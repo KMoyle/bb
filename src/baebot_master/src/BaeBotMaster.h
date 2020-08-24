@@ -29,12 +29,23 @@ class BaeBotMaster {
     ~BaeBotMaster();
 
     // SETS
-    void set_new_pose_xy( Point2D );
-    void set_new_pose( POSE );
-    void set_velocity( );
+    void setNewPose_xy( Point2D );
+    void setNewPose( POSE );
+    void setVelocity( );
 
     // GETS
 
+
+    // OPERATIONAL CONTROL FUNCTION
+    void controlLoopFunc();
+    void updateLoop();
+    void updateDt();
+    void navUpdate();
+    void sensorUpdate();
+    void missionUpdate();
+    void updateCurrentTask();
+    void sendMotorCommands();
+    void publishPoseMessages();
 
 
     // UTILS
