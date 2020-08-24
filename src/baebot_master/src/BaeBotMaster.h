@@ -13,10 +13,15 @@ class BaeBotMaster {
     // Subs and pubs
 
 
+
+
     public:
 
     POSE        pose;
     POSE        poseDmd;
+    POSE        poseGoal;
+    Point2D     point_xy;
+
 
 
     // CTOR & DTOR
@@ -24,12 +29,17 @@ class BaeBotMaster {
     ~BaeBotMaster();
 
     // SETS
-    void setNewGoal( POSE );
-    void setVelocity( POSE );
+    void set_new_pose_xy( Point2D );
+    void set_new_pose( POSE );
+    void set_velocity( );
+
+    // GETS
+
 
 
     // UTILS
-    double dist2Point( POSE , POSE );
+    double dist_to_point( Point2D );
+    double dist_to_pose( POSE );
 
 
 
