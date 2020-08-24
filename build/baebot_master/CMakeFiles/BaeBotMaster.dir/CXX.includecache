@@ -17,6 +17,8 @@ baebot_global.h
 /home/kyle/baebot_ws/src/baebot_master/src/baebot_global.h
 ros/ros.h
 /home/kyle/baebot_ws/src/baebot_master/src/ros/ros.h
+math.h
+-
 
 /home/kyle/baebot_ws/src/baebot_master/src/baebotMasterMain.cpp
 BaeBotMaster.h

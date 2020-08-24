@@ -3,7 +3,7 @@
 
 #include "baebot_global.h"
 #include "ros/ros.h"
-
+#include <math.h>
 
 
 class BaeBotMaster {
@@ -29,7 +29,7 @@ class BaeBotMaster {
 
 
     // UTILS
-    double dist2Point( POSE , Point2D );
+    double dist2Point( POSE , POSE );
 
 
 
