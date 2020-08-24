@@ -1,0 +1,8 @@
+prefix=/home/kyle/baebot_ws/install
+
+Name: baebot_master
+Description: Description of baebot_master
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
