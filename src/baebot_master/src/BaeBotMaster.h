@@ -10,18 +10,26 @@ class BaeBotMaster {
 
     private:
 
-    // Subs and pubs
-
-
+    // Subs
+    ros::Subscriber laser_sub;
+    ros::Subscriber image_sub;
 
 
     public:
+
+    double sampleRate;
+    ros::Duration dt;
+    ros::Rate r = 10; //10Hz
 
     POSE        pose;
     POSE        poseDmd;
     POSE        poseGoal;
     Point2D     point_xy;
 
+
+    //Pubs
+    ros::Publisher rviz_pub;
+    ros::Publisher im_alive_pub;
 
 
     // CTOR & DTOR
