@@ -14,6 +14,8 @@ enum { CONTROL_ESTOP = 0, CONTROL_JOYSTICK = 1, CONTROL_AUTONOMOUS = 2};
 
 
 
+#define LOOP_RATE 30
+
 typedef struct {
 
     double x = 0;       // (m)
@@ -32,4 +34,6 @@ typedef struct {
     double y = 0;
 
 } Point2D;
+
+
 #endif // BAEBOT_GLOBAL_H_INCLUDED

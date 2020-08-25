@@ -96,6 +96,7 @@ baebot_master/CMakeFiles/BaeBotMaster.dir/src/baebotMasterMain.cpp.o: /opt/ros/m
 baebot_master/CMakeFiles/BaeBotMaster.dir/src/baebotMasterMain.cpp.o: /opt/ros/melodic/include/ros/message.h
 baebot_master/CMakeFiles/BaeBotMaster.dir/src/baebotMasterMain.cpp.o: /opt/ros/melodic/include/ros/message_event.h
 baebot_master/CMakeFiles/BaeBotMaster.dir/src/baebotMasterMain.cpp.o: /opt/ros/melodic/include/ros/message_forward.h
+baebot_master/CMakeFiles/BaeBotMaster.dir/src/baebotMasterMain.cpp.o: /opt/ros/melodic/include/ros/message_operations.h
 baebot_master/CMakeFiles/BaeBotMaster.dir/src/baebotMasterMain.cpp.o: /opt/ros/melodic/include/ros/message_traits.h
 baebot_master/CMakeFiles/BaeBotMaster.dir/src/baebotMasterMain.cpp.o: /opt/ros/melodic/include/ros/names.h
 baebot_master/CMakeFiles/BaeBotMaster.dir/src/baebotMasterMain.cpp.o: /opt/ros/melodic/include/ros/node_handle.h
@@ -133,6 +134,7 @@ baebot_master/CMakeFiles/BaeBotMaster.dir/src/baebotMasterMain.cpp.o: /opt/ros/m
 baebot_master/CMakeFiles/BaeBotMaster.dir/src/baebotMasterMain.cpp.o: /opt/ros/melodic/include/ros/wall_timer.h
 baebot_master/CMakeFiles/BaeBotMaster.dir/src/baebotMasterMain.cpp.o: /opt/ros/melodic/include/ros/wall_timer_options.h
 baebot_master/CMakeFiles/BaeBotMaster.dir/src/baebotMasterMain.cpp.o: /opt/ros/melodic/include/rosconsole/macros_generated.h
+baebot_master/CMakeFiles/BaeBotMaster.dir/src/baebotMasterMain.cpp.o: /opt/ros/melodic/include/std_msgs/String.h
 baebot_master/CMakeFiles/BaeBotMaster.dir/src/baebotMasterMain.cpp.o: /opt/ros/melodic/include/xmlrpcpp/XmlRpcDecl.h
 baebot_master/CMakeFiles/BaeBotMaster.dir/src/baebotMasterMain.cpp.o: /opt/ros/melodic/include/xmlrpcpp/XmlRpcValue.h
 baebot_master/CMakeFiles/BaeBotMaster.dir/src/baebotMasterMain.cpp.o: /usr/include/x86_64-linux-gnu/bits/select.h
