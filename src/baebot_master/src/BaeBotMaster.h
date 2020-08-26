@@ -1,8 +1,18 @@
 #ifndef BAEBOTMASTER_H_INCLUDED
 #define BAEBOTMASTER_H_INCLUDED
 
-#include "baebot_global.h"
 #include "ros/ros.h"
+#include "sensor_msgs/LaserScan.h"
+#include "sensor_msgs/Image.h"
+#include "laser_geometry/laser_geometry.h"
+#include "sensor_msgs/PointCloud.h"
+#include <tf/transform_broadcaster.h>
+#include <tf/transform_listener.h>
+#include "message_filters/subscriber.h"
+
+
+#include "baebot_global.h"
+#include "bb_sensors/BbLaser.h"
 #include <math.h>
 
 
@@ -11,9 +21,8 @@ class BaeBotMaster {
     private:
 
     // Subs
-    ros::Subscriber laser_sub;
+    message_filters::Subscriber<sensor_msgs::LaserScan> laser_sub;
     ros::Subscriber image_sub;
-
 
     public:
 
@@ -30,6 +39,13 @@ class BaeBotMaster {
     //Pubs
     ros::Publisher rviz_pub;
     ros::Publisher im_alive_pub;
+    ros::Publisher scan_pub_;
+
+    //LASER FUNCTION
+    laser_geometry::LaserProjection projector;
+    tf::TransformListener listener;
+    tf::MessageFilter<sensor_msgs::LaserScan> laser_notifier_;
+
 
 
     // CTOR & DTOR
@@ -42,6 +58,10 @@ class BaeBotMaster {
     void setVelocity( );
 
     // GETS
+
+    // CALLBACK FUNCTIONS
+    void rpLidarCallback(const sensor_msgs::LaserScan::ConstPtr& scan);
+    void cameraImageCallback(const sensor_msgs::Image::ConstPtr& img);
 
 
     // OPERATIONAL CONTROL FUNCTION

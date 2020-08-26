@@ -105,16 +105,42 @@ baebot_master/CMakeFiles/BaeBotMaster.dir/src/baebotMasterMain.cpp.o.provides: b
 baebot_master/CMakeFiles/BaeBotMaster.dir/src/baebotMasterMain.cpp.o.provides.build: baebot_master/CMakeFiles/BaeBotMaster.dir/src/baebotMasterMain.cpp.o
 
 
+baebot_master/CMakeFiles/BaeBotMaster.dir/src/bb_sensors/BbLaser.cpp.o: baebot_master/CMakeFiles/BaeBotMaster.dir/flags.make
+baebot_master/CMakeFiles/BaeBotMaster.dir/src/bb_sensors/BbLaser.cpp.o: /home/kyle/baebot_ws/src/baebot_master/src/bb_sensors/BbLaser.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kyle/baebot_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object baebot_master/CMakeFiles/BaeBotMaster.dir/src/bb_sensors/BbLaser.cpp.o"
+	cd /home/kyle/baebot_ws/build/baebot_master && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BaeBotMaster.dir/src/bb_sensors/BbLaser.cpp.o -c /home/kyle/baebot_ws/src/baebot_master/src/bb_sensors/BbLaser.cpp
+
+baebot_master/CMakeFiles/BaeBotMaster.dir/src/bb_sensors/BbLaser.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BaeBotMaster.dir/src/bb_sensors/BbLaser.cpp.i"
+	cd /home/kyle/baebot_ws/build/baebot_master && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kyle/baebot_ws/src/baebot_master/src/bb_sensors/BbLaser.cpp > CMakeFiles/BaeBotMaster.dir/src/bb_sensors/BbLaser.cpp.i
+
+baebot_master/CMakeFiles/BaeBotMaster.dir/src/bb_sensors/BbLaser.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BaeBotMaster.dir/src/bb_sensors/BbLaser.cpp.s"
+	cd /home/kyle/baebot_ws/build/baebot_master && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kyle/baebot_ws/src/baebot_master/src/bb_sensors/BbLaser.cpp -o CMakeFiles/BaeBotMaster.dir/src/bb_sensors/BbLaser.cpp.s
+
+baebot_master/CMakeFiles/BaeBotMaster.dir/src/bb_sensors/BbLaser.cpp.o.requires:
+
+.PHONY : baebot_master/CMakeFiles/BaeBotMaster.dir/src/bb_sensors/BbLaser.cpp.o.requires
+
+baebot_master/CMakeFiles/BaeBotMaster.dir/src/bb_sensors/BbLaser.cpp.o.provides: baebot_master/CMakeFiles/BaeBotMaster.dir/src/bb_sensors/BbLaser.cpp.o.requires
+	$(MAKE) -f baebot_master/CMakeFiles/BaeBotMaster.dir/build.make baebot_master/CMakeFiles/BaeBotMaster.dir/src/bb_sensors/BbLaser.cpp.o.provides.build
+.PHONY : baebot_master/CMakeFiles/BaeBotMaster.dir/src/bb_sensors/BbLaser.cpp.o.provides
+
+baebot_master/CMakeFiles/BaeBotMaster.dir/src/bb_sensors/BbLaser.cpp.o.provides.build: baebot_master/CMakeFiles/BaeBotMaster.dir/src/bb_sensors/BbLaser.cpp.o
+
+
 # Object files for target BaeBotMaster
 BaeBotMaster_OBJECTS = \
 "CMakeFiles/BaeBotMaster.dir/src/BaeBotMaster.cpp.o" \
-"CMakeFiles/BaeBotMaster.dir/src/baebotMasterMain.cpp.o"
+"CMakeFiles/BaeBotMaster.dir/src/baebotMasterMain.cpp.o" \
+"CMakeFiles/BaeBotMaster.dir/src/bb_sensors/BbLaser.cpp.o"
 
 # External object files for target BaeBotMaster
 BaeBotMaster_EXTERNAL_OBJECTS =
 
 /home/kyle/baebot_ws/devel/lib/baebot_master/BaeBotMaster: baebot_master/CMakeFiles/BaeBotMaster.dir/src/BaeBotMaster.cpp.o
 /home/kyle/baebot_ws/devel/lib/baebot_master/BaeBotMaster: baebot_master/CMakeFiles/BaeBotMaster.dir/src/baebotMasterMain.cpp.o
+/home/kyle/baebot_ws/devel/lib/baebot_master/BaeBotMaster: baebot_master/CMakeFiles/BaeBotMaster.dir/src/bb_sensors/BbLaser.cpp.o
 /home/kyle/baebot_ws/devel/lib/baebot_master/BaeBotMaster: baebot_master/CMakeFiles/BaeBotMaster.dir/build.make
 /home/kyle/baebot_ws/devel/lib/baebot_master/BaeBotMaster: /opt/ros/melodic/lib/libcv_bridge.so
 /home/kyle/baebot_ws/devel/lib/baebot_master/BaeBotMaster: /usr/lib/x86_64-linux-gnu/libopencv_core.so.3.2.0
@@ -313,15 +339,16 @@ BaeBotMaster_EXTERNAL_OBJECTS =
 /home/kyle/baebot_ws/devel/lib/baebot_master/BaeBotMaster: /opt/ros/melodic/lib/libroslz4.so
 /home/kyle/baebot_ws/devel/lib/baebot_master/BaeBotMaster: /usr/lib/x86_64-linux-gnu/liblz4.so
 /home/kyle/baebot_ws/devel/lib/baebot_master/BaeBotMaster: /opt/ros/melodic/lib/libtopic_tools.so
+/home/kyle/baebot_ws/devel/lib/baebot_master/BaeBotMaster: /opt/ros/melodic/lib/liblaser_geometry.so
 /home/kyle/baebot_ws/devel/lib/baebot_master/BaeBotMaster: /opt/ros/melodic/lib/libtf.so
 /home/kyle/baebot_ws/devel/lib/baebot_master/BaeBotMaster: /opt/ros/melodic/lib/libtf2_ros.so
 /home/kyle/baebot_ws/devel/lib/baebot_master/BaeBotMaster: /opt/ros/melodic/lib/libactionlib.so
+/home/kyle/baebot_ws/devel/lib/baebot_master/BaeBotMaster: /opt/ros/melodic/lib/libtf2.so
 /home/kyle/baebot_ws/devel/lib/baebot_master/BaeBotMaster: /opt/ros/melodic/lib/libmessage_filters.so
 /home/kyle/baebot_ws/devel/lib/baebot_master/BaeBotMaster: /opt/ros/melodic/lib/libroscpp.so
 /home/kyle/baebot_ws/devel/lib/baebot_master/BaeBotMaster: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
-/home/kyle/baebot_ws/devel/lib/baebot_master/BaeBotMaster: /opt/ros/melodic/lib/libxmlrpcpp.so
-/home/kyle/baebot_ws/devel/lib/baebot_master/BaeBotMaster: /opt/ros/melodic/lib/libtf2.so
 /home/kyle/baebot_ws/devel/lib/baebot_master/BaeBotMaster: /opt/ros/melodic/lib/libroscpp_serialization.so
+/home/kyle/baebot_ws/devel/lib/baebot_master/BaeBotMaster: /opt/ros/melodic/lib/libxmlrpcpp.so
 /home/kyle/baebot_ws/devel/lib/baebot_master/BaeBotMaster: /opt/ros/melodic/lib/librosconsole.so
 /home/kyle/baebot_ws/devel/lib/baebot_master/BaeBotMaster: /opt/ros/melodic/lib/librosconsole_log4cxx.so
 /home/kyle/baebot_ws/devel/lib/baebot_master/BaeBotMaster: /opt/ros/melodic/lib/librosconsole_backend_interface.so
@@ -337,7 +364,7 @@ BaeBotMaster_EXTERNAL_OBJECTS =
 /home/kyle/baebot_ws/devel/lib/baebot_master/BaeBotMaster: /usr/lib/x86_64-linux-gnu/libpthread.so
 /home/kyle/baebot_ws/devel/lib/baebot_master/BaeBotMaster: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4
 /home/kyle/baebot_ws/devel/lib/baebot_master/BaeBotMaster: baebot_master/CMakeFiles/BaeBotMaster.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/kyle/baebot_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable /home/kyle/baebot_ws/devel/lib/baebot_master/BaeBotMaster"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/kyle/baebot_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable /home/kyle/baebot_ws/devel/lib/baebot_master/BaeBotMaster"
 	cd /home/kyle/baebot_ws/build/baebot_master && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/BaeBotMaster.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -347,6 +374,7 @@ baebot_master/CMakeFiles/BaeBotMaster.dir/build: /home/kyle/baebot_ws/devel/lib/
 
 baebot_master/CMakeFiles/BaeBotMaster.dir/requires: baebot_master/CMakeFiles/BaeBotMaster.dir/src/BaeBotMaster.cpp.o.requires
 baebot_master/CMakeFiles/BaeBotMaster.dir/requires: baebot_master/CMakeFiles/BaeBotMaster.dir/src/baebotMasterMain.cpp.o.requires
+baebot_master/CMakeFiles/BaeBotMaster.dir/requires: baebot_master/CMakeFiles/BaeBotMaster.dir/src/bb_sensors/BbLaser.cpp.o.requires
 
 .PHONY : baebot_master/CMakeFiles/BaeBotMaster.dir/requires
 

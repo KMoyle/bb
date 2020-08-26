@@ -3,8 +3,16 @@
 
 
 
-BaeBotMaster::BaeBotMaster(ros::NodeHandle *nh ){
+BaeBotMaster::BaeBotMaster(ros::NodeHandle *nh ) :
+    nh_(nh),
+    laser_sub(nh_, "base_scan", 10),
+    laser_notifier_(laser_sub, listener, "base_link", 10)
 
+{
+
+    laser_notifier_.registerCallback( boost::bind(&BaeBotMaster::rpLidarCallback, this, _1));
+    laser_notifier_.setTolerance(ros::Duration(0.01));
+    scan_pub_ = nh_.advertise<sensor_msgs::PointCloud>("/my_cloud",1);
 
 
 
