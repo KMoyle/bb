@@ -17,6 +17,8 @@ find_package(catkin REQUIRED COMPONENTS
   sensor_msgs
   std_msgs
   tf
+  laser_geometry
+  message_filters
 )
 
 ## System dependencies are found with CMake's conventions
@@ -217,6 +219,10 @@ add_executable( BaeBotMaster
     src/BaeBotMaster.h
     src/baebot_global.h
     src/baebotMasterMain.cpp
+
+
+    src/bb_sensors/BbLaser.cpp
+    src/bb_sensors/BbLaser.h
 
 )
 

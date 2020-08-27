@@ -1,6 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/BaeBotMaster.dir/src/BaeBotMaster.cpp.o"
   "CMakeFiles/BaeBotMaster.dir/src/baebotMasterMain.cpp.o"
+  "CMakeFiles/BaeBotMaster.dir/src/bb_sensors/BbLaser.cpp.o"
   "/home/kyle/baebot_ws/devel/lib/baebot_master/BaeBotMaster.pdb"
   "/home/kyle/baebot_ws/devel/lib/baebot_master/BaeBotMaster"
 )

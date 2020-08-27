@@ -1421,6 +1421,33 @@ src/baebotMasterMain.cpp.s:
 	cd /home/kyle/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/BaeBotMaster.dir/build.make baebot_master/CMakeFiles/BaeBotMaster.dir/src/baebotMasterMain.cpp.s
 .PHONY : src/baebotMasterMain.cpp.s
 
+src/bb_sensors/BbLaser.o: src/bb_sensors/BbLaser.cpp.o
+
+.PHONY : src/bb_sensors/BbLaser.o
+
+# target to build an object file
+src/bb_sensors/BbLaser.cpp.o:
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/BaeBotMaster.dir/build.make baebot_master/CMakeFiles/BaeBotMaster.dir/src/bb_sensors/BbLaser.cpp.o
+.PHONY : src/bb_sensors/BbLaser.cpp.o
+
+src/bb_sensors/BbLaser.i: src/bb_sensors/BbLaser.cpp.i
+
+.PHONY : src/bb_sensors/BbLaser.i
+
+# target to preprocess a source file
+src/bb_sensors/BbLaser.cpp.i:
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/BaeBotMaster.dir/build.make baebot_master/CMakeFiles/BaeBotMaster.dir/src/bb_sensors/BbLaser.cpp.i
+.PHONY : src/bb_sensors/BbLaser.cpp.i
+
+src/bb_sensors/BbLaser.s: src/bb_sensors/BbLaser.cpp.s
+
+.PHONY : src/bb_sensors/BbLaser.s
+
+# target to generate assembly for a file
+src/bb_sensors/BbLaser.cpp.s:
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/BaeBotMaster.dir/build.make baebot_master/CMakeFiles/BaeBotMaster.dir/src/bb_sensors/BbLaser.cpp.s
+.PHONY : src/bb_sensors/BbLaser.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -1520,6 +1547,9 @@ help:
 	@echo "... src/baebotMasterMain.o"
 	@echo "... src/baebotMasterMain.i"
 	@echo "... src/baebotMasterMain.s"
+	@echo "... src/bb_sensors/BbLaser.o"
+	@echo "... src/bb_sensors/BbLaser.i"
+	@echo "... src/bb_sensors/BbLaser.s"
 .PHONY : help
 
 
