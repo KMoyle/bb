@@ -8,11 +8,11 @@
 void BaeBotMaster::rpLidarCallback(const sensor_msgs::LaserScan::ConstPtr& scan ){
 
     //tf2_ros::Buffer tfBuffer;
-    tf2_ros::Buffer tfBuffer;
-    tf2_ros::TransformListener tfListener(tfBuffer);
+    static tf2_ros::Buffer tfBuffer;
+    static tf2_ros::TransformListener tfListener(tfBuffer);
 
     geometry_msgs::TransformStamped transformStamped;
-    ros::Duration(0.05).sleep();
+
 
 
        try{
