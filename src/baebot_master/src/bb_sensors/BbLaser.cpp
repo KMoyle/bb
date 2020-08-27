@@ -7,11 +7,25 @@
 
 void BaeBotMaster::rpLidarCallback(const sensor_msgs::LaserScan::ConstPtr& scan ){
 
+    //tf2_ros::Buffer tfBuffer;
+    tf2_ros::Buffer tfBuffer;
+    tf2_ros::TransformListener tfListener(tfBuffer);
 
-   sensor_msgs::PointCloud cloud;
+    geometry_msgs::TransformStamped transformStamped;
+    ros::Duration(0.05).sleep();
 
-   projector.projectLaser(*scan, cloud);
 
+       try{
+         transformStamped = tfBuffer.lookupTransform( "laser", "base_link",   ros::Time(0));
+       }
+       catch (tf2::TransformException &ex) {
+         ROS_WARN("%s",ex.what());
+       }
+
+
+       std::cout << "\nx= " << transformStamped.transform.translation.x ;
+       std::cout << "\ny= " <<transformStamped.transform.translation.y ;
+       std::cout << "\nz= " <<transformStamped.transform.translation.z ;
 
 
 };

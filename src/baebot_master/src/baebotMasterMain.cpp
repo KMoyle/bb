@@ -27,10 +27,7 @@ int main( int argc, char **argv){
     /*
     *   Publisher setup
     */
-    baebotMaster->im_alive_pub = nh.advertise<std_msgs::String>( "BB_TALKS", 1 );
 
-    std_msgs::StringPtr  str(new std_msgs::String);
-    str->data = "IM ALIVE";
 
 
 
@@ -43,18 +40,17 @@ int main( int argc, char **argv){
 
     while(ros::ok()){
 
-        baebotMaster->im_alive_pub.publish(str);
-
         ros::spinOnce();
 
         baebotMaster->r.sleep();
+
+        //ROS_WARN("SPINNING");
 
 
 
     }
 
 
-    delete baebotMaster;
 
     return 0;
 

@@ -6,7 +6,8 @@
 #include "sensor_msgs/Image.h"
 #include "sensor_msgs/PointCloud.h"
 #include "laser_geometry/laser_geometry.h"
-
+#include "tf2_ros/transform_listener.h"
+#include <geometry_msgs/TransformStamped.h>
 
 #include "baebot_global.h"
 #include "bb_sensors/BbLaser.h"
@@ -18,7 +19,7 @@ class BaeBotMaster {
     private:
 
     // Subs
-    ros::Subscriber laser_sub;
+
     ros::Subscriber image_sub;
 
 
@@ -40,6 +41,8 @@ class BaeBotMaster {
     ros::Publisher rviz_pub;
     ros::Publisher im_alive_pub;
 
+    ros::Subscriber laser_sub;
+
 
 
 
@@ -55,11 +58,8 @@ class BaeBotMaster {
     // GETS
 
     // CALLBACK FUNCTIONS
-    void rpLidarCallback(const sensor_msgs::LaserScan::ConstPtr& scan);
-    laser_geometry::LaserProjection projector;
-
-
-    void cameraImageCallback(const sensor_msgs::Image::ConstPtr& img);
+    void rpLidarCallback(const sensor_msgs::LaserScan::ConstPtr& );
+    void cameraImageCallback(const sensor_msgs::Image::ConstPtr& );
 
 
     // OPERATIONAL CONTROL FUNCTION

@@ -1,0 +1,5 @@
+<launch>
+
+    <node pkg="baebot_master" name="BaeBotMaster" type="BaeBotMaster" output="screen"/>
+
+</launch>

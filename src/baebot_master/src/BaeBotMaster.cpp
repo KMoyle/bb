@@ -6,11 +6,11 @@
 BaeBotMaster::BaeBotMaster(ros::NodeHandle *nh ){
 
 
-        laser_sub = nh->subscribe<sensor_msgs::LaserScan>("/rplidar_scan" , 1, &BaeBotMaster::rpLidarCallback, this);
+        //laser_sub = nh->subscribe<sensor_msgs::LaserScan>("/rplidar_scan" , 1, &BaeBotMaster::rpLidarCallback, this);
+        laser_sub = nh->subscribe<sensor_msgs::LaserScan>("/scan" , 1, &BaeBotMaster::rpLidarCallback, this);
 
 
-
-
+        ROS_WARN("ctor");
 };
 
 BaeBotMaster::~BaeBotMaster(){

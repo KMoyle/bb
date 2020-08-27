@@ -23,6 +23,8 @@ baebot_master/CMakeFiles/BaeBotMaster.dir/src/BaeBotMaster.cpp.o: /opt/ros/melod
 baebot_master/CMakeFiles/BaeBotMaster.dir/src/BaeBotMaster.cpp.o: /opt/ros/melodic/include/ros/advertise_service_options.h
 baebot_master/CMakeFiles/BaeBotMaster.dir/src/BaeBotMaster.cpp.o: /opt/ros/melodic/include/ros/assert.h
 baebot_master/CMakeFiles/BaeBotMaster.dir/src/BaeBotMaster.cpp.o: /opt/ros/melodic/include/ros/builtin_message_traits.h
+baebot_master/CMakeFiles/BaeBotMaster.dir/src/BaeBotMaster.cpp.o: /opt/ros/melodic/include/ros/callback_queue.h
+baebot_master/CMakeFiles/BaeBotMaster.dir/src/BaeBotMaster.cpp.o: /opt/ros/melodic/include/ros/callback_queue_interface.h
 baebot_master/CMakeFiles/BaeBotMaster.dir/src/BaeBotMaster.cpp.o: /opt/ros/melodic/include/ros/common.h
 baebot_master/CMakeFiles/BaeBotMaster.dir/src/BaeBotMaster.cpp.o: /opt/ros/melodic/include/ros/console.h
 baebot_master/CMakeFiles/BaeBotMaster.dir/src/BaeBotMaster.cpp.o: /opt/ros/melodic/include/ros/console_backend.h
@@ -32,6 +34,7 @@ baebot_master/CMakeFiles/BaeBotMaster.dir/src/BaeBotMaster.cpp.o: /opt/ros/melod
 baebot_master/CMakeFiles/BaeBotMaster.dir/src/BaeBotMaster.cpp.o: /opt/ros/melodic/include/ros/exceptions.h
 baebot_master/CMakeFiles/BaeBotMaster.dir/src/BaeBotMaster.cpp.o: /opt/ros/melodic/include/ros/forwards.h
 baebot_master/CMakeFiles/BaeBotMaster.dir/src/BaeBotMaster.cpp.o: /opt/ros/melodic/include/ros/init.h
+baebot_master/CMakeFiles/BaeBotMaster.dir/src/BaeBotMaster.cpp.o: /opt/ros/melodic/include/ros/internal/condition_variable.h
 baebot_master/CMakeFiles/BaeBotMaster.dir/src/BaeBotMaster.cpp.o: /opt/ros/melodic/include/ros/macros.h
 baebot_master/CMakeFiles/BaeBotMaster.dir/src/BaeBotMaster.cpp.o: /opt/ros/melodic/include/ros/master.h
 baebot_master/CMakeFiles/BaeBotMaster.dir/src/BaeBotMaster.cpp.o: /opt/ros/melodic/include/ros/message.h
@@ -81,6 +84,7 @@ baebot_master/CMakeFiles/BaeBotMaster.dir/src/BaeBotMaster.cpp.o: /opt/ros/melod
 baebot_master/CMakeFiles/BaeBotMaster.dir/src/BaeBotMaster.cpp.o: /opt/ros/melodic/include/sensor_msgs/PointCloud.h
 baebot_master/CMakeFiles/BaeBotMaster.dir/src/BaeBotMaster.cpp.o: /opt/ros/melodic/include/sensor_msgs/PointCloud2.h
 baebot_master/CMakeFiles/BaeBotMaster.dir/src/BaeBotMaster.cpp.o: /opt/ros/melodic/include/sensor_msgs/PointField.h
+baebot_master/CMakeFiles/BaeBotMaster.dir/src/BaeBotMaster.cpp.o: /opt/ros/melodic/include/std_msgs/Empty.h
 baebot_master/CMakeFiles/BaeBotMaster.dir/src/BaeBotMaster.cpp.o: /opt/ros/melodic/include/std_msgs/Header.h
 baebot_master/CMakeFiles/BaeBotMaster.dir/src/BaeBotMaster.cpp.o: /opt/ros/melodic/include/tf/LinearMath/Matrix3x3.h
 baebot_master/CMakeFiles/BaeBotMaster.dir/src/BaeBotMaster.cpp.o: /opt/ros/melodic/include/tf/LinearMath/Quaternion.h
@@ -103,8 +107,10 @@ baebot_master/CMakeFiles/BaeBotMaster.dir/src/BaeBotMaster.cpp.o: /opt/ros/melod
 baebot_master/CMakeFiles/BaeBotMaster.dir/src/BaeBotMaster.cpp.o: /opt/ros/melodic/include/tf2_msgs/FrameGraph.h
 baebot_master/CMakeFiles/BaeBotMaster.dir/src/BaeBotMaster.cpp.o: /opt/ros/melodic/include/tf2_msgs/FrameGraphRequest.h
 baebot_master/CMakeFiles/BaeBotMaster.dir/src/BaeBotMaster.cpp.o: /opt/ros/melodic/include/tf2_msgs/FrameGraphResponse.h
+baebot_master/CMakeFiles/BaeBotMaster.dir/src/BaeBotMaster.cpp.o: /opt/ros/melodic/include/tf2_msgs/TFMessage.h
 baebot_master/CMakeFiles/BaeBotMaster.dir/src/BaeBotMaster.cpp.o: /opt/ros/melodic/include/tf2_ros/buffer.h
 baebot_master/CMakeFiles/BaeBotMaster.dir/src/BaeBotMaster.cpp.o: /opt/ros/melodic/include/tf2_ros/buffer_interface.h
+baebot_master/CMakeFiles/BaeBotMaster.dir/src/BaeBotMaster.cpp.o: /opt/ros/melodic/include/tf2_ros/transform_listener.h
 baebot_master/CMakeFiles/BaeBotMaster.dir/src/BaeBotMaster.cpp.o: /opt/ros/melodic/include/xmlrpcpp/XmlRpcDecl.h
 baebot_master/CMakeFiles/BaeBotMaster.dir/src/BaeBotMaster.cpp.o: /opt/ros/melodic/include/xmlrpcpp/XmlRpcValue.h
 baebot_master/CMakeFiles/BaeBotMaster.dir/src/BaeBotMaster.cpp.o: /usr/include/eigen3/Eigen/Core
@@ -283,6 +289,8 @@ baebot_master/CMakeFiles/BaeBotMaster.dir/src/baebotMasterMain.cpp.o: /opt/ros/m
 baebot_master/CMakeFiles/BaeBotMaster.dir/src/baebotMasterMain.cpp.o: /opt/ros/melodic/include/ros/advertise_service_options.h
 baebot_master/CMakeFiles/BaeBotMaster.dir/src/baebotMasterMain.cpp.o: /opt/ros/melodic/include/ros/assert.h
 baebot_master/CMakeFiles/BaeBotMaster.dir/src/baebotMasterMain.cpp.o: /opt/ros/melodic/include/ros/builtin_message_traits.h
+baebot_master/CMakeFiles/BaeBotMaster.dir/src/baebotMasterMain.cpp.o: /opt/ros/melodic/include/ros/callback_queue.h
+baebot_master/CMakeFiles/BaeBotMaster.dir/src/baebotMasterMain.cpp.o: /opt/ros/melodic/include/ros/callback_queue_interface.h
 baebot_master/CMakeFiles/BaeBotMaster.dir/src/baebotMasterMain.cpp.o: /opt/ros/melodic/include/ros/common.h
 baebot_master/CMakeFiles/BaeBotMaster.dir/src/baebotMasterMain.cpp.o: /opt/ros/melodic/include/ros/console.h
 baebot_master/CMakeFiles/BaeBotMaster.dir/src/baebotMasterMain.cpp.o: /opt/ros/melodic/include/ros/console_backend.h
@@ -292,6 +300,7 @@ baebot_master/CMakeFiles/BaeBotMaster.dir/src/baebotMasterMain.cpp.o: /opt/ros/m
 baebot_master/CMakeFiles/BaeBotMaster.dir/src/baebotMasterMain.cpp.o: /opt/ros/melodic/include/ros/exceptions.h
 baebot_master/CMakeFiles/BaeBotMaster.dir/src/baebotMasterMain.cpp.o: /opt/ros/melodic/include/ros/forwards.h
 baebot_master/CMakeFiles/BaeBotMaster.dir/src/baebotMasterMain.cpp.o: /opt/ros/melodic/include/ros/init.h
+baebot_master/CMakeFiles/BaeBotMaster.dir/src/baebotMasterMain.cpp.o: /opt/ros/melodic/include/ros/internal/condition_variable.h
 baebot_master/CMakeFiles/BaeBotMaster.dir/src/baebotMasterMain.cpp.o: /opt/ros/melodic/include/ros/macros.h
 baebot_master/CMakeFiles/BaeBotMaster.dir/src/baebotMasterMain.cpp.o: /opt/ros/melodic/include/ros/master.h
 baebot_master/CMakeFiles/BaeBotMaster.dir/src/baebotMasterMain.cpp.o: /opt/ros/melodic/include/ros/message.h
@@ -341,6 +350,7 @@ baebot_master/CMakeFiles/BaeBotMaster.dir/src/baebotMasterMain.cpp.o: /opt/ros/m
 baebot_master/CMakeFiles/BaeBotMaster.dir/src/baebotMasterMain.cpp.o: /opt/ros/melodic/include/sensor_msgs/PointCloud.h
 baebot_master/CMakeFiles/BaeBotMaster.dir/src/baebotMasterMain.cpp.o: /opt/ros/melodic/include/sensor_msgs/PointCloud2.h
 baebot_master/CMakeFiles/BaeBotMaster.dir/src/baebotMasterMain.cpp.o: /opt/ros/melodic/include/sensor_msgs/PointField.h
+baebot_master/CMakeFiles/BaeBotMaster.dir/src/baebotMasterMain.cpp.o: /opt/ros/melodic/include/std_msgs/Empty.h
 baebot_master/CMakeFiles/BaeBotMaster.dir/src/baebotMasterMain.cpp.o: /opt/ros/melodic/include/std_msgs/Header.h
 baebot_master/CMakeFiles/BaeBotMaster.dir/src/baebotMasterMain.cpp.o: /opt/ros/melodic/include/std_msgs/String.h
 baebot_master/CMakeFiles/BaeBotMaster.dir/src/baebotMasterMain.cpp.o: /opt/ros/melodic/include/tf/LinearMath/Matrix3x3.h
@@ -364,8 +374,10 @@ baebot_master/CMakeFiles/BaeBotMaster.dir/src/baebotMasterMain.cpp.o: /opt/ros/m
 baebot_master/CMakeFiles/BaeBotMaster.dir/src/baebotMasterMain.cpp.o: /opt/ros/melodic/include/tf2_msgs/FrameGraph.h
 baebot_master/CMakeFiles/BaeBotMaster.dir/src/baebotMasterMain.cpp.o: /opt/ros/melodic/include/tf2_msgs/FrameGraphRequest.h
 baebot_master/CMakeFiles/BaeBotMaster.dir/src/baebotMasterMain.cpp.o: /opt/ros/melodic/include/tf2_msgs/FrameGraphResponse.h
+baebot_master/CMakeFiles/BaeBotMaster.dir/src/baebotMasterMain.cpp.o: /opt/ros/melodic/include/tf2_msgs/TFMessage.h
 baebot_master/CMakeFiles/BaeBotMaster.dir/src/baebotMasterMain.cpp.o: /opt/ros/melodic/include/tf2_ros/buffer.h
 baebot_master/CMakeFiles/BaeBotMaster.dir/src/baebotMasterMain.cpp.o: /opt/ros/melodic/include/tf2_ros/buffer_interface.h
+baebot_master/CMakeFiles/BaeBotMaster.dir/src/baebotMasterMain.cpp.o: /opt/ros/melodic/include/tf2_ros/transform_listener.h
 baebot_master/CMakeFiles/BaeBotMaster.dir/src/baebotMasterMain.cpp.o: /opt/ros/melodic/include/xmlrpcpp/XmlRpcDecl.h
 baebot_master/CMakeFiles/BaeBotMaster.dir/src/baebotMasterMain.cpp.o: /opt/ros/melodic/include/xmlrpcpp/XmlRpcValue.h
 baebot_master/CMakeFiles/BaeBotMaster.dir/src/baebotMasterMain.cpp.o: /usr/include/eigen3/Eigen/Core
@@ -544,6 +556,8 @@ baebot_master/CMakeFiles/BaeBotMaster.dir/src/bb_sensors/BbLaser.cpp.o: /opt/ros
 baebot_master/CMakeFiles/BaeBotMaster.dir/src/bb_sensors/BbLaser.cpp.o: /opt/ros/melodic/include/ros/advertise_service_options.h
 baebot_master/CMakeFiles/BaeBotMaster.dir/src/bb_sensors/BbLaser.cpp.o: /opt/ros/melodic/include/ros/assert.h
 baebot_master/CMakeFiles/BaeBotMaster.dir/src/bb_sensors/BbLaser.cpp.o: /opt/ros/melodic/include/ros/builtin_message_traits.h
+baebot_master/CMakeFiles/BaeBotMaster.dir/src/bb_sensors/BbLaser.cpp.o: /opt/ros/melodic/include/ros/callback_queue.h
+baebot_master/CMakeFiles/BaeBotMaster.dir/src/bb_sensors/BbLaser.cpp.o: /opt/ros/melodic/include/ros/callback_queue_interface.h
 baebot_master/CMakeFiles/BaeBotMaster.dir/src/bb_sensors/BbLaser.cpp.o: /opt/ros/melodic/include/ros/common.h
 baebot_master/CMakeFiles/BaeBotMaster.dir/src/bb_sensors/BbLaser.cpp.o: /opt/ros/melodic/include/ros/console.h
 baebot_master/CMakeFiles/BaeBotMaster.dir/src/bb_sensors/BbLaser.cpp.o: /opt/ros/melodic/include/ros/console_backend.h
@@ -553,6 +567,7 @@ baebot_master/CMakeFiles/BaeBotMaster.dir/src/bb_sensors/BbLaser.cpp.o: /opt/ros
 baebot_master/CMakeFiles/BaeBotMaster.dir/src/bb_sensors/BbLaser.cpp.o: /opt/ros/melodic/include/ros/exceptions.h
 baebot_master/CMakeFiles/BaeBotMaster.dir/src/bb_sensors/BbLaser.cpp.o: /opt/ros/melodic/include/ros/forwards.h
 baebot_master/CMakeFiles/BaeBotMaster.dir/src/bb_sensors/BbLaser.cpp.o: /opt/ros/melodic/include/ros/init.h
+baebot_master/CMakeFiles/BaeBotMaster.dir/src/bb_sensors/BbLaser.cpp.o: /opt/ros/melodic/include/ros/internal/condition_variable.h
 baebot_master/CMakeFiles/BaeBotMaster.dir/src/bb_sensors/BbLaser.cpp.o: /opt/ros/melodic/include/ros/macros.h
 baebot_master/CMakeFiles/BaeBotMaster.dir/src/bb_sensors/BbLaser.cpp.o: /opt/ros/melodic/include/ros/master.h
 baebot_master/CMakeFiles/BaeBotMaster.dir/src/bb_sensors/BbLaser.cpp.o: /opt/ros/melodic/include/ros/message.h
@@ -602,6 +617,7 @@ baebot_master/CMakeFiles/BaeBotMaster.dir/src/bb_sensors/BbLaser.cpp.o: /opt/ros
 baebot_master/CMakeFiles/BaeBotMaster.dir/src/bb_sensors/BbLaser.cpp.o: /opt/ros/melodic/include/sensor_msgs/PointCloud.h
 baebot_master/CMakeFiles/BaeBotMaster.dir/src/bb_sensors/BbLaser.cpp.o: /opt/ros/melodic/include/sensor_msgs/PointCloud2.h
 baebot_master/CMakeFiles/BaeBotMaster.dir/src/bb_sensors/BbLaser.cpp.o: /opt/ros/melodic/include/sensor_msgs/PointField.h
+baebot_master/CMakeFiles/BaeBotMaster.dir/src/bb_sensors/BbLaser.cpp.o: /opt/ros/melodic/include/std_msgs/Empty.h
 baebot_master/CMakeFiles/BaeBotMaster.dir/src/bb_sensors/BbLaser.cpp.o: /opt/ros/melodic/include/std_msgs/Header.h
 baebot_master/CMakeFiles/BaeBotMaster.dir/src/bb_sensors/BbLaser.cpp.o: /opt/ros/melodic/include/tf/LinearMath/Matrix3x3.h
 baebot_master/CMakeFiles/BaeBotMaster.dir/src/bb_sensors/BbLaser.cpp.o: /opt/ros/melodic/include/tf/LinearMath/Quaternion.h
@@ -624,8 +640,10 @@ baebot_master/CMakeFiles/BaeBotMaster.dir/src/bb_sensors/BbLaser.cpp.o: /opt/ros
 baebot_master/CMakeFiles/BaeBotMaster.dir/src/bb_sensors/BbLaser.cpp.o: /opt/ros/melodic/include/tf2_msgs/FrameGraph.h
 baebot_master/CMakeFiles/BaeBotMaster.dir/src/bb_sensors/BbLaser.cpp.o: /opt/ros/melodic/include/tf2_msgs/FrameGraphRequest.h
 baebot_master/CMakeFiles/BaeBotMaster.dir/src/bb_sensors/BbLaser.cpp.o: /opt/ros/melodic/include/tf2_msgs/FrameGraphResponse.h
+baebot_master/CMakeFiles/BaeBotMaster.dir/src/bb_sensors/BbLaser.cpp.o: /opt/ros/melodic/include/tf2_msgs/TFMessage.h
 baebot_master/CMakeFiles/BaeBotMaster.dir/src/bb_sensors/BbLaser.cpp.o: /opt/ros/melodic/include/tf2_ros/buffer.h
 baebot_master/CMakeFiles/BaeBotMaster.dir/src/bb_sensors/BbLaser.cpp.o: /opt/ros/melodic/include/tf2_ros/buffer_interface.h
+baebot_master/CMakeFiles/BaeBotMaster.dir/src/bb_sensors/BbLaser.cpp.o: /opt/ros/melodic/include/tf2_ros/transform_listener.h
 baebot_master/CMakeFiles/BaeBotMaster.dir/src/bb_sensors/BbLaser.cpp.o: /opt/ros/melodic/include/xmlrpcpp/XmlRpcDecl.h
 baebot_master/CMakeFiles/BaeBotMaster.dir/src/bb_sensors/BbLaser.cpp.o: /opt/ros/melodic/include/xmlrpcpp/XmlRpcValue.h
 baebot_master/CMakeFiles/BaeBotMaster.dir/src/bb_sensors/BbLaser.cpp.o: /usr/include/eigen3/Eigen/Core
