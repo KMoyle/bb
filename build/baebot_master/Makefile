@@ -1421,6 +1421,33 @@ src/baebotMasterMain.cpp.s:
 	cd /home/kyle/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/BaeBotMaster.dir/build.make baebot_master/CMakeFiles/BaeBotMaster.dir/src/baebotMasterMain.cpp.s
 .PHONY : src/baebotMasterMain.cpp.s
 
+src/bb_control/BbControl.o: src/bb_control/BbControl.cpp.o
+
+.PHONY : src/bb_control/BbControl.o
+
+# target to build an object file
+src/bb_control/BbControl.cpp.o:
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/BaeBotMaster.dir/build.make baebot_master/CMakeFiles/BaeBotMaster.dir/src/bb_control/BbControl.cpp.o
+.PHONY : src/bb_control/BbControl.cpp.o
+
+src/bb_control/BbControl.i: src/bb_control/BbControl.cpp.i
+
+.PHONY : src/bb_control/BbControl.i
+
+# target to preprocess a source file
+src/bb_control/BbControl.cpp.i:
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/BaeBotMaster.dir/build.make baebot_master/CMakeFiles/BaeBotMaster.dir/src/bb_control/BbControl.cpp.i
+.PHONY : src/bb_control/BbControl.cpp.i
+
+src/bb_control/BbControl.s: src/bb_control/BbControl.cpp.s
+
+.PHONY : src/bb_control/BbControl.s
+
+# target to generate assembly for a file
+src/bb_control/BbControl.cpp.s:
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/BaeBotMaster.dir/build.make baebot_master/CMakeFiles/BaeBotMaster.dir/src/bb_control/BbControl.cpp.s
+.PHONY : src/bb_control/BbControl.cpp.s
+
 src/bb_sensors/BbLaser.o: src/bb_sensors/BbLaser.cpp.o
 
 .PHONY : src/bb_sensors/BbLaser.o
@@ -1547,6 +1574,9 @@ help:
 	@echo "... src/baebotMasterMain.o"
 	@echo "... src/baebotMasterMain.i"
 	@echo "... src/baebotMasterMain.s"
+	@echo "... src/bb_control/BbControl.o"
+	@echo "... src/bb_control/BbControl.i"
+	@echo "... src/bb_control/BbControl.s"
 	@echo "... src/bb_sensors/BbLaser.o"
 	@echo "... src/bb_sensors/BbLaser.i"
 	@echo "... src/bb_sensors/BbLaser.s"

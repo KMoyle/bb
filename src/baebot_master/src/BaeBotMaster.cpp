@@ -23,12 +23,31 @@ BaeBotMaster::~BaeBotMaster(){
 
 void BaeBotMaster::controlLoopFunc(){
 
+    int	controlLoopCnt = 0;
+    ros::Rate loop_rate(LOOP_RATE);
 
-    // queuing tasks
-    // ros::Rate
-    updateLoop();
 
-    // Sensor update check
+    while ( ros::ok() ) {
+
+        // queuing tasks
+        // ros::Rate
+        updateLoop();
+
+        if ( 0 ) ROS_INFO( "Control Loop Cnt: %d", controlLoopCnt++ );
+
+        ros::spinOnce();
+        loop_rate.sleep();
+    }
+
+
+
+}
+
+void BaeBotMaster::updateLoop(){
+
+    updateDt();
+
+        // Sensor update check
     sensorUpdate();
 
     // Update the pose and navigation parameters
@@ -56,14 +75,20 @@ void BaeBotMaster::controlLoopFunc(){
 
 }
 
-void BaeBotMaster::updateLoop(){
-
-    updateDt();
-
-}
-
 void BaeBotMaster::updateDt(){
 
+     ros::Time currentTime = ros::Time::now();
+
+     if ( lastUpdateTime == NULL ) {
+          dt = ros::Duration( 1.0 / sampleRate );
+     } else {
+          dt = currentTime - *lastUpdateTime;
+     }
+     lastUpdateTime = new ros::Time( currentTime.sec, currentTime.nsec );
+
+     if ( dt > ros::Duration( 1.5 / sampleRate ) ) {
+          ROS_WARN( "Time between updates (%2f) was greater than 1.5 times the requested time (%2f)!", dt.toSec(), (1.0 / sampleRate) );
+     }
 
 
 }
@@ -73,6 +98,26 @@ void BaeBotMaster::updateDt(){
 *
 */
 void BaeBotMaster::navUpdate(){
+
+    static int x_counter = 0;
+    static int y_counter = 0;
+    static double theta_counter = 0;
+
+    static int counter = 0;
+
+    if ( (counter % 5) == 0 ){
+        pose.x = x_counter;
+        x_counter++;
+    };
+    if ( (counter % 10) == 0 ){
+        pose.y = y_counter;
+        y_counter++;
+    };
+    if ( (counter % 25) == 0 ){
+        pose.theta = theta_counter;
+        theta_counter+= 0.1;
+    };
+
 
 
 

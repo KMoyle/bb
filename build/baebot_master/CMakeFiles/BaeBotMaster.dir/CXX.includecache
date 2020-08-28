@@ -31,6 +31,8 @@ baebot_global.h
 /home/kyle/baebot_ws/src/baebot_master/src/baebot_global.h
 bb_sensors/BbLaser.h
 /home/kyle/baebot_ws/src/baebot_master/src/bb_sensors/BbLaser.h
+bb_control/BbControl.h
+/home/kyle/baebot_ws/src/baebot_master/src/bb_control/BbControl.h
 math.h
 -
 
@@ -48,6 +50,18 @@ boost/thread.hpp
 boost/date_time.hpp
 -
 
+/home/kyle/baebot_ws/src/baebot_master/src/baebot_global.h
+
+/home/kyle/baebot_ws/src/baebot_master/src/bb_control/BbControl.cpp
+BbControl.h
+/home/kyle/baebot_ws/src/baebot_master/src/bb_control/BbControl.h
+../BaeBotMaster.h
+/home/kyle/baebot_ws/src/baebot_master/src/BaeBotMaster.h
+
+/home/kyle/baebot_ws/src/baebot_master/src/bb_control/BbControl.h
+ros/ros.h
+/home/kyle/baebot_ws/src/baebot_master/src/bb_control/ros/ros.h
+../baebot_global.h
 /home/kyle/baebot_ws/src/baebot_master/src/baebot_global.h
 
 /home/kyle/baebot_ws/src/baebot_master/src/bb_sensors/BbLaser.cpp

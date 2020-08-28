@@ -225,6 +225,9 @@ add_executable( BaeBotMaster
     src/bb_sensors/BbLaser.cpp
     src/bb_sensors/BbLaser.h
 
+    src/bb_control/BbControl.cpp
+    src/bb_control/BbControl.h
+
 )
 
 target_link_libraries( BaeBotMaster ${catkin_LIBRARIES})

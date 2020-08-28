@@ -11,6 +11,7 @@
 
 #include "baebot_global.h"
 #include "bb_sensors/BbLaser.h"
+#include "bb_control/BbControl.h"
 #include <math.h>
 
 
@@ -27,9 +28,13 @@ class BaeBotMaster {
 
     public:
 
+
+    BaeBotControl baeBotControl;
+
     double sampleRate;
     ros::Duration dt;
-    ros::Rate r = 10; //10Hz
+    ros::Rate r = 30; //10Hz
+    ros::Time* lastUpdateTime = NULL;
 
     POSE        pose;
     POSE        poseDmd;
@@ -39,7 +44,7 @@ class BaeBotMaster {
 
     //Pubs
     ros::Publisher rviz_pub;
-    ros::Publisher im_alive_pub;
+    ros::Publisher pose_pub;
 
     ros::Subscriber laser_sub;
 

@@ -6,6 +6,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/kyle/baebot_ws/src/baebot_master/src/BaeBotMaster.cpp" "/home/kyle/baebot_ws/build/baebot_master/CMakeFiles/BaeBotMaster.dir/src/BaeBotMaster.cpp.o"
   "/home/kyle/baebot_ws/src/baebot_master/src/baebotMasterMain.cpp" "/home/kyle/baebot_ws/build/baebot_master/CMakeFiles/BaeBotMaster.dir/src/baebotMasterMain.cpp.o"
+  "/home/kyle/baebot_ws/src/baebot_master/src/bb_control/BbControl.cpp" "/home/kyle/baebot_ws/build/baebot_master/CMakeFiles/BaeBotMaster.dir/src/bb_control/BbControl.cpp.o"
   "/home/kyle/baebot_ws/src/baebot_master/src/bb_sensors/BbLaser.cpp" "/home/kyle/baebot_ws/build/baebot_master/CMakeFiles/BaeBotMaster.dir/src/bb_sensors/BbLaser.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
