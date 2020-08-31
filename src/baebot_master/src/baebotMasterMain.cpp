@@ -45,9 +45,6 @@ int main( int argc, char **argv){
         baebotMaster->r.sleep();
 
         //ROS_WARN("SPINNING");
-
-
-
     }
 
 

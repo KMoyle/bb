@@ -50,6 +50,8 @@ void BaeBotMaster::updateLoop(){
         // Sensor update check
     sensorUpdate();
 
+    // TODO -- controller update
+
     // Update the pose and navigation parameters
     navUpdate();
 
@@ -99,24 +101,20 @@ void BaeBotMaster::updateDt(){
 */
 void BaeBotMaster::navUpdate(){
 
-    static int x_counter = 0;
-    static int y_counter = 0;
-    static double theta_counter = 0;
+    double xdot, ydot, thetadot;
 
-    static int counter = 0;
+    // TODO -- function that takes the WHEEL encoder info and outputs the vw
 
-    if ( (counter % 5) == 0 ){
-        pose.x = x_counter;
-        x_counter++;
-    };
-    if ( (counter % 10) == 0 ){
-        pose.y = y_counter;
-        y_counter++;
-    };
-    if ( (counter % 25) == 0 ){
-        pose.theta = theta_counter;
-        theta_counter+= 0.1;
-    };
+    // using the velocity and current angle to work out the change in x, y & theta
+    xdot = pose.v * cos( pose.theta );
+    ydot = pose.v * sin( pose.theta );
+    thetadot = pose.w;
+
+    // updating the new pose information
+    pose.x = pose.x + xdot*(dt.toSec());
+    pose.y = pose.y + ydot*(dt.toSec());
+    pose.theta = pose.theta + thetadot*(dt.toSec());
+
 
 
 

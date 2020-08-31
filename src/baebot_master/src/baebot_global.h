@@ -22,6 +22,8 @@ typedef struct {
     double y = 0;       // (m)
     double theta = 0;   // (rads)
 
+    double v = 0;
+    double w = 0;
     double velX = 0;    // (m/s)
     double velY = 0;    // (m/s)
 
