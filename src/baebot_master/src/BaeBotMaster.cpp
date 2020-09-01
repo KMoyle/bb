@@ -3,11 +3,16 @@
 
 
 
-BaeBotMaster::BaeBotMaster(ros::NodeHandle *nh ){
+BaeBotMaster::BaeBotMaster(ros::NodeHandle *nh ) :
+                it_(*nh)
+{
+
 
 
         //laser_sub = nh->subscribe<sensor_msgs::LaserScan>("/rplidar_scan" , 1, &BaeBotMaster::rpLidarCallback, this);
         laser_sub = nh->subscribe<sensor_msgs::LaserScan>("/scan" , 1, &BaeBotMaster::rpLidarCallback, this);
+        //laser_sub = nh->subscribe<sensor_msgs::MultiEchoLaserScan>("/horizontal_laser_2d" , 1, &BaeBotMaster::rpLidarCallback, this);
+        image_sub = it_.subscribe("/camera/image_raw" , 1, &BaeBotMaster::cameraImageCallback, this);
 
 
         ROS_WARN("ctor");

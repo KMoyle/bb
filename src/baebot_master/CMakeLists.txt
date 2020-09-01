@@ -20,10 +20,12 @@ find_package(catkin REQUIRED COMPONENTS
   laser_geometry
   message_filters
   geometry_msgs
+  image_transport
 )
 
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)
+find_package(OpenCV REQUIRED)
 
 
 ## Uncomment this if the package has a setup.py. This macro ensures
@@ -224,6 +226,8 @@ add_executable( BaeBotMaster
 
     src/bb_sensors/BbLaser.cpp
     src/bb_sensors/BbLaser.h
+    src/bb_sensors/BbImage.cpp
+    src/bb_sensors/BbImage.h
 
     src/bb_control/BbControl.cpp
     src/bb_control/BbControl.h
