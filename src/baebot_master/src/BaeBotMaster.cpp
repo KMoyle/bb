@@ -11,6 +11,7 @@ BaeBotMaster::BaeBotMaster(ros::NodeHandle *nh ) :
 
         //laser_sub = nh->subscribe<sensor_msgs::LaserScan>("/rplidar_scan" , 1, &BaeBotMaster::rpLidarCallback, this);
         laser_sub = nh->subscribe<sensor_msgs::LaserScan>("/scan" , 1, &BaeBotMaster::rpLidarCallback, this);
+        pose_sub = nh->subscribe<nav_msgs::Odometry>("/odom" , 1, &BaeBotMaster::bbPoseCallback, this);
         //laser_sub = nh->subscribe<sensor_msgs::MultiEchoLaserScan>("/horizontal_laser_2d" , 1, &BaeBotMaster::rpLidarCallback, this);
         image_sub = it_.subscribe("/camera/image_raw" , 1, &BaeBotMaster::cameraImageCallback, this);
 
@@ -106,19 +107,7 @@ void BaeBotMaster::updateDt(){
 */
 void BaeBotMaster::navUpdate(){
 
-    double xdot, ydot, thetadot;
 
-    // TODO -- function that takes the WHEEL encoder info and outputs the vw
-
-    // using the velocity and current angle to work out the change in x, y & theta
-    xdot = pose.v * cos( pose.theta );
-    ydot = pose.v * sin( pose.theta );
-    thetadot = pose.w;
-
-    // updating the new pose information
-    pose.x = pose.x + xdot*(dt.toSec());
-    pose.y = pose.y + ydot*(dt.toSec());
-    pose.theta = pose.theta + thetadot*(dt.toSec());
 
 
 
@@ -157,6 +146,22 @@ void BaeBotMaster::sendMotorCommands(){
 void BaeBotMaster::publishPoseMessages(){
 
 
+
+}
+
+void BaeBotMaster::bbPoseCallback(const nav_msgs::Odometry::ConstPtr& msg){
+
+
+    pose.x = msg->pose.pose.position.x;
+    pose.y = msg->pose.pose.position.y;
+
+    pose.qx = msg->pose.pose.orientation.x;
+    pose.qy = msg->pose.pose.orientation.y;
+    pose.qz = msg->pose.pose.orientation.z;
+    pose.qw = msg->pose.pose.orientation.w;
+
+    pose.velX = msg->twist.twist.linear.x;
+    pose.velY = msg->twist.twist.linear.y;
 
 }
 

@@ -22,6 +22,11 @@ typedef struct {
     double y = 0;       // (m)
     double theta = 0;   // (rads)
 
+    double qx = 0;
+    double qy = 0;
+    double qz = 0;
+    double qw = 1;
+
     double v = 0;
     double w = 0;
     double velX = 0;    // (m/s)

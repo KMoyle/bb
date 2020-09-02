@@ -26,10 +26,9 @@ int main( int argc, char **argv){
 
     /*
     *   Publisher setup
-    */
 	baebotMaster->pose_pub = nh.advertise< geometry_msgs::Pose >( "pose", 1 );
 	baebotMaster->poseDmd_pub = nh.advertise< geometry_msgs::Pose >( "poseDmd", 1 );
-
+    */
 
 
 

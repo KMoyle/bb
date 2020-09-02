@@ -2,13 +2,18 @@
 #define BAEBOTMASTER_H_INCLUDED
 
 #include "ros/ros.h"
+
 #include "sensor_msgs/LaserScan.h"
 #include "sensor_msgs/MultiEchoLaserScan.h"
 #include "sensor_msgs/Image.h"
 #include "sensor_msgs/PointCloud.h"
+
 #include "laser_geometry/laser_geometry.h"
 #include "tf2_ros/transform_listener.h"
+
 #include <geometry_msgs/TransformStamped.h>
+#include <nav_msgs/Odometry.h>
+
 #include <image_transport/image_transport.h>
 
 #include "baebot_global.h"
@@ -23,6 +28,7 @@ class BaeBotMaster {
 
     // Subs
     ros::Subscriber laser_sub;
+    ros::Subscriber pose_sub;
     image_transport::Subscriber image_sub;
     image_transport::ImageTransport it_;
 
@@ -70,6 +76,7 @@ class BaeBotMaster {
     void rpLidarCallback(const sensor_msgs::LaserScan::ConstPtr& );
     //void rpLidarCallback(const sensor_msgs::MultiEchoLaserScan::ConstPtr& );
     void cameraImageCallback(const sensor_msgs::Image::ConstPtr& );
+    void bbPoseCallback(const nav_msgs::Odometry::ConstPtr& );
 
 
     // OPERATIONAL CONTROL FUNCTION
