@@ -11,6 +11,7 @@ BaeBotMaster::BaeBotMaster(ros::NodeHandle *nh ) :
 
         //laser_sub = nh->subscribe<sensor_msgs::LaserScan>("/rplidar_scan" , 1, &BaeBotMaster::rpLidarCallback, this);
         laser_sub = nh->subscribe<sensor_msgs::LaserScan>("/scan" , 1, &BaeBotMaster::rpLidarCallback, this);
+        pose_sub = nh->subscribe<nav_msgs::Odometry>("/odom" , 1, &BaeBotMaster::bbPoseCallback, this);
         //laser_sub = nh->subscribe<sensor_msgs::MultiEchoLaserScan>("/horizontal_laser_2d" , 1, &BaeBotMaster::rpLidarCallback, this);
         image_sub = it_.subscribe("/camera/image_raw" , 1, &BaeBotMaster::cameraImageCallback, this);
 
@@ -105,20 +106,16 @@ void BaeBotMaster::updateDt(){
 *
 */
 void BaeBotMaster::navUpdate(){
+    std::pair<double, double> motor_cmds_vw;
+    // calculate the forward and angular velocities [v,w]
+    motor_cmds_vw = baeBotControl.controllerProportional( pose, poseDmd );
+    // publish the cmd_vel msg, Twsit
+    publishMotorCommands( motor_cmds_vw );
 
-    double xdot, ydot, thetadot;
 
-    // TODO -- function that takes the WHEEL encoder info and outputs the vw
 
-    // using the velocity and current angle to work out the change in x, y & theta
-    xdot = pose.v * cos( pose.theta );
-    ydot = pose.v * sin( pose.theta );
-    thetadot = pose.w;
 
-    // updating the new pose information
-    pose.x = pose.x + xdot*(dt.toSec());
-    pose.y = pose.y + ydot*(dt.toSec());
-    pose.theta = pose.theta + thetadot*(dt.toSec());
+
 
 
 
@@ -148,7 +145,16 @@ void BaeBotMaster::updateCurrentTask(){
 
 }
 
-void BaeBotMaster::sendMotorCommands(){
+void BaeBotMaster::publishMotorCommands( std::pair<double, double> vw){
+
+    // ROS twist msg type
+    geometry_msgs::Twist msg;
+    // Filling the msg
+    msg.linear.x = vw.first;
+    msg.linear.y = 0;
+    msg.angular.z = vw.second;
+    // Publishing the msg
+    motorDmd_pub.publish(msg);
 
 
 
@@ -157,6 +163,29 @@ void BaeBotMaster::sendMotorCommands(){
 void BaeBotMaster::publishPoseMessages(){
 
 
+
+}
+
+void BaeBotMaster::bbPoseCallback(const nav_msgs::Odometry::ConstPtr& msg){
+    double roll, pitch, yaw;
+    // Getting the Yaw info from  Quaternion
+    tf::Quaternion q (msg->pose.pose.orientation.x,
+                       msg->pose.pose.orientation.y,
+                       msg->pose.pose.orientation.z,
+                       msg->pose.pose.orientation.w);
+    tf::Matrix3x3 m( q );
+    m.getRPY(roll, pitch, yaw);
+
+    // Updating the pose info from the base_control node
+    pose.x = msg->pose.pose.position.x;
+    pose.y = msg->pose.pose.position.y;
+    pose.theta = yaw;
+    pose.qx = msg->pose.pose.orientation.x;
+    pose.qy = msg->pose.pose.orientation.y;
+    pose.qz = msg->pose.pose.orientation.z;
+    pose.qw = msg->pose.pose.orientation.w;
+    pose.velX = msg->twist.twist.linear.x;
+    pose.velY = msg->twist.twist.linear.y;
 
 }
 

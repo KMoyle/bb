@@ -298,6 +298,19 @@ BaeBotMaster/fast:
 .PHONY : BaeBotMaster/fast
 
 #=============================================================================
+# Target rules for targets named nav_msgs_generate_messages_nodejs
+
+# Build rule for target.
+nav_msgs_generate_messages_nodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 nav_msgs_generate_messages_nodejs
+.PHONY : nav_msgs_generate_messages_nodejs
+
+# fast build rule for target.
+nav_msgs_generate_messages_nodejs/fast:
+	$(MAKE) -f baebot_master/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/build.make baebot_master/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/build
+.PHONY : nav_msgs_generate_messages_nodejs/fast
+
+#=============================================================================
 # Target rules for targets named geometry_msgs_generate_messages_py
 
 # Build rule for target.
@@ -322,6 +335,19 @@ geometry_msgs_generate_messages_lisp: cmake_check_build_system
 geometry_msgs_generate_messages_lisp/fast:
 	$(MAKE) -f baebot_master/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build.make baebot_master/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build
 .PHONY : geometry_msgs_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named nav_msgs_generate_messages_cpp
+
+# Build rule for target.
+nav_msgs_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 nav_msgs_generate_messages_cpp
+.PHONY : nav_msgs_generate_messages_cpp
+
+# fast build rule for target.
+nav_msgs_generate_messages_cpp/fast:
+	$(MAKE) -f baebot_master/CMakeFiles/nav_msgs_generate_messages_cpp.dir/build.make baebot_master/CMakeFiles/nav_msgs_generate_messages_cpp.dir/build
+.PHONY : nav_msgs_generate_messages_cpp/fast
 
 #=============================================================================
 # Target rules for targets named sensor_msgs_generate_messages_lisp
@@ -948,6 +974,19 @@ topic_tools_generate_messages_eus/fast:
 .PHONY : topic_tools_generate_messages_eus/fast
 
 #=============================================================================
+# Target rules for targets named nav_msgs_generate_messages_lisp
+
+# Build rule for target.
+nav_msgs_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 nav_msgs_generate_messages_lisp
+.PHONY : nav_msgs_generate_messages_lisp
+
+# fast build rule for target.
+nav_msgs_generate_messages_lisp/fast:
+	$(MAKE) -f baebot_master/CMakeFiles/nav_msgs_generate_messages_lisp.dir/build.make baebot_master/CMakeFiles/nav_msgs_generate_messages_lisp.dir/build
+.PHONY : nav_msgs_generate_messages_lisp/fast
+
+#=============================================================================
 # Target rules for targets named pcl_msgs_generate_messages_nodejs
 
 # Build rule for target.
@@ -1273,6 +1312,19 @@ tf2_msgs_generate_messages_cpp/fast:
 .PHONY : tf2_msgs_generate_messages_cpp/fast
 
 #=============================================================================
+# Target rules for targets named nav_msgs_generate_messages_eus
+
+# Build rule for target.
+nav_msgs_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 nav_msgs_generate_messages_eus
+.PHONY : nav_msgs_generate_messages_eus
+
+# fast build rule for target.
+nav_msgs_generate_messages_eus/fast:
+	$(MAKE) -f baebot_master/CMakeFiles/nav_msgs_generate_messages_eus.dir/build.make baebot_master/CMakeFiles/nav_msgs_generate_messages_eus.dir/build
+.PHONY : nav_msgs_generate_messages_eus/fast
+
+#=============================================================================
 # Target rules for targets named tf2_msgs_generate_messages_eus
 
 # Build rule for target.
@@ -1284,6 +1336,19 @@ tf2_msgs_generate_messages_eus: cmake_check_build_system
 tf2_msgs_generate_messages_eus/fast:
 	$(MAKE) -f baebot_master/CMakeFiles/tf2_msgs_generate_messages_eus.dir/build.make baebot_master/CMakeFiles/tf2_msgs_generate_messages_eus.dir/build
 .PHONY : tf2_msgs_generate_messages_eus/fast
+
+#=============================================================================
+# Target rules for targets named nav_msgs_generate_messages_py
+
+# Build rule for target.
+nav_msgs_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 nav_msgs_generate_messages_py
+.PHONY : nav_msgs_generate_messages_py
+
+# fast build rule for target.
+nav_msgs_generate_messages_py/fast:
+	$(MAKE) -f baebot_master/CMakeFiles/nav_msgs_generate_messages_py.dir/build.make baebot_master/CMakeFiles/nav_msgs_generate_messages_py.dir/build
+.PHONY : nav_msgs_generate_messages_py/fast
 
 #=============================================================================
 # Target rules for targets named dynamic_reconfigure_gencfg
@@ -1347,8 +1412,10 @@ help:
 	@echo "... gtest_main"
 	@echo "... gtest"
 	@echo "... BaeBotMaster"
+	@echo "... nav_msgs_generate_messages_nodejs"
 	@echo "... geometry_msgs_generate_messages_py"
 	@echo "... geometry_msgs_generate_messages_lisp"
+	@echo "... nav_msgs_generate_messages_cpp"
 	@echo "... sensor_msgs_generate_messages_lisp"
 	@echo "... geometry_msgs_generate_messages_eus"
 	@echo "... roscpp_generate_messages_py"
@@ -1397,6 +1464,7 @@ help:
 	@echo "... dynamic_reconfigure_generate_messages_lisp"
 	@echo "... pcl_msgs_generate_messages_eus"
 	@echo "... topic_tools_generate_messages_eus"
+	@echo "... nav_msgs_generate_messages_lisp"
 	@echo "... pcl_msgs_generate_messages_nodejs"
 	@echo "... nodelet_generate_messages_nodejs"
 	@echo "... actionlib_generate_messages_eus"
@@ -1422,7 +1490,9 @@ help:
 	@echo "... tf_generate_messages_lisp"
 	@echo "... tf_generate_messages_nodejs"
 	@echo "... tf2_msgs_generate_messages_cpp"
+	@echo "... nav_msgs_generate_messages_eus"
 	@echo "... tf2_msgs_generate_messages_eus"
+	@echo "... nav_msgs_generate_messages_py"
 	@echo "... dynamic_reconfigure_gencfg"
 	@echo "... tf2_msgs_generate_messages_lisp"
 	@echo "... tf2_msgs_generate_messages_nodejs"

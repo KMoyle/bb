@@ -183,6 +183,21 @@ BaeBotMaster/fast:
 .PHONY : BaeBotMaster/fast
 
 # Convenience name for target.
+baebot_master/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/rule:
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/rule
+.PHONY : baebot_master/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+nav_msgs_generate_messages_nodejs: baebot_master/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/rule
+
+.PHONY : nav_msgs_generate_messages_nodejs
+
+# fast build rule for target.
+nav_msgs_generate_messages_nodejs/fast:
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/build.make baebot_master/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/build
+.PHONY : nav_msgs_generate_messages_nodejs/fast
+
+# Convenience name for target.
 baebot_master/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule:
 	cd /home/kyle/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
 .PHONY : baebot_master/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
@@ -211,6 +226,21 @@ geometry_msgs_generate_messages_lisp: baebot_master/CMakeFiles/geometry_msgs_gen
 geometry_msgs_generate_messages_lisp/fast:
 	cd /home/kyle/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build.make baebot_master/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build
 .PHONY : geometry_msgs_generate_messages_lisp/fast
+
+# Convenience name for target.
+baebot_master/CMakeFiles/nav_msgs_generate_messages_cpp.dir/rule:
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/nav_msgs_generate_messages_cpp.dir/rule
+.PHONY : baebot_master/CMakeFiles/nav_msgs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+nav_msgs_generate_messages_cpp: baebot_master/CMakeFiles/nav_msgs_generate_messages_cpp.dir/rule
+
+.PHONY : nav_msgs_generate_messages_cpp
+
+# fast build rule for target.
+nav_msgs_generate_messages_cpp/fast:
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/nav_msgs_generate_messages_cpp.dir/build.make baebot_master/CMakeFiles/nav_msgs_generate_messages_cpp.dir/build
+.PHONY : nav_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
 baebot_master/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule:
@@ -933,6 +963,21 @@ topic_tools_generate_messages_eus/fast:
 .PHONY : topic_tools_generate_messages_eus/fast
 
 # Convenience name for target.
+baebot_master/CMakeFiles/nav_msgs_generate_messages_lisp.dir/rule:
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/nav_msgs_generate_messages_lisp.dir/rule
+.PHONY : baebot_master/CMakeFiles/nav_msgs_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+nav_msgs_generate_messages_lisp: baebot_master/CMakeFiles/nav_msgs_generate_messages_lisp.dir/rule
+
+.PHONY : nav_msgs_generate_messages_lisp
+
+# fast build rule for target.
+nav_msgs_generate_messages_lisp/fast:
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/nav_msgs_generate_messages_lisp.dir/build.make baebot_master/CMakeFiles/nav_msgs_generate_messages_lisp.dir/build
+.PHONY : nav_msgs_generate_messages_lisp/fast
+
+# Convenience name for target.
 baebot_master/CMakeFiles/pcl_msgs_generate_messages_nodejs.dir/rule:
 	cd /home/kyle/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/pcl_msgs_generate_messages_nodejs.dir/rule
 .PHONY : baebot_master/CMakeFiles/pcl_msgs_generate_messages_nodejs.dir/rule
@@ -1308,6 +1353,21 @@ tf2_msgs_generate_messages_cpp/fast:
 .PHONY : tf2_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
+baebot_master/CMakeFiles/nav_msgs_generate_messages_eus.dir/rule:
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/nav_msgs_generate_messages_eus.dir/rule
+.PHONY : baebot_master/CMakeFiles/nav_msgs_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+nav_msgs_generate_messages_eus: baebot_master/CMakeFiles/nav_msgs_generate_messages_eus.dir/rule
+
+.PHONY : nav_msgs_generate_messages_eus
+
+# fast build rule for target.
+nav_msgs_generate_messages_eus/fast:
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/nav_msgs_generate_messages_eus.dir/build.make baebot_master/CMakeFiles/nav_msgs_generate_messages_eus.dir/build
+.PHONY : nav_msgs_generate_messages_eus/fast
+
+# Convenience name for target.
 baebot_master/CMakeFiles/tf2_msgs_generate_messages_eus.dir/rule:
 	cd /home/kyle/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/tf2_msgs_generate_messages_eus.dir/rule
 .PHONY : baebot_master/CMakeFiles/tf2_msgs_generate_messages_eus.dir/rule
@@ -1321,6 +1381,21 @@ tf2_msgs_generate_messages_eus: baebot_master/CMakeFiles/tf2_msgs_generate_messa
 tf2_msgs_generate_messages_eus/fast:
 	cd /home/kyle/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/tf2_msgs_generate_messages_eus.dir/build.make baebot_master/CMakeFiles/tf2_msgs_generate_messages_eus.dir/build
 .PHONY : tf2_msgs_generate_messages_eus/fast
+
+# Convenience name for target.
+baebot_master/CMakeFiles/nav_msgs_generate_messages_py.dir/rule:
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/nav_msgs_generate_messages_py.dir/rule
+.PHONY : baebot_master/CMakeFiles/nav_msgs_generate_messages_py.dir/rule
+
+# Convenience name for target.
+nav_msgs_generate_messages_py: baebot_master/CMakeFiles/nav_msgs_generate_messages_py.dir/rule
+
+.PHONY : nav_msgs_generate_messages_py
+
+# fast build rule for target.
+nav_msgs_generate_messages_py/fast:
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/nav_msgs_generate_messages_py.dir/build.make baebot_master/CMakeFiles/nav_msgs_generate_messages_py.dir/build
+.PHONY : nav_msgs_generate_messages_py/fast
 
 # Convenience name for target.
 baebot_master/CMakeFiles/dynamic_reconfigure_gencfg.dir/rule:
@@ -1512,10 +1587,12 @@ help:
 	@echo "... install/local"
 	@echo "... install"
 	@echo "... list_install_components"
-	@echo "... test"
 	@echo "... BaeBotMaster"
+	@echo "... test"
+	@echo "... nav_msgs_generate_messages_nodejs"
 	@echo "... geometry_msgs_generate_messages_py"
 	@echo "... geometry_msgs_generate_messages_lisp"
+	@echo "... nav_msgs_generate_messages_cpp"
 	@echo "... sensor_msgs_generate_messages_lisp"
 	@echo "... geometry_msgs_generate_messages_eus"
 	@echo "... roscpp_generate_messages_py"
@@ -1566,6 +1643,7 @@ help:
 	@echo "... dynamic_reconfigure_generate_messages_lisp"
 	@echo "... pcl_msgs_generate_messages_eus"
 	@echo "... topic_tools_generate_messages_eus"
+	@echo "... nav_msgs_generate_messages_lisp"
 	@echo "... pcl_msgs_generate_messages_nodejs"
 	@echo "... nodelet_generate_messages_nodejs"
 	@echo "... actionlib_generate_messages_eus"
@@ -1591,7 +1669,9 @@ help:
 	@echo "... tf_generate_messages_lisp"
 	@echo "... tf_generate_messages_nodejs"
 	@echo "... tf2_msgs_generate_messages_cpp"
+	@echo "... nav_msgs_generate_messages_eus"
 	@echo "... tf2_msgs_generate_messages_eus"
+	@echo "... nav_msgs_generate_messages_py"
 	@echo "... dynamic_reconfigure_gencfg"
 	@echo "... tf2_msgs_generate_messages_lisp"
 	@echo "... tf2_msgs_generate_messages_nodejs"
