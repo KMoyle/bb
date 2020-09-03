@@ -18,6 +18,7 @@ find_package(catkin REQUIRED COMPONENTS
   std_msgs
   nav_msgs
   tf2_ros
+    tf2
   laser_geometry
   message_filters
   geometry_msgs

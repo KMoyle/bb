@@ -60,10 +60,11 @@ int   BaeBotControl::controllerPurePursuit( POSE p, POSE pd ){
 
 };
 
-int   BaeBotControl::controllerProportional( POSE p, POSE pd ){
+std::pair<double, double>   BaeBotControl::controllerProportional( POSE p, POSE pd ){
 
     double ang_diff;
     double theta_star;
+    std::pair<double, double> motor_cmds_vw;
 
     // Proportional control
     p.v = Kp*sqrt( pow( pd.x - p.x, 2) + pow( pd.y - p.y, 2) );
@@ -75,9 +76,11 @@ int   BaeBotControl::controllerProportional( POSE p, POSE pd ){
 
     p.w = Kn*ang_diff;
 
-    //TODO -- Need a function to turn v and w into motor cmds, need to look at how they do it
 
-    //TODO -- function to send motor cmds
+    motor_cmds_vw.first = p.v;
+    motor_cmds_vw.second = p.w;
+
+    return motor_cmds_vw;
 
 
 };
@@ -97,3 +100,31 @@ double BaeBotControl::angsDiff( double theta_star, double theta_current){
     return ang_difference;
 
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

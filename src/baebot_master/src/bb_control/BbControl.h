@@ -14,7 +14,7 @@ public:
     BaeBotControl();
 
     int controllerPurePursuit( POSE, POSE );
-    int controllerProportional( POSE, POSE );
+    std::pair<double, double>  controllerProportional( POSE, POSE );
     double angsDiff( double, double );
 
     // Maximum allowable motor commands

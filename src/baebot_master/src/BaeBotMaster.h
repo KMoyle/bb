@@ -55,6 +55,7 @@ class BaeBotMaster {
     ros::Publisher rviz_pub;
     ros::Publisher pose_pub;
     ros::Publisher poseDmd_pub;
+    ros::Publisher motorDmd_pub;
 
 
 
@@ -87,7 +88,7 @@ class BaeBotMaster {
     void sensorUpdate();
     void missionUpdate();
     void updateCurrentTask();
-    void sendMotorCommands();
+    void publishMotorCommands(std::pair<double, double> );
     void publishPoseMessages();
 
 
