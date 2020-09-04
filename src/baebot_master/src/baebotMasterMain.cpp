@@ -18,8 +18,6 @@ int main( int argc, char **argv){
     */
     BaeBotMaster *baebotMaster = new BaeBotMaster( &nh );
 
-    baebotMaster->poseDmd.x = 1;
-    baebotMaster->poseDmd.y = 1;
 
 
     /*

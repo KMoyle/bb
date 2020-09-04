@@ -12,6 +12,7 @@ BaeBotMaster::BaeBotMaster(ros::NodeHandle *nh ) :
         //laser_sub = nh->subscribe<sensor_msgs::LaserScan>("/rplidar_scan" , 1, &BaeBotMaster::rpLidarCallback, this);
         laser_sub = nh->subscribe<sensor_msgs::LaserScan>("/scan" , 1, &BaeBotMaster::rpLidarCallback, this);
         pose_sub = nh->subscribe<nav_msgs::Odometry>("/odom" , 1, &BaeBotMaster::bbPoseCallback, this);
+        poseDmd_sub = nh->subscribe<nav_msgs::Odometry>("/poseDmd_odom" , 1, &BaeBotMaster::bbPoseDmdCallback, this);
         //laser_sub = nh->subscribe<sensor_msgs::MultiEchoLaserScan>("/horizontal_laser_2d" , 1, &BaeBotMaster::rpLidarCallback, this);
         image_sub = it_.subscribe("/camera/image_raw" , 1, &BaeBotMaster::cameraImageCallback, this);
 
@@ -107,6 +108,7 @@ void BaeBotMaster::updateDt(){
 */
 void BaeBotMaster::navUpdate(){
     std::pair<double, double> motor_cmds_vw;
+
     // calculate the forward and angular velocities [v,w]
     motor_cmds_vw = baeBotControl.controllerProportional( pose, poseDmd );
     // publish the cmd_vel msg, Twsit
@@ -189,6 +191,15 @@ void BaeBotMaster::bbPoseCallback(const nav_msgs::Odometry::ConstPtr& msg){
 
 }
 
+void BaeBotMaster::bbPoseDmdCallback(const nav_msgs::Odometry::ConstPtr& msg){
+
+    // Updating the poseDmd info from writing topic
+    poseDmd.x = msg->pose.pose.position.x;
+    poseDmd.y = msg->pose.pose.position.y;
+    //poseDmd.theta = yaw;
+
+
+}
 
 // SETTERS
 void BaeBotMaster::setNewPose_xy( Point2D bb_goal ){

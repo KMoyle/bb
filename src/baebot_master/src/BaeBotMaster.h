@@ -29,6 +29,7 @@ class BaeBotMaster {
     // Subs
     ros::Subscriber laser_sub;
     ros::Subscriber pose_sub;
+    ros::Subscriber poseDmd_sub;
     image_transport::Subscriber image_sub;
     image_transport::ImageTransport it_;
 
@@ -78,6 +79,7 @@ class BaeBotMaster {
     //void rpLidarCallback(const sensor_msgs::MultiEchoLaserScan::ConstPtr& );
     void cameraImageCallback(const sensor_msgs::Image::ConstPtr& );
     void bbPoseCallback(const nav_msgs::Odometry::ConstPtr& );
+    void bbPoseDmdCallback(const nav_msgs::Odometry::ConstPtr& );
 
 
     // OPERATIONAL CONTROL FUNCTION
