@@ -38,8 +38,21 @@ class BaeBotMaster {
 
     public:
 
+    bool DEBUG = true;
+
 
     BaeBotControl baeBotControl;
+    MISSION_MODE mission_status;
+    SENSOR_STATUS sensor_status;
+
+
+    //Sensors timeouts
+    double sensorTimeOut;
+    double timeSinceLastLidarUpdate;
+    double timeSinceLastCameraUpdate;
+    double timeSinceLastPoseUpdate;
+
+    std::pair<double, double> motor_cmds_vw;
 
     double sampleRate;
     ros::Duration dt;
@@ -57,10 +70,6 @@ class BaeBotMaster {
     ros::Publisher pose_pub;
     ros::Publisher poseDmd_pub;
     ros::Publisher motorDmd_pub;
-
-
-
-
 
 
     // CTOR & DTOR
@@ -90,7 +99,7 @@ class BaeBotMaster {
     void sensorUpdate();
     void missionUpdate();
     void updateCurrentTask();
-    void publishMotorCommands(std::pair<double, double> );
+    void publishMotorCommands();
     void publishPoseMessages();
 
 

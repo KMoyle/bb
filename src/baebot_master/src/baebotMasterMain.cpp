@@ -31,7 +31,7 @@ int main( int argc, char **argv){
 	baebotMaster->poseDmd_pub = nh.advertise< geometry_msgs::Pose >( "poseDmd", 1 );
     */
     // TODO ---> Be sure to change the topic to babot_master/cmd_vel on baebot
-    baebotMaster->motorDmd_pub = nh.advertise< geometry_msgs::Twist >( "cmd_vel", 1 );
+
 
 
 
@@ -44,6 +44,7 @@ int main( int argc, char **argv){
     while(ros::ok()){
 
         ros::spinOnce();
+        baebotMaster->motorDmd_pub = nh.advertise< geometry_msgs::Twist >( "cmd_vel", 1 );
 
         baebotMaster->r.sleep();
 
