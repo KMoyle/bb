@@ -20,36 +20,21 @@ int main( int argc, char **argv){
 
 
 
-    /*
-    *   Subscriber setup
-    */
-
-
-    /*
-    *   Publisher setup
-	baebotMaster->pose_pub = nh.advertise< geometry_msgs::Pose >( "pose", 1 );
-	baebotMaster->poseDmd_pub = nh.advertise< geometry_msgs::Pose >( "poseDmd", 1 );
-    */
-    // TODO ---> Be sure to change the topic to babot_master/cmd_vel on baebot
-
-
-
 
     /*
     *   Initialise Threads
     */
     // Control threads
     // Planner threads
-
-    while(ros::ok()){
-
-        ros::spinOnce();
         baebotMaster->motorDmd_pub = nh.advertise< geometry_msgs::Twist >( "cmd_vel", 1 );
 
-        baebotMaster->r.sleep();
 
-        //ROS_WARN("SPINNING");
-    }
+
+        boost::thread controlLoopThread( boost::bind( &BaeBotMaster::controlLoopFunc, baebotMaster ) );
+
+        ROS_INFO("main: starting controller thread");
+        controlLoopThread.join();
+
 
 
 

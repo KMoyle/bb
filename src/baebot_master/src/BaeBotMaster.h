@@ -54,7 +54,7 @@ class BaeBotMaster {
 
     std::pair<double, double> motor_cmds_vw;
 
-    double sampleRate;
+    double sampleRate = 30;
     ros::Duration dt;
     ros::Rate r = 30; //10Hz
     ros::Time* lastUpdateTime = NULL;

@@ -25,7 +25,7 @@ BaeBotMaster::BaeBotMaster(ros::NodeHandle *nh ) :
         timeSinceLastCameraUpdate = sensorTimeOut;
         timeSinceLastPoseUpdate = sensorTimeOut;
 
-        ROS_WARN("ctor");
+        ROS_INFO("ctor");
 };
 
 BaeBotMaster::~BaeBotMaster(){
@@ -39,16 +39,17 @@ BaeBotMaster::~BaeBotMaster(){
 void BaeBotMaster::controlLoopFunc(){
 
     int	controlLoopCnt = 0;
-    ros::Rate loop_rate(LOOP_RATE);
+    if ( DEBUG ) ROS_INFO("in controol loop");
+    ros::Rate loop_rate( r );
 
 
     while ( ros::ok() ) {
 
         // queuing tasks
-        // ros::Rate
+        //ros::Rate
         updateLoop();
 
-        if ( 0 ) ROS_INFO( "Control Loop Cnt: %d", controlLoopCnt++ );
+        if ( DEBUG ) ROS_INFO( "Control Loop Cnt: %d", controlLoopCnt++ );
 
         ros::spinOnce();
         loop_rate.sleep();
@@ -99,7 +100,7 @@ void BaeBotMaster::updateDt(){
 
      if ( lastUpdateTime == NULL ) {
           dt = ros::Duration( 1.0 / sampleRate );
-     } else {
+     }else {
           dt = currentTime - *lastUpdateTime;
      }
      lastUpdateTime = new ros::Time( currentTime.sec, currentTime.nsec );
@@ -145,7 +146,7 @@ void BaeBotMaster::sensorUpdate(){
 
     sensor_status.poseAlive = ( (timeSinceLastPoseUpdate += dt.toSec() ) < sensorTimeOut );
 
-    if ( DEBUG ) { ROS_INFO( "Time Since Last Camera Update = %f", timeSinceLastPoseUpdate); }
+    if ( DEBUG ) { ROS_INFO( "Time Since Last Pose Update = %f", timeSinceLastPoseUpdate); }
 
 
 
