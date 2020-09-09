@@ -29,6 +29,7 @@ class BaeBotMaster {
     // Subs
     ros::Subscriber laser_sub;
     ros::Subscriber pose_sub;
+    ros::Subscriber poseDmd_sub;
     image_transport::Subscriber image_sub;
     image_transport::ImageTransport it_;
 
@@ -37,10 +38,23 @@ class BaeBotMaster {
 
     public:
 
+    bool DEBUG = true;
+
 
     BaeBotControl baeBotControl;
+    MISSION_MODE mission_status;
+    SENSOR_STATUS sensor_status;
 
-    double sampleRate;
+
+    //Sensors timeouts
+    double sensorTimeOut;
+    double timeSinceLastLidarUpdate;
+    double timeSinceLastCameraUpdate;
+    double timeSinceLastPoseUpdate;
+
+    std::pair<double, double> motor_cmds_vw;
+
+    double sampleRate = 30;
     ros::Duration dt;
     ros::Rate r = 30; //10Hz
     ros::Time* lastUpdateTime = NULL;
@@ -56,10 +70,6 @@ class BaeBotMaster {
     ros::Publisher pose_pub;
     ros::Publisher poseDmd_pub;
     ros::Publisher motorDmd_pub;
-
-
-
-
 
 
     // CTOR & DTOR
@@ -78,6 +88,7 @@ class BaeBotMaster {
     //void rpLidarCallback(const sensor_msgs::MultiEchoLaserScan::ConstPtr& );
     void cameraImageCallback(const sensor_msgs::Image::ConstPtr& );
     void bbPoseCallback(const nav_msgs::Odometry::ConstPtr& );
+    void bbPoseDmdCallback(const nav_msgs::Odometry::ConstPtr& );
 
 
     // OPERATIONAL CONTROL FUNCTION
@@ -88,7 +99,7 @@ class BaeBotMaster {
     void sensorUpdate();
     void missionUpdate();
     void updateCurrentTask();
-    void publishMotorCommands(std::pair<double, double> );
+    void publishMotorCommands();
     void publishPoseMessages();
 
 

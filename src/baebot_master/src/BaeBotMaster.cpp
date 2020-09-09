@@ -12,11 +12,20 @@ BaeBotMaster::BaeBotMaster(ros::NodeHandle *nh ) :
         //laser_sub = nh->subscribe<sensor_msgs::LaserScan>("/rplidar_scan" , 1, &BaeBotMaster::rpLidarCallback, this);
         laser_sub = nh->subscribe<sensor_msgs::LaserScan>("/scan" , 1, &BaeBotMaster::rpLidarCallback, this);
         pose_sub = nh->subscribe<nav_msgs::Odometry>("/odom" , 1, &BaeBotMaster::bbPoseCallback, this);
+        poseDmd_sub = nh->subscribe<nav_msgs::Odometry>("/poseDmd_odom" , 1, &BaeBotMaster::bbPoseDmdCallback, this);
         //laser_sub = nh->subscribe<sensor_msgs::MultiEchoLaserScan>("/horizontal_laser_2d" , 1, &BaeBotMaster::rpLidarCallback, this);
         image_sub = it_.subscribe("/camera/image_raw" , 1, &BaeBotMaster::cameraImageCallback, this);
 
+        // MISSION STATUS INIT
+        mission_status = AWAITING_MISSION;
 
-        ROS_WARN("ctor");
+        // Intitalising the sensor last updates
+        sensorTimeOut = 5.0;
+        timeSinceLastLidarUpdate = sensorTimeOut;
+        timeSinceLastCameraUpdate = sensorTimeOut;
+        timeSinceLastPoseUpdate = sensorTimeOut;
+
+        ROS_INFO("ctor");
 };
 
 BaeBotMaster::~BaeBotMaster(){
@@ -30,16 +39,17 @@ BaeBotMaster::~BaeBotMaster(){
 void BaeBotMaster::controlLoopFunc(){
 
     int	controlLoopCnt = 0;
-    ros::Rate loop_rate(LOOP_RATE);
+    if ( DEBUG ) ROS_INFO("in controol loop");
+    ros::Rate loop_rate( r );
 
 
     while ( ros::ok() ) {
 
         // queuing tasks
-        // ros::Rate
+        //ros::Rate
         updateLoop();
 
-        if ( 0 ) ROS_INFO( "Control Loop Cnt: %d", controlLoopCnt++ );
+        if ( DEBUG ) ROS_INFO( "Control Loop Cnt: %d", controlLoopCnt++ );
 
         ros::spinOnce();
         loop_rate.sleep();
@@ -59,10 +69,10 @@ void BaeBotMaster::updateLoop(){
     // TODO -- controller update
 
     // Update the pose and navigation parameters
-    navUpdate();
+    //navUpdate();
 
-    /*
-    if(// senors alive) {
+
+    if( sensor_status.poseAlive && sensor_status.cameraAlive && sensor_status.lidarAlive ) {
         // Update the the current mission task and calculate the desired control forces
         missionUpdate();
 
@@ -70,12 +80,13 @@ void BaeBotMaster::updateLoop(){
         updateCurrentTask();
 
         // Send the thruster commands to the motor controller
-        sendMotorCommands();
+        publishMotorCommands();
 
     } else{
-        ROS_ERROR("BaeBotMaster: lidar, imu or obs_list not alive, skipping mission/motor update");
+        mission_status = MISSION_STOPPED;
+        ROS_ERROR("BaeBotMaster: lidar, camera or pose not alive, skipping mission/motor update");
     }
-`*/
+
     // Publishes summary pose messages
     publishPoseMessages();
 
@@ -89,7 +100,7 @@ void BaeBotMaster::updateDt(){
 
      if ( lastUpdateTime == NULL ) {
           dt = ros::Duration( 1.0 / sampleRate );
-     } else {
+     }else {
           dt = currentTime - *lastUpdateTime;
      }
      lastUpdateTime = new ros::Time( currentTime.sec, currentTime.nsec );
@@ -100,23 +111,19 @@ void BaeBotMaster::updateDt(){
 
 
 }
+
+
 /**
 *
 * Update the pose structure with all the navigation information from the sensors
 *
 */
 void BaeBotMaster::navUpdate(){
-    std::pair<double, double> motor_cmds_vw;
+
+
+
     // calculate the forward and angular velocities [v,w]
-    motor_cmds_vw = baeBotControl.controllerProportional( pose, poseDmd );
     // publish the cmd_vel msg, Twsit
-    publishMotorCommands( motor_cmds_vw );
-
-
-
-
-
-
 
 
 
@@ -129,12 +136,46 @@ void BaeBotMaster::navUpdate(){
 */
 void BaeBotMaster::sensorUpdate(){
 
+    sensor_status.cameraAlive = ( (timeSinceLastCameraUpdate += dt.toSec() ) < sensorTimeOut );
+
+    if ( DEBUG ) { ROS_INFO( "Time Since Last Camera Update = %f", timeSinceLastCameraUpdate); }
+
+    sensor_status.lidarAlive = ( (timeSinceLastLidarUpdate += dt.toSec() ) < sensorTimeOut );
+
+    if ( DEBUG ) { ROS_INFO( "Time Since Last Lidar Update = %f", timeSinceLastLidarUpdate); }
+
+    sensor_status.poseAlive = ( (timeSinceLastPoseUpdate += dt.toSec() ) < sensorTimeOut );
+
+    if ( DEBUG ) { ROS_INFO( "Time Since Last Pose Update = %f", timeSinceLastPoseUpdate); }
+
 
 
 }
 
 void BaeBotMaster::missionUpdate(){
 
+
+
+    if (mission_status == AWAITING_MISSION){
+        motor_cmds_vw.first = 0;
+        motor_cmds_vw.second = 0;
+        ROS_INFO("AWAITING_MISSION");
+    }else if (mission_status == MISSION_RUNNING){
+        motor_cmds_vw = baeBotControl.controllerProportional( pose, poseDmd );
+        ROS_INFO("MISSION_RUNNING");
+    }else if (mission_status == MISSION_COMPLETED){
+        motor_cmds_vw.first = 0;
+        motor_cmds_vw.second = 0;
+        ROS_INFO("MISSION_COMPLETED");
+    }else if (mission_status == MISSION_PAUSED){
+        motor_cmds_vw.first = 0;
+        motor_cmds_vw.second = 0;
+        ROS_INFO("MISSION_PAUSED");
+    }else if (mission_status == MISSION_STOPPED){
+        motor_cmds_vw.first = 0;
+        motor_cmds_vw.second = 0;
+        ROS_INFO("MISSION_STOPPED");
+    }
 
 
 }
@@ -145,14 +186,14 @@ void BaeBotMaster::updateCurrentTask(){
 
 }
 
-void BaeBotMaster::publishMotorCommands( std::pair<double, double> vw){
+void BaeBotMaster::publishMotorCommands( ){
 
     // ROS twist msg type
     geometry_msgs::Twist msg;
     // Filling the msg
-    msg.linear.x = vw.first;
+    msg.linear.x = motor_cmds_vw.first;
     msg.linear.y = 0;
-    msg.angular.z = vw.second;
+    msg.angular.z = motor_cmds_vw.second;
     // Publishing the msg
     motorDmd_pub.publish(msg);
 
@@ -167,6 +208,10 @@ void BaeBotMaster::publishPoseMessages(){
 }
 
 void BaeBotMaster::bbPoseCallback(const nav_msgs::Odometry::ConstPtr& msg){
+
+    timeSinceLastPoseUpdate =  0.0;
+    sensor_status.poseAlive = true;
+
     double roll, pitch, yaw;
     // Getting the Yaw info from  Quaternion
     tf::Quaternion q (msg->pose.pose.orientation.x,
@@ -189,6 +234,18 @@ void BaeBotMaster::bbPoseCallback(const nav_msgs::Odometry::ConstPtr& msg){
 
 }
 
+void BaeBotMaster::bbPoseDmdCallback(const nav_msgs::Odometry::ConstPtr& msg){
+
+
+    mission_status = MISSION_RUNNING;
+
+    // Updating the poseDmd info from writing topic
+    poseDmd.x = msg->pose.pose.position.x;
+    poseDmd.y = msg->pose.pose.position.y;
+    //poseDmd.theta = yaw;
+
+
+}
 
 // SETTERS
 void BaeBotMaster::setNewPose_xy( Point2D bb_goal ){

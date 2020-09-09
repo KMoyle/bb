@@ -6,6 +6,9 @@
 
 void BaeBotMaster::cameraImageCallback(const sensor_msgs::Image::ConstPtr& msg_in){
 
+    timeSinceLastCameraUpdate =  0.0;
+    sensor_status.cameraAlive = true;
+
     // Declare opencv mat pointer
     cv_bridge::CvImagePtr cv_ptr;
     // Try to convert recieved sensor_msgs/Image to opencv

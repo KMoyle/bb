@@ -6,6 +6,9 @@
 
 void BaeBotMaster::rpLidarCallback(const sensor_msgs::LaserScan::ConstPtr& scan ){
 
+     timeSinceLastLidarUpdate = 0.0;
+     sensor_status.lidarAlive = true;
+
     //tf2_ros::Buffer tfBuffer;
     static tf2_ros::Buffer tfBuffer;
     static tf2_ros::TransformListener tfListener(tfBuffer);
