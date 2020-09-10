@@ -15,6 +15,8 @@ BaeBotMaster::BaeBotMaster(ros::NodeHandle *nh ) :
         poseDmd_sub = nh->subscribe<nav_msgs::Odometry>("/poseDmd_odom" , 1, &BaeBotMaster::bbPoseDmdCallback, this);
         //laser_sub = nh->subscribe<sensor_msgs::MultiEchoLaserScan>("/horizontal_laser_2d" , 1, &BaeBotMaster::rpLidarCallback, this);
         image_sub = it_.subscribe("/camera/image_raw" , 1, &BaeBotMaster::cameraImageCallback, this);
+        //image_sub = it_.subscribe("/BaeBot/camera/image_raw" , 1, &BaeBotMaster::cameraImageCallback, this);
+        battery_sub = nh->subscribe("/battery" , 1, &BaeBotMaster::batteryStateCallback, this);
 
         // MISSION STATUS INIT
         mission_status = AWAITING_MISSION;
@@ -24,6 +26,9 @@ BaeBotMaster::BaeBotMaster(ros::NodeHandle *nh ) :
         timeSinceLastLidarUpdate = sensorTimeOut;
         timeSinceLastCameraUpdate = sensorTimeOut;
         timeSinceLastPoseUpdate = sensorTimeOut;
+
+
+        goto_time = ros::Time::now();
 
         ROS_INFO("ctor");
 };
@@ -39,7 +44,6 @@ BaeBotMaster::~BaeBotMaster(){
 void BaeBotMaster::controlLoopFunc(){
 
     int	controlLoopCnt = 0;
-    if ( DEBUG ) ROS_INFO("in controol loop");
     ros::Rate loop_rate( r );
 
 
@@ -121,7 +125,14 @@ void BaeBotMaster::updateDt(){
 void BaeBotMaster::navUpdate(){
 
 
+    ros::Time currentTime = ros::Time::now();
 
+    if ( ( currentTime.toSec() - goto_time.toSec() ) > 30 ){
+        ROS_INFO("Off on our first mission");
+        mission_status = MISSION_RUNNING;
+        poseDmd.x = goto_points[0].first;
+        poseDmd.y = goto_points[0].second;
+    }
     // calculate the forward and angular velocities [v,w]
     // publish the cmd_vel msg, Twsit
 
@@ -244,6 +255,16 @@ void BaeBotMaster::bbPoseDmdCallback(const nav_msgs::Odometry::ConstPtr& msg){
     poseDmd.y = msg->pose.pose.position.y;
     //poseDmd.theta = yaw;
 
+
+}
+
+void BaeBotMaster::batteryStateCallback(const sensor_msgs::BatteryState::ConstPtr& msg){
+
+    if ( msg->voltage < 10.5 ){
+        ROS_WARN("BATTERY VOLTAGE IS BELOW 10.5V, TIME TO RECHARGE");
+
+    }
+    if ( DEBUG ) { ROS_INFO("BATTERY VOLTAGE IS %2.2f", msg->voltage );}
 
 }
 

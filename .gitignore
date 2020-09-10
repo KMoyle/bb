@@ -3,3 +3,7 @@ devel/
 *.bag
 
 *.o
+
+*.internal
+
+*.make

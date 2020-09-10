@@ -50,4 +50,7 @@ typedef struct {
 } Point2D;
 
 
+
+
+
 #endif // BAEBOT_GLOBAL_H_INCLUDED
