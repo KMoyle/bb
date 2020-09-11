@@ -44,6 +44,8 @@ class BaeBotMaster {
     ros::Time goto_time;
 
     bool DEBUG = true;
+    bool we_are_off = false;
+    const double THRESH_DIST = 0.05; //5cm
 
 
     BaeBotControl baeBotControl;
@@ -111,7 +113,7 @@ class BaeBotMaster {
 
     // UTILS
     double dist_to_point( Point2D );
-    double dist_to_pose( POSE );
+    double dist_to_pose( );
 
 
 

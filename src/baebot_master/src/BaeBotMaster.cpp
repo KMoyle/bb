@@ -68,7 +68,7 @@ void BaeBotMaster::updateLoop(){
     updateDt();
 
         // Sensor update check
-    sensorUpdate();
+    //sensorUpdate();
 
     // TODO -- controller update
 
@@ -127,11 +127,21 @@ void BaeBotMaster::navUpdate(){
 
     ros::Time currentTime = ros::Time::now();
 
-    if ( ( currentTime.toSec() - goto_time.toSec() ) > 30 ){
+    if ( ( currentTime.toSec() - goto_time.toSec() ) > 20  && !we_are_off ){
         ROS_INFO("Off on our first mission");
         mission_status = MISSION_RUNNING;
-        poseDmd.x = goto_points[0].first;
-        poseDmd.y = goto_points[0].second;
+        poseDmd.x = goto_points.back().first;
+        poseDmd.y = goto_points.back().second;
+        goto_points.pop_back();
+        we_are_off = true;
+    }
+    if ( dist_to_pose() < THRESH_DIST ){
+
+        ROS_INFO("ONTO NEXT WAY POINT");
+        poseDmd.x = goto_points.back().first;
+        poseDmd.y = goto_points.back().second;
+        goto_points.pop_back();
+
     }
     // calculate the forward and angular velocities [v,w]
     // publish the cmd_vel msg, Twsit
@@ -286,6 +296,6 @@ double BaeBotMaster::dist_to_point( Point2D point ){
  return sqrt( pow( point.x - pose.x, 2) + pow( point.y - pose.y, 2) );
 }
 
-double BaeBotMaster::dist_to_pose( POSE poseDmd ){
+double BaeBotMaster::dist_to_pose(  ){
  return sqrt( pow( poseDmd.x - pose.x, 2) + pow( poseDmd.y - pose.y, 2) );
 }
