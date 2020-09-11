@@ -7,6 +7,7 @@
 #include "sensor_msgs/MultiEchoLaserScan.h"
 #include "sensor_msgs/Image.h"
 #include "sensor_msgs/PointCloud.h"
+#include "sensor_msgs/BatteryState.h"
 
 #include "laser_geometry/laser_geometry.h"
 #include "tf2_ros/transform_listener.h"
@@ -30,6 +31,7 @@ class BaeBotMaster {
     ros::Subscriber laser_sub;
     ros::Subscriber pose_sub;
     ros::Subscriber poseDmd_sub;
+    ros::Subscriber battery_sub;
     image_transport::Subscriber image_sub;
     image_transport::ImageTransport it_;
 
@@ -38,7 +40,12 @@ class BaeBotMaster {
 
     public:
 
+    std::vector<std::pair<double, double> > goto_points;
+    ros::Time goto_time;
+
     bool DEBUG = true;
+    bool we_are_off = false;
+    const double THRESH_DIST = 0.05; //5cm
 
 
     BaeBotControl baeBotControl;
@@ -89,6 +96,7 @@ class BaeBotMaster {
     void cameraImageCallback(const sensor_msgs::Image::ConstPtr& );
     void bbPoseCallback(const nav_msgs::Odometry::ConstPtr& );
     void bbPoseDmdCallback(const nav_msgs::Odometry::ConstPtr& );
+    void batteryStateCallback( const sensor_msgs::BatteryState::ConstPtr& );
 
 
     // OPERATIONAL CONTROL FUNCTION
@@ -105,7 +113,7 @@ class BaeBotMaster {
 
     // UTILS
     double dist_to_point( Point2D );
-    double dist_to_pose( POSE );
+    double dist_to_pose( );
 
 
 
