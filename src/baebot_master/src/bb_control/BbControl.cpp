@@ -10,7 +10,7 @@ BaeBotControl::BaeBotControl(){
         // INTEGRAL CONTROLLER GAIN
         Ki = 0.008;
         // PROPORTAIONAL CONTROLLER GAIN
-        Kp = 1;
+        Kp = 0.2;
         // ANGLE DIFF GAIN
         Kn = 2;
         // PP ERROR
@@ -75,6 +75,8 @@ std::pair<double, double>   BaeBotControl::controllerProportional( POSE p, POSE 
     ang_diff = angsDiff( theta_star, p.theta );
 
     p.w = Kn*ang_diff;
+
+    ROS_INFO("velocity=  %f \t angle=  %f", p.v, p.w);
 
 
     motor_cmds_vw.first = p.v;
