@@ -73,7 +73,7 @@ void BaeBotMaster::updateLoop(){
     // TODO -- controller update
 
     // Update the pose and navigation parameters
-    //navUpdate();
+    navUpdate();
 
 
     if( sensor_status.poseAlive && sensor_status.cameraAlive && sensor_status.lidarAlive ) {
@@ -124,6 +124,7 @@ void BaeBotMaster::updateDt(){
 */
 void BaeBotMaster::navUpdate(){
 
+    static int num_wp = 0;
 
     ros::Time currentTime = ros::Time::now();
 
@@ -136,8 +137,8 @@ void BaeBotMaster::navUpdate(){
         we_are_off = true;
     }
     if ( dist_to_pose() < THRESH_DIST ){
-
-        ROS_INFO("ONTO NEXT WAY POINT");
+        num_wp++;
+        ROS_INFO("ONTO NEXT WAY POINT - %d", num_wp);
         poseDmd.x = goto_points.back().first;
         poseDmd.y = goto_points.back().second;
         goto_points.pop_back();
@@ -183,7 +184,7 @@ void BaeBotMaster::missionUpdate(){
         ROS_INFO("AWAITING_MISSION");
     }else if (mission_status == MISSION_RUNNING){
         motor_cmds_vw = baeBotControl.controllerProportional( pose, poseDmd );
-        ROS_INFO("MISSION_RUNNING");
+        //ROS_INFO("MISSION_RUNNING");
     }else if (mission_status == MISSION_COMPLETED){
         motor_cmds_vw.first = 0;
         motor_cmds_vw.second = 0;
@@ -252,6 +253,9 @@ void BaeBotMaster::bbPoseCallback(const nav_msgs::Odometry::ConstPtr& msg){
     pose.qw = msg->pose.pose.orientation.w;
     pose.velX = msg->twist.twist.linear.x;
     pose.velY = msg->twist.twist.linear.y;
+
+
+    ROS_INFO("Current Pose: X= %f     Y= %f     theta= %f", pose.x, pose.y, pose.theta);
 
 }
 
