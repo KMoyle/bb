@@ -4,11 +4,11 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/kyle/baebot_ws/src/baebot_master/src/BaeBotMaster.cpp" "/home/kyle/baebot_ws/build/baebot_master/CMakeFiles/BaeBotMaster.dir/src/BaeBotMaster.cpp.o"
-  "/home/kyle/baebot_ws/src/baebot_master/src/baebotMasterMain.cpp" "/home/kyle/baebot_ws/build/baebot_master/CMakeFiles/BaeBotMaster.dir/src/baebotMasterMain.cpp.o"
-  "/home/kyle/baebot_ws/src/baebot_master/src/bb_control/BbControl.cpp" "/home/kyle/baebot_ws/build/baebot_master/CMakeFiles/BaeBotMaster.dir/src/bb_control/BbControl.cpp.o"
-  "/home/kyle/baebot_ws/src/baebot_master/src/bb_sensors/BbImage.cpp" "/home/kyle/baebot_ws/build/baebot_master/CMakeFiles/BaeBotMaster.dir/src/bb_sensors/BbImage.cpp.o"
-  "/home/kyle/baebot_ws/src/baebot_master/src/bb_sensors/BbLaser.cpp" "/home/kyle/baebot_ws/build/baebot_master/CMakeFiles/BaeBotMaster.dir/src/bb_sensors/BbLaser.cpp.o"
+  "/home/nanorobot/baebot_ws/src/baebot_master/src/BaeBotMaster.cpp" "/home/nanorobot/baebot_ws/build/baebot_master/CMakeFiles/BaeBotMaster.dir/src/BaeBotMaster.cpp.o"
+  "/home/nanorobot/baebot_ws/src/baebot_master/src/baebotMasterMain.cpp" "/home/nanorobot/baebot_ws/build/baebot_master/CMakeFiles/BaeBotMaster.dir/src/baebotMasterMain.cpp.o"
+  "/home/nanorobot/baebot_ws/src/baebot_master/src/bb_control/BbControl.cpp" "/home/nanorobot/baebot_ws/build/baebot_master/CMakeFiles/BaeBotMaster.dir/src/bb_control/BbControl.cpp.o"
+  "/home/nanorobot/baebot_ws/src/baebot_master/src/bb_sensors/BbImage.cpp" "/home/nanorobot/baebot_ws/build/baebot_master/CMakeFiles/BaeBotMaster.dir/src/bb_sensors/BbImage.cpp.o"
+  "/home/nanorobot/baebot_ws/src/baebot_master/src/bb_sensors/BbLaser.cpp" "/home/nanorobot/baebot_ws/build/baebot_master/CMakeFiles/BaeBotMaster.dir/src/bb_sensors/BbLaser.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -30,12 +30,12 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "/usr/include/openni2"
   "/usr/include/vtk-6.3"
   "/usr/include/freetype2"
-  "/usr/lib/x86_64-linux-gnu/openmpi/include/openmpi"
-  "/usr/lib/x86_64-linux-gnu/openmpi/include/openmpi/opal/mca/event/libevent2022/libevent"
-  "/usr/lib/x86_64-linux-gnu/openmpi/include/openmpi/opal/mca/event/libevent2022/libevent/include"
-  "/usr/lib/x86_64-linux-gnu/openmpi/include"
+  "/usr/lib/aarch64-linux-gnu/openmpi/include/openmpi"
+  "/usr/lib/aarch64-linux-gnu/openmpi/include/openmpi/opal/mca/event/libevent2022/libevent"
+  "/usr/lib/aarch64-linux-gnu/openmpi/include/openmpi/opal/mca/event/libevent2022/libevent/include"
+  "/usr/lib/aarch64-linux-gnu/openmpi/include"
   "/usr/include/python2.7"
-  "/usr/include/x86_64-linux-gnu"
+  "/usr/include/aarch64-linux-gnu"
   "/usr/include/hdf5/openmpi"
   "/usr/include/libxml2"
   "/usr/include/jsoncpp"

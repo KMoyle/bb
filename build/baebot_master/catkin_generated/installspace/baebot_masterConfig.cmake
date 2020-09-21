@@ -67,14 +67,14 @@ set(baebot_master_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(baebot_master_SOURCE_PREFIX /home/kyle/baebot_ws/src/baebot_master)
-  set(baebot_master_DEVEL_PREFIX /home/kyle/baebot_ws/devel)
+  set(baebot_master_SOURCE_PREFIX /home/nanorobot/baebot_ws/src/baebot_master)
+  set(baebot_master_DEVEL_PREFIX /home/nanorobot/baebot_ws/devel)
   set(baebot_master_INSTALL_PREFIX "")
   set(baebot_master_PREFIX ${baebot_master_DEVEL_PREFIX})
 else()
   set(baebot_master_SOURCE_PREFIX "")
   set(baebot_master_DEVEL_PREFIX "")
-  set(baebot_master_INSTALL_PREFIX /home/kyle/baebot_ws/install)
+  set(baebot_master_INSTALL_PREFIX /home/nanorobot/baebot_ws/install)
   set(baebot_master_PREFIX ${baebot_master_INSTALL_PREFIX})
 endif()
 
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/kyle/baebot_ws/install/lib;/home/kyle/baebot_ws/devel/lib;/home/kyle/cartographer_ws/devel/lib;/home/kyle/catkin_ws/devel/lib;/opt/ros/melodic/lib)
+    foreach(path /home/nanorobot/baebot_ws/install/lib;/home/nanorobot/baebot_ws/devel/lib;/home/nanorobot/catkin_ws/devel/lib;/opt/ros/melodic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

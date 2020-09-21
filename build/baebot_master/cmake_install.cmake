@@ -1,8 +1,8 @@
-# Install script for directory: /home/kyle/baebot_ws/src/baebot_master
+# Install script for directory: /home/nanorobot/baebot_ws/src/baebot_master
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/kyle/baebot_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/nanorobot/baebot_ws/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,17 +38,17 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/kyle/baebot_ws/build/baebot_master/catkin_generated/installspace/baebot_master.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/nanorobot/baebot_ws/build/baebot_master/catkin_generated/installspace/baebot_master.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/baebot_master/cmake" TYPE FILE FILES
-    "/home/kyle/baebot_ws/build/baebot_master/catkin_generated/installspace/baebot_masterConfig.cmake"
-    "/home/kyle/baebot_ws/build/baebot_master/catkin_generated/installspace/baebot_masterConfig-version.cmake"
+    "/home/nanorobot/baebot_ws/build/baebot_master/catkin_generated/installspace/baebot_masterConfig.cmake"
+    "/home/nanorobot/baebot_ws/build/baebot_master/catkin_generated/installspace/baebot_masterConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/baebot_master" TYPE FILE FILES "/home/kyle/baebot_ws/src/baebot_master/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/baebot_master" TYPE FILE FILES "/home/nanorobot/baebot_ws/src/baebot_master/package.xml")
 endif()
 

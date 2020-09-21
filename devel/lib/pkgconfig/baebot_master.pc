@@ -1,4 +1,4 @@
-prefix=/home/kyle/baebot_ws/devel
+prefix=/home/nanorobot/baebot_ws/devel
 
 Name: baebot_master
 Description: Description of baebot_master
