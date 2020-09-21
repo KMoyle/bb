@@ -71,8 +71,8 @@ void BaeBotMaster::updateLoop(){
     //sensorUpdate();
 
     //ODOM TEST
-    doASpin();
-   // goStraight();
+   // doASpin();
+   goStraight();
 
 
     // Update the pose and navigation parameters
@@ -205,11 +205,11 @@ void BaeBotMaster::missionUpdate(){
     }else if (mission_status == MISSION_DO_A_SPIN){
         motor_cmds_vw.first = 0;
         motor_cmds_vw.second = 1;
-        ROS_INFO("MISSION_STOPPED");
+        ROS_INFO("MISSION_DO_A_SPIN");
     }else if (mission_status == MISSION_GO_STRAIGHT){
         motor_cmds_vw.first = 1;
         motor_cmds_vw.second = 0;
-        ROS_INFO("MISSION_STOPPED");
+        ROS_INFO("MISSION_GO_STRAIGHT");
     }
 
 
