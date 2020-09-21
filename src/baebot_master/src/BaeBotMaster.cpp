@@ -79,6 +79,7 @@ void BaeBotMaster::updateLoop(){
     //navUpdate();
 
 
+
     //if( sensor_status.poseAlive && sensor_status.cameraAlive && sensor_status.lidarAlive ) {
     if( 1 ) {
         // Update the the current mission task and calculate the desired control forces
@@ -132,7 +133,7 @@ void BaeBotMaster::navUpdate(){
 
     ros::Time currentTime = ros::Time::now();
 
-    if ( ( currentTime.toSec() - goto_time.toSec() ) > 20  && !we_are_off ){
+    if ( !we_are_off ){
         ROS_INFO("Off on our first mission");
         mission_status = MISSION_RUNNING;
         poseDmd.x = goto_points.back().first;
