@@ -110,6 +110,10 @@ class BaeBotMaster {
     void publishMotorCommands();
     void publishPoseMessages();
 
+    //DATA gathering functions to TEST ODOM
+    void doASpin();
+    void goStraight();
+
 
     // UTILS
     double dist_to_point( Point2D );

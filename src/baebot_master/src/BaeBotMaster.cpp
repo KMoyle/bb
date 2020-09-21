@@ -70,14 +70,19 @@ void BaeBotMaster::updateLoop(){
         // Sensor update check
     //sensorUpdate();
 
-    // TODO -- controller update
+    //ODOM TEST
+    doASpin();
+    goStraight();
+
 
     // Update the pose and navigation parameters
-    navUpdate();
+    //navUpdate();
 
 
-   // if( sensor_status.poseAlive && sensor_status.cameraAlive && sensor_status.lidarAlive ) {
-     if (1){   // Update the the current mission task and calculate the desired control forces
+
+    //if( sensor_status.poseAlive && sensor_status.cameraAlive && sensor_status.lidarAlive ) {
+    if( 1 ) {
+        // Update the the current mission task and calculate the desired control forces
         missionUpdate();
 
         // Move to the next task in the queue if the current task has just completed
@@ -136,7 +141,7 @@ void BaeBotMaster::navUpdate(){
         goto_points.pop_back();
         we_are_off = true;
     }
-    if ( dist_to_pose() < THRESH_DIST ){
+    if ( dist_to_pose() < THRESH_DIST && !goto_points.empty() ){
         num_wp++;
         ROS_INFO("ONTO NEXT WAY POINT - %d", num_wp);
         poseDmd.x = goto_points.back().first;
@@ -195,6 +200,14 @@ void BaeBotMaster::missionUpdate(){
         ROS_INFO("MISSION_PAUSED");
     }else if (mission_status == MISSION_STOPPED){
         motor_cmds_vw.first = 0;
+        motor_cmds_vw.second = 0;
+        ROS_INFO("MISSION_STOPPED");
+    }else if (mission_status == MISSION_DO_A_SPIN){
+        motor_cmds_vw.first = 0;
+        motor_cmds_vw.second = 1;
+        ROS_INFO("MISSION_STOPPED");
+    }else if (mission_status == MISSION_GO_STRAIGHT){
+        motor_cmds_vw.first = 1;
         motor_cmds_vw.second = 0;
         ROS_INFO("MISSION_STOPPED");
     }
@@ -262,7 +275,7 @@ void BaeBotMaster::bbPoseCallback(const nav_msgs::Odometry::ConstPtr& msg){
 void BaeBotMaster::bbPoseDmdCallback(const nav_msgs::Odometry::ConstPtr& msg){
 
 
-    mission_status = MISSION_RUNNING;
+    //mission_status = MISSION_RUNNING;
 
     // Updating the poseDmd info from writing topic
     poseDmd.x = msg->pose.pose.position.x;
@@ -302,4 +315,17 @@ double BaeBotMaster::dist_to_point( Point2D point ){
 
 double BaeBotMaster::dist_to_pose(  ){
  return sqrt( pow( poseDmd.x - pose.x, 2) + pow( poseDmd.y - pose.y, 2) );
+}
+
+
+void BaeBotMaster::doASpin(){
+
+        mission_status = MISSION_DO_A_SPIN;
+
+}
+
+void BaeBotMaster::goStraight(){
+
+        mission_status = MISSION_GO_STRAIGHT;
+
 }
