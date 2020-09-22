@@ -1,3 +1,4 @@
+<<<<<<< refs/remotes/origin/master
 set(CMAKE_HOST_SYSTEM "Linux-4.19.105-v8-28")
 set(CMAKE_HOST_SYSTEM_NAME "Linux")
 set(CMAKE_HOST_SYSTEM_VERSION "4.19.105-v8-28")
@@ -9,6 +10,19 @@ set(CMAKE_SYSTEM "Linux-4.19.105-v8-28")
 set(CMAKE_SYSTEM_NAME "Linux")
 set(CMAKE_SYSTEM_VERSION "4.19.105-v8-28")
 set(CMAKE_SYSTEM_PROCESSOR "aarch64")
+=======
+set(CMAKE_HOST_SYSTEM "Linux-5.4.0-47-generic")
+set(CMAKE_HOST_SYSTEM_NAME "Linux")
+set(CMAKE_HOST_SYSTEM_VERSION "5.4.0-47-generic")
+set(CMAKE_HOST_SYSTEM_PROCESSOR "x86_64")
+
+
+
+set(CMAKE_SYSTEM "Linux-5.4.0-47-generic")
+set(CMAKE_SYSTEM_NAME "Linux")
+set(CMAKE_SYSTEM_VERSION "5.4.0-47-generic")
+set(CMAKE_SYSTEM_PROCESSOR "x86_64")
+>>>>>>> fix
 
 set(CMAKE_CROSSCOMPILING "FALSE")
 

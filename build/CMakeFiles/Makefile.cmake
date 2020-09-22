@@ -10,6 +10,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.10.2/CMakeCCompiler.cmake"
   "CMakeFiles/3.10.2/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.10.2/CMakeSystem.cmake"
+<<<<<<< refs/remotes/origin/master
   "CMakeFiles/feature_tests.c"
   "CMakeFiles/feature_tests.cxx"
   "baebot_master/catkin_generated/ordered_paths.cmake"
@@ -20,6 +21,19 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/home/nanorobot/baebot_ws/src/CMakeLists.txt"
   "/home/nanorobot/baebot_ws/src/baebot_master/CMakeLists.txt"
   "/home/nanorobot/baebot_ws/src/baebot_master/package.xml"
+=======
+  "baebot_master/catkin_generated/ordered_paths.cmake"
+  "baebot_master/catkin_generated/package.cmake"
+  "baebot_sim/catkin_generated/package.cmake"
+  "catkin/catkin_generated/version/package.cmake"
+  "catkin_generated/installspace/_setup_util.py"
+  "catkin_generated/order_packages.cmake"
+  "/home/kyle/baebot_ws/src/CMakeLists.txt"
+  "/home/kyle/baebot_ws/src/baebot_master/CMakeLists.txt"
+  "/home/kyle/baebot_ws/src/baebot_master/package.xml"
+  "/home/kyle/baebot_ws/src/baebot_sim/CMakeLists.txt"
+  "/home/kyle/baebot_ws/src/baebot_sim/package.xml"
+>>>>>>> fix
   "/opt/ros/melodic/share/actionlib/cmake/actionlib-msg-extras.cmake"
   "/opt/ros/melodic/share/actionlib/cmake/actionlibConfig-version.cmake"
   "/opt/ros/melodic/share/actionlib/cmake/actionlibConfig.cmake"
@@ -213,6 +227,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/opt/ros/melodic/share/xmlrpcpp/cmake/xmlrpcpp-extras.cmake"
   "/opt/ros/melodic/share/xmlrpcpp/cmake/xmlrpcppConfig-version.cmake"
   "/opt/ros/melodic/share/xmlrpcpp/cmake/xmlrpcppConfig.cmake"
+<<<<<<< refs/remotes/origin/master
   "/usr/share/OpenCV/OpenCVConfig-version.cmake"
   "/usr/share/OpenCV/OpenCVConfig.cmake"
   "/usr/share/OpenCV/OpenCVModules-release.cmake"
@@ -298,6 +313,27 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/usr/share/cmake-3.10/Modules/Compiler/XL-CXX-DetermineCompiler.cmake"
   "/usr/share/cmake-3.10/Modules/Compiler/zOS-C-DetermineCompiler.cmake"
   "/usr/share/cmake-3.10/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake"
+=======
+  "/usr/local/lib/cmake/opencv4/OpenCVConfig-version.cmake"
+  "/usr/local/lib/cmake/opencv4/OpenCVConfig.cmake"
+  "/usr/local/lib/cmake/opencv4/OpenCVModules-release.cmake"
+  "/usr/local/lib/cmake/opencv4/OpenCVModules.cmake"
+  "/usr/share/cmake-3.10/Modules/CMakeCInformation.cmake"
+  "/usr/share/cmake-3.10/Modules/CMakeCXXInformation.cmake"
+  "/usr/share/cmake-3.10/Modules/CMakeCommonLanguageInclude.cmake"
+  "/usr/share/cmake-3.10/Modules/CMakeGenericSystem.cmake"
+  "/usr/share/cmake-3.10/Modules/CMakeLanguageInformation.cmake"
+  "/usr/share/cmake-3.10/Modules/CMakeParseArguments.cmake"
+  "/usr/share/cmake-3.10/Modules/CMakeSystemSpecificInformation.cmake"
+  "/usr/share/cmake-3.10/Modules/CMakeSystemSpecificInitialize.cmake"
+  "/usr/share/cmake-3.10/Modules/CheckIncludeFile.cmake"
+  "/usr/share/cmake-3.10/Modules/CheckLibraryExists.cmake"
+  "/usr/share/cmake-3.10/Modules/CheckSymbolExists.cmake"
+  "/usr/share/cmake-3.10/Modules/Compiler/CMakeCommonCompilerMacros.cmake"
+  "/usr/share/cmake-3.10/Modules/Compiler/GNU-C.cmake"
+  "/usr/share/cmake-3.10/Modules/Compiler/GNU-CXX.cmake"
+  "/usr/share/cmake-3.10/Modules/Compiler/GNU.cmake"
+>>>>>>> fix
   "/usr/share/cmake-3.10/Modules/DartConfiguration.tcl.in"
   "/usr/share/cmake-3.10/Modules/FindGTest.cmake"
   "/usr/share/cmake-3.10/Modules/FindPackageHandleStandardArgs.cmake"
@@ -305,8 +341,11 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/usr/share/cmake-3.10/Modules/FindPythonInterp.cmake"
   "/usr/share/cmake-3.10/Modules/FindThreads.cmake"
   "/usr/share/cmake-3.10/Modules/GoogleTest.cmake"
+<<<<<<< refs/remotes/origin/master
   "/usr/share/cmake-3.10/Modules/Internal/FeatureTesting.cmake"
   "/usr/share/cmake-3.10/Modules/Platform/Linux-Determine-CXX.cmake"
+=======
+>>>>>>> fix
   "/usr/share/cmake-3.10/Modules/Platform/Linux-GNU-C.cmake"
   "/usr/share/cmake-3.10/Modules/Platform/Linux-GNU-CXX.cmake"
   "/usr/share/cmake-3.10/Modules/Platform/Linux-GNU.cmake"
@@ -326,11 +365,14 @@ set(CMAKE_MAKEFILE_OUTPUTS
 
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
+<<<<<<< refs/remotes/origin/master
   "CMakeFiles/3.10.2/CMakeSystem.cmake"
   "CMakeFiles/3.10.2/CMakeCCompiler.cmake"
   "CMakeFiles/3.10.2/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.10.2/CMakeCCompiler.cmake"
   "CMakeFiles/3.10.2/CMakeCXXCompiler.cmake"
+=======
+>>>>>>> fix
   "CTestConfiguration.ini"
   "catkin_generated/stamps/Project/package.xml.stamp"
   "atomic_configure/_setup_util.py"
@@ -361,6 +403,10 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "gtest/CMakeFiles/CMakeDirectoryInformation.cmake"
   "gtest/googlemock/CMakeFiles/CMakeDirectoryInformation.cmake"
   "gtest/googlemock/gtest/CMakeFiles/CMakeDirectoryInformation.cmake"
+<<<<<<< refs/remotes/origin/master
+=======
+  "baebot_sim/CMakeFiles/CMakeDirectoryInformation.cmake"
+>>>>>>> fix
   "baebot_master/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
@@ -375,23 +421,41 @@ set(CMAKE_DEPEND_INFO_FILES
   "gtest/googlemock/CMakeFiles/gmock.dir/DependInfo.cmake"
   "gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/DependInfo.cmake"
   "gtest/googlemock/gtest/CMakeFiles/gtest.dir/DependInfo.cmake"
+<<<<<<< refs/remotes/origin/master
+=======
+  "baebot_sim/CMakeFiles/_catkin_empty_exported_target.dir/DependInfo.cmake"
+>>>>>>> fix
   "baebot_master/CMakeFiles/BaeBotMaster.dir/DependInfo.cmake"
   "baebot_master/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/DependInfo.cmake"
   "baebot_master/CMakeFiles/geometry_msgs_generate_messages_py.dir/DependInfo.cmake"
   "baebot_master/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/DependInfo.cmake"
+<<<<<<< refs/remotes/origin/master
   "baebot_master/CMakeFiles/nav_msgs_generate_messages_cpp.dir/DependInfo.cmake"
   "baebot_master/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/DependInfo.cmake"
+=======
+  "baebot_master/CMakeFiles/pcl_msgs_generate_messages_cpp.dir/DependInfo.cmake"
+  "baebot_master/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/DependInfo.cmake"
+  "baebot_master/CMakeFiles/nav_msgs_generate_messages_cpp.dir/DependInfo.cmake"
+  "baebot_master/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/DependInfo.cmake"
+  "baebot_master/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/DependInfo.cmake"
+  "baebot_master/CMakeFiles/tf_generate_messages_py.dir/DependInfo.cmake"
+  "baebot_master/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/DependInfo.cmake"
+  "baebot_master/CMakeFiles/topic_tools_generate_messages_cpp.dir/DependInfo.cmake"
+>>>>>>> fix
   "baebot_master/CMakeFiles/geometry_msgs_generate_messages_eus.dir/DependInfo.cmake"
   "baebot_master/CMakeFiles/roscpp_generate_messages_py.dir/DependInfo.cmake"
   "baebot_master/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/DependInfo.cmake"
   "baebot_master/CMakeFiles/std_srvs_generate_messages_eus.dir/DependInfo.cmake"
   "baebot_master/CMakeFiles/roscpp_generate_messages_lisp.dir/DependInfo.cmake"
   "baebot_master/CMakeFiles/bond_generate_messages_eus.dir/DependInfo.cmake"
+<<<<<<< refs/remotes/origin/master
   "baebot_master/CMakeFiles/roscpp_generate_messages_cpp.dir/DependInfo.cmake"
   "baebot_master/CMakeFiles/actionlib_generate_messages_cpp.dir/DependInfo.cmake"
   "baebot_master/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/DependInfo.cmake"
   "baebot_master/CMakeFiles/tf2_msgs_generate_messages_py.dir/DependInfo.cmake"
   "baebot_master/CMakeFiles/actionlib_generate_messages_py.dir/DependInfo.cmake"
+=======
+>>>>>>> fix
   "baebot_master/CMakeFiles/pcl_ros_gencfg.dir/DependInfo.cmake"
   "baebot_master/CMakeFiles/topic_tools_generate_messages_nodejs.dir/DependInfo.cmake"
   "baebot_master/CMakeFiles/std_msgs_generate_messages_nodejs.dir/DependInfo.cmake"
@@ -402,6 +466,12 @@ set(CMAKE_DEPEND_INFO_FILES
   "baebot_master/CMakeFiles/bond_generate_messages_py.dir/DependInfo.cmake"
   "baebot_master/CMakeFiles/std_srvs_generate_messages_nodejs.dir/DependInfo.cmake"
   "baebot_master/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/DependInfo.cmake"
+<<<<<<< refs/remotes/origin/master
+=======
+  "baebot_master/CMakeFiles/actionlib_generate_messages_cpp.dir/DependInfo.cmake"
+  "baebot_master/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/DependInfo.cmake"
+  "baebot_master/CMakeFiles/roscpp_generate_messages_cpp.dir/DependInfo.cmake"
+>>>>>>> fix
   "baebot_master/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/DependInfo.cmake"
   "baebot_master/CMakeFiles/std_srvs_generate_messages_cpp.dir/DependInfo.cmake"
   "baebot_master/CMakeFiles/nodelet_generate_messages_lisp.dir/DependInfo.cmake"
@@ -415,17 +485,23 @@ set(CMAKE_DEPEND_INFO_FILES
   "baebot_master/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/DependInfo.cmake"
   "baebot_master/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/DependInfo.cmake"
   "baebot_master/CMakeFiles/std_msgs_generate_messages_eus.dir/DependInfo.cmake"
+<<<<<<< refs/remotes/origin/master
   "baebot_master/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/DependInfo.cmake"
   "baebot_master/CMakeFiles/tf_generate_messages_py.dir/DependInfo.cmake"
   "baebot_master/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/DependInfo.cmake"
   "baebot_master/CMakeFiles/topic_tools_generate_messages_cpp.dir/DependInfo.cmake"
+=======
+>>>>>>> fix
   "baebot_master/CMakeFiles/sensor_msgs_generate_messages_eus.dir/DependInfo.cmake"
   "baebot_master/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/DependInfo.cmake"
   "baebot_master/CMakeFiles/roscpp_generate_messages_nodejs.dir/DependInfo.cmake"
   "baebot_master/CMakeFiles/std_msgs_generate_messages_lisp.dir/DependInfo.cmake"
   "baebot_master/CMakeFiles/std_msgs_generate_messages_py.dir/DependInfo.cmake"
+<<<<<<< refs/remotes/origin/master
   "baebot_master/CMakeFiles/pcl_msgs_generate_messages_cpp.dir/DependInfo.cmake"
   "baebot_master/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/DependInfo.cmake"
+=======
+>>>>>>> fix
   "baebot_master/CMakeFiles/pcl_msgs_generate_messages_eus.dir/DependInfo.cmake"
   "baebot_master/CMakeFiles/topic_tools_generate_messages_eus.dir/DependInfo.cmake"
   "baebot_master/CMakeFiles/nav_msgs_generate_messages_lisp.dir/DependInfo.cmake"
@@ -444,7 +520,10 @@ set(CMAKE_DEPEND_INFO_FILES
   "baebot_master/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/DependInfo.cmake"
   "baebot_master/CMakeFiles/topic_tools_generate_messages_py.dir/DependInfo.cmake"
   "baebot_master/CMakeFiles/nodelet_topic_tools_gencfg.dir/DependInfo.cmake"
+<<<<<<< refs/remotes/origin/master
   "baebot_master/CMakeFiles/_catkin_empty_exported_target.dir/DependInfo.cmake"
+=======
+>>>>>>> fix
   "baebot_master/CMakeFiles/std_srvs_generate_messages_lisp.dir/DependInfo.cmake"
   "baebot_master/CMakeFiles/topic_tools_generate_messages_lisp.dir/DependInfo.cmake"
   "baebot_master/CMakeFiles/std_srvs_generate_messages_py.dir/DependInfo.cmake"
@@ -459,5 +538,10 @@ set(CMAKE_DEPEND_INFO_FILES
   "baebot_master/CMakeFiles/nav_msgs_generate_messages_py.dir/DependInfo.cmake"
   "baebot_master/CMakeFiles/dynamic_reconfigure_gencfg.dir/DependInfo.cmake"
   "baebot_master/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/DependInfo.cmake"
+<<<<<<< refs/remotes/origin/master
+=======
+  "baebot_master/CMakeFiles/actionlib_generate_messages_py.dir/DependInfo.cmake"
+  "baebot_master/CMakeFiles/tf2_msgs_generate_messages_py.dir/DependInfo.cmake"
+>>>>>>> fix
   "baebot_master/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/DependInfo.cmake"
   )

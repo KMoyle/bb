@@ -48,10 +48,17 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
+<<<<<<< refs/remotes/origin/master
 CMAKE_SOURCE_DIR = /home/nanorobot/baebot_ws/src
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/nanorobot/baebot_ws/build
+=======
+CMAKE_SOURCE_DIR = /home/kyle/baebot_ws/src
+
+# The top-level build directory on which CMake was run.
+CMAKE_BINARY_DIR = /home/kyle/baebot_ws/build
+>>>>>>> fix
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -137,14 +144,24 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/nanorobot/baebot_ws/build/CMakeFiles /home/nanorobot/baebot_ws/build/baebot_master/CMakeFiles/progress.marks
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/nanorobot/baebot_ws/build/CMakeFiles 0
+=======
+	cd /home/kyle/baebot_ws/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/kyle/baebot_ws/build/CMakeFiles /home/kyle/baebot_ws/build/baebot_master/CMakeFiles/progress.marks
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kyle/baebot_ws/build/CMakeFiles 0
+>>>>>>> fix
 .PHONY : all
 
 # The main clean target
 clean:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/clean
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/clean
+>>>>>>> fix
 .PHONY : clean
 
 # The main clean target
@@ -154,22 +171,38 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/preinstall
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/preinstall
+>>>>>>> fix
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/preinstall
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/preinstall
+>>>>>>> fix
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+=======
+	cd /home/kyle/baebot_ws/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+>>>>>>> fix
 .PHONY : depend
 
 # Convenience name for target.
 baebot_master/CMakeFiles/BaeBotMaster.dir/rule:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/BaeBotMaster.dir/rule
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/BaeBotMaster.dir/rule
+>>>>>>> fix
 .PHONY : baebot_master/CMakeFiles/BaeBotMaster.dir/rule
 
 # Convenience name for target.
@@ -179,12 +212,20 @@ BaeBotMaster: baebot_master/CMakeFiles/BaeBotMaster.dir/rule
 
 # fast build rule for target.
 BaeBotMaster/fast:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/BaeBotMaster.dir/build.make baebot_master/CMakeFiles/BaeBotMaster.dir/build
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/BaeBotMaster.dir/build.make baebot_master/CMakeFiles/BaeBotMaster.dir/build
+>>>>>>> fix
 .PHONY : BaeBotMaster/fast
 
 # Convenience name for target.
 baebot_master/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/rule:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/rule
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/rule
+>>>>>>> fix
 .PHONY : baebot_master/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -194,12 +235,20 @@ nav_msgs_generate_messages_nodejs: baebot_master/CMakeFiles/nav_msgs_generate_me
 
 # fast build rule for target.
 nav_msgs_generate_messages_nodejs/fast:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/build.make baebot_master/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/build
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/build.make baebot_master/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/build
+>>>>>>> fix
 .PHONY : nav_msgs_generate_messages_nodejs/fast
 
 # Convenience name for target.
 baebot_master/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
+>>>>>>> fix
 .PHONY : baebot_master/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -209,12 +258,20 @@ geometry_msgs_generate_messages_py: baebot_master/CMakeFiles/geometry_msgs_gener
 
 # fast build rule for target.
 geometry_msgs_generate_messages_py/fast:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/geometry_msgs_generate_messages_py.dir/build.make baebot_master/CMakeFiles/geometry_msgs_generate_messages_py.dir/build
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/geometry_msgs_generate_messages_py.dir/build.make baebot_master/CMakeFiles/geometry_msgs_generate_messages_py.dir/build
+>>>>>>> fix
 .PHONY : geometry_msgs_generate_messages_py/fast
 
 # Convenience name for target.
 baebot_master/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
+>>>>>>> fix
 .PHONY : baebot_master/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -224,12 +281,51 @@ geometry_msgs_generate_messages_lisp: baebot_master/CMakeFiles/geometry_msgs_gen
 
 # fast build rule for target.
 geometry_msgs_generate_messages_lisp/fast:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build.make baebot_master/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build
 .PHONY : geometry_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
 baebot_master/CMakeFiles/nav_msgs_generate_messages_cpp.dir/rule:
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/nav_msgs_generate_messages_cpp.dir/rule
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build.make baebot_master/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build
+.PHONY : geometry_msgs_generate_messages_lisp/fast
+
+# Convenience name for target.
+baebot_master/CMakeFiles/pcl_msgs_generate_messages_cpp.dir/rule:
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/pcl_msgs_generate_messages_cpp.dir/rule
+.PHONY : baebot_master/CMakeFiles/pcl_msgs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+pcl_msgs_generate_messages_cpp: baebot_master/CMakeFiles/pcl_msgs_generate_messages_cpp.dir/rule
+
+.PHONY : pcl_msgs_generate_messages_cpp
+
+# fast build rule for target.
+pcl_msgs_generate_messages_cpp/fast:
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/pcl_msgs_generate_messages_cpp.dir/build.make baebot_master/CMakeFiles/pcl_msgs_generate_messages_cpp.dir/build
+.PHONY : pcl_msgs_generate_messages_cpp/fast
+
+# Convenience name for target.
+baebot_master/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule:
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule
+.PHONY : baebot_master/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+dynamic_reconfigure_generate_messages_lisp: baebot_master/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule
+
+.PHONY : dynamic_reconfigure_generate_messages_lisp
+
+# fast build rule for target.
+dynamic_reconfigure_generate_messages_lisp/fast:
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/build.make baebot_master/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/build
+.PHONY : dynamic_reconfigure_generate_messages_lisp/fast
+
+# Convenience name for target.
+baebot_master/CMakeFiles/nav_msgs_generate_messages_cpp.dir/rule:
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/nav_msgs_generate_messages_cpp.dir/rule
+>>>>>>> fix
 .PHONY : baebot_master/CMakeFiles/nav_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -239,12 +335,20 @@ nav_msgs_generate_messages_cpp: baebot_master/CMakeFiles/nav_msgs_generate_messa
 
 # fast build rule for target.
 nav_msgs_generate_messages_cpp/fast:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/nav_msgs_generate_messages_cpp.dir/build.make baebot_master/CMakeFiles/nav_msgs_generate_messages_cpp.dir/build
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/nav_msgs_generate_messages_cpp.dir/build.make baebot_master/CMakeFiles/nav_msgs_generate_messages_cpp.dir/build
+>>>>>>> fix
 .PHONY : nav_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
 baebot_master/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
+>>>>>>> fix
 .PHONY : baebot_master/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -254,12 +358,81 @@ sensor_msgs_generate_messages_lisp: baebot_master/CMakeFiles/sensor_msgs_generat
 
 # fast build rule for target.
 sensor_msgs_generate_messages_lisp/fast:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build.make baebot_master/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build
 .PHONY : sensor_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
 baebot_master/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule:
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build.make baebot_master/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build
+.PHONY : sensor_msgs_generate_messages_lisp/fast
+
+# Convenience name for target.
+baebot_master/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule:
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
+.PHONY : baebot_master/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+rosgraph_msgs_generate_messages_cpp: baebot_master/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
+
+.PHONY : rosgraph_msgs_generate_messages_cpp
+
+# fast build rule for target.
+rosgraph_msgs_generate_messages_cpp/fast:
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make baebot_master/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
+.PHONY : rosgraph_msgs_generate_messages_cpp/fast
+
+# Convenience name for target.
+baebot_master/CMakeFiles/tf_generate_messages_py.dir/rule:
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/tf_generate_messages_py.dir/rule
+.PHONY : baebot_master/CMakeFiles/tf_generate_messages_py.dir/rule
+
+# Convenience name for target.
+tf_generate_messages_py: baebot_master/CMakeFiles/tf_generate_messages_py.dir/rule
+
+.PHONY : tf_generate_messages_py
+
+# fast build rule for target.
+tf_generate_messages_py/fast:
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/tf_generate_messages_py.dir/build.make baebot_master/CMakeFiles/tf_generate_messages_py.dir/build
+.PHONY : tf_generate_messages_py/fast
+
+# Convenience name for target.
+baebot_master/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule:
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule
+.PHONY : baebot_master/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+dynamic_reconfigure_generate_messages_cpp: baebot_master/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule
+
+.PHONY : dynamic_reconfigure_generate_messages_cpp
+
+# fast build rule for target.
+dynamic_reconfigure_generate_messages_cpp/fast:
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/build.make baebot_master/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/build
+.PHONY : dynamic_reconfigure_generate_messages_cpp/fast
+
+# Convenience name for target.
+baebot_master/CMakeFiles/topic_tools_generate_messages_cpp.dir/rule:
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/topic_tools_generate_messages_cpp.dir/rule
+.PHONY : baebot_master/CMakeFiles/topic_tools_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+topic_tools_generate_messages_cpp: baebot_master/CMakeFiles/topic_tools_generate_messages_cpp.dir/rule
+
+.PHONY : topic_tools_generate_messages_cpp
+
+# fast build rule for target.
+topic_tools_generate_messages_cpp/fast:
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/topic_tools_generate_messages_cpp.dir/build.make baebot_master/CMakeFiles/topic_tools_generate_messages_cpp.dir/build
+.PHONY : topic_tools_generate_messages_cpp/fast
+
+# Convenience name for target.
+baebot_master/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule:
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule
+>>>>>>> fix
 .PHONY : baebot_master/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -269,12 +442,20 @@ geometry_msgs_generate_messages_eus: baebot_master/CMakeFiles/geometry_msgs_gene
 
 # fast build rule for target.
 geometry_msgs_generate_messages_eus/fast:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build.make baebot_master/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build.make baebot_master/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build
+>>>>>>> fix
 .PHONY : geometry_msgs_generate_messages_eus/fast
 
 # Convenience name for target.
 baebot_master/CMakeFiles/roscpp_generate_messages_py.dir/rule:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/roscpp_generate_messages_py.dir/rule
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/roscpp_generate_messages_py.dir/rule
+>>>>>>> fix
 .PHONY : baebot_master/CMakeFiles/roscpp_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -284,12 +465,20 @@ roscpp_generate_messages_py: baebot_master/CMakeFiles/roscpp_generate_messages_p
 
 # fast build rule for target.
 roscpp_generate_messages_py/fast:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/roscpp_generate_messages_py.dir/build.make baebot_master/CMakeFiles/roscpp_generate_messages_py.dir/build
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/roscpp_generate_messages_py.dir/build.make baebot_master/CMakeFiles/roscpp_generate_messages_py.dir/build
+>>>>>>> fix
 .PHONY : roscpp_generate_messages_py/fast
 
 # Convenience name for target.
 baebot_master/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule
+>>>>>>> fix
 .PHONY : baebot_master/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -299,12 +488,20 @@ geometry_msgs_generate_messages_nodejs: baebot_master/CMakeFiles/geometry_msgs_g
 
 # fast build rule for target.
 geometry_msgs_generate_messages_nodejs/fast:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build.make baebot_master/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build.make baebot_master/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build
+>>>>>>> fix
 .PHONY : geometry_msgs_generate_messages_nodejs/fast
 
 # Convenience name for target.
 baebot_master/CMakeFiles/std_srvs_generate_messages_eus.dir/rule:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/std_srvs_generate_messages_eus.dir/rule
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/std_srvs_generate_messages_eus.dir/rule
+>>>>>>> fix
 .PHONY : baebot_master/CMakeFiles/std_srvs_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -314,12 +511,20 @@ std_srvs_generate_messages_eus: baebot_master/CMakeFiles/std_srvs_generate_messa
 
 # fast build rule for target.
 std_srvs_generate_messages_eus/fast:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/std_srvs_generate_messages_eus.dir/build.make baebot_master/CMakeFiles/std_srvs_generate_messages_eus.dir/build
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/std_srvs_generate_messages_eus.dir/build.make baebot_master/CMakeFiles/std_srvs_generate_messages_eus.dir/build
+>>>>>>> fix
 .PHONY : std_srvs_generate_messages_eus/fast
 
 # Convenience name for target.
 baebot_master/CMakeFiles/roscpp_generate_messages_lisp.dir/rule:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
+>>>>>>> fix
 .PHONY : baebot_master/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -329,12 +534,20 @@ roscpp_generate_messages_lisp: baebot_master/CMakeFiles/roscpp_generate_messages
 
 # fast build rule for target.
 roscpp_generate_messages_lisp/fast:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make baebot_master/CMakeFiles/roscpp_generate_messages_lisp.dir/build
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make baebot_master/CMakeFiles/roscpp_generate_messages_lisp.dir/build
+>>>>>>> fix
 .PHONY : roscpp_generate_messages_lisp/fast
 
 # Convenience name for target.
 baebot_master/CMakeFiles/bond_generate_messages_eus.dir/rule:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/bond_generate_messages_eus.dir/rule
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/bond_generate_messages_eus.dir/rule
+>>>>>>> fix
 .PHONY : baebot_master/CMakeFiles/bond_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -344,6 +557,7 @@ bond_generate_messages_eus: baebot_master/CMakeFiles/bond_generate_messages_eus.
 
 # fast build rule for target.
 bond_generate_messages_eus/fast:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/bond_generate_messages_eus.dir/build.make baebot_master/CMakeFiles/bond_generate_messages_eus.dir/build
 .PHONY : bond_generate_messages_eus/fast
 
@@ -425,6 +639,14 @@ actionlib_generate_messages_py/fast:
 # Convenience name for target.
 baebot_master/CMakeFiles/pcl_ros_gencfg.dir/rule:
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/pcl_ros_gencfg.dir/rule
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/bond_generate_messages_eus.dir/build.make baebot_master/CMakeFiles/bond_generate_messages_eus.dir/build
+.PHONY : bond_generate_messages_eus/fast
+
+# Convenience name for target.
+baebot_master/CMakeFiles/pcl_ros_gencfg.dir/rule:
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/pcl_ros_gencfg.dir/rule
+>>>>>>> fix
 .PHONY : baebot_master/CMakeFiles/pcl_ros_gencfg.dir/rule
 
 # Convenience name for target.
@@ -434,12 +656,20 @@ pcl_ros_gencfg: baebot_master/CMakeFiles/pcl_ros_gencfg.dir/rule
 
 # fast build rule for target.
 pcl_ros_gencfg/fast:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/pcl_ros_gencfg.dir/build.make baebot_master/CMakeFiles/pcl_ros_gencfg.dir/build
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/pcl_ros_gencfg.dir/build.make baebot_master/CMakeFiles/pcl_ros_gencfg.dir/build
+>>>>>>> fix
 .PHONY : pcl_ros_gencfg/fast
 
 # Convenience name for target.
 baebot_master/CMakeFiles/topic_tools_generate_messages_nodejs.dir/rule:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/topic_tools_generate_messages_nodejs.dir/rule
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/topic_tools_generate_messages_nodejs.dir/rule
+>>>>>>> fix
 .PHONY : baebot_master/CMakeFiles/topic_tools_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -449,12 +679,20 @@ topic_tools_generate_messages_nodejs: baebot_master/CMakeFiles/topic_tools_gener
 
 # fast build rule for target.
 topic_tools_generate_messages_nodejs/fast:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/topic_tools_generate_messages_nodejs.dir/build.make baebot_master/CMakeFiles/topic_tools_generate_messages_nodejs.dir/build
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/topic_tools_generate_messages_nodejs.dir/build.make baebot_master/CMakeFiles/topic_tools_generate_messages_nodejs.dir/build
+>>>>>>> fix
 .PHONY : topic_tools_generate_messages_nodejs/fast
 
 # Convenience name for target.
 baebot_master/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
+>>>>>>> fix
 .PHONY : baebot_master/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -464,12 +702,20 @@ std_msgs_generate_messages_nodejs: baebot_master/CMakeFiles/std_msgs_generate_me
 
 # fast build rule for target.
 std_msgs_generate_messages_nodejs/fast:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make baebot_master/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make baebot_master/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build
+>>>>>>> fix
 .PHONY : std_msgs_generate_messages_nodejs/fast
 
 # Convenience name for target.
 baebot_master/CMakeFiles/bond_generate_messages_lisp.dir/rule:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/bond_generate_messages_lisp.dir/rule
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/bond_generate_messages_lisp.dir/rule
+>>>>>>> fix
 .PHONY : baebot_master/CMakeFiles/bond_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -479,12 +725,20 @@ bond_generate_messages_lisp: baebot_master/CMakeFiles/bond_generate_messages_lis
 
 # fast build rule for target.
 bond_generate_messages_lisp/fast:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/bond_generate_messages_lisp.dir/build.make baebot_master/CMakeFiles/bond_generate_messages_lisp.dir/build
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/bond_generate_messages_lisp.dir/build.make baebot_master/CMakeFiles/bond_generate_messages_lisp.dir/build
+>>>>>>> fix
 .PHONY : bond_generate_messages_lisp/fast
 
 # Convenience name for target.
 baebot_master/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
+>>>>>>> fix
 .PHONY : baebot_master/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -494,12 +748,20 @@ geometry_msgs_generate_messages_cpp: baebot_master/CMakeFiles/geometry_msgs_gene
 
 # fast build rule for target.
 geometry_msgs_generate_messages_cpp/fast:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build.make baebot_master/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build.make baebot_master/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build
+>>>>>>> fix
 .PHONY : geometry_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
 baebot_master/CMakeFiles/actionlib_generate_messages_lisp.dir/rule:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/actionlib_generate_messages_lisp.dir/rule
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/actionlib_generate_messages_lisp.dir/rule
+>>>>>>> fix
 .PHONY : baebot_master/CMakeFiles/actionlib_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -509,12 +771,20 @@ actionlib_generate_messages_lisp: baebot_master/CMakeFiles/actionlib_generate_me
 
 # fast build rule for target.
 actionlib_generate_messages_lisp/fast:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/actionlib_generate_messages_lisp.dir/build.make baebot_master/CMakeFiles/actionlib_generate_messages_lisp.dir/build
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/actionlib_generate_messages_lisp.dir/build.make baebot_master/CMakeFiles/actionlib_generate_messages_lisp.dir/build
+>>>>>>> fix
 .PHONY : actionlib_generate_messages_lisp/fast
 
 # Convenience name for target.
 baebot_master/CMakeFiles/nodelet_generate_messages_cpp.dir/rule:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/nodelet_generate_messages_cpp.dir/rule
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/nodelet_generate_messages_cpp.dir/rule
+>>>>>>> fix
 .PHONY : baebot_master/CMakeFiles/nodelet_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -524,12 +794,20 @@ nodelet_generate_messages_cpp: baebot_master/CMakeFiles/nodelet_generate_message
 
 # fast build rule for target.
 nodelet_generate_messages_cpp/fast:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/nodelet_generate_messages_cpp.dir/build.make baebot_master/CMakeFiles/nodelet_generate_messages_cpp.dir/build
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/nodelet_generate_messages_cpp.dir/build.make baebot_master/CMakeFiles/nodelet_generate_messages_cpp.dir/build
+>>>>>>> fix
 .PHONY : nodelet_generate_messages_cpp/fast
 
 # Convenience name for target.
 baebot_master/CMakeFiles/bond_generate_messages_py.dir/rule:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/bond_generate_messages_py.dir/rule
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/bond_generate_messages_py.dir/rule
+>>>>>>> fix
 .PHONY : baebot_master/CMakeFiles/bond_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -539,12 +817,20 @@ bond_generate_messages_py: baebot_master/CMakeFiles/bond_generate_messages_py.di
 
 # fast build rule for target.
 bond_generate_messages_py/fast:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/bond_generate_messages_py.dir/build.make baebot_master/CMakeFiles/bond_generate_messages_py.dir/build
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/bond_generate_messages_py.dir/build.make baebot_master/CMakeFiles/bond_generate_messages_py.dir/build
+>>>>>>> fix
 .PHONY : bond_generate_messages_py/fast
 
 # Convenience name for target.
 baebot_master/CMakeFiles/std_srvs_generate_messages_nodejs.dir/rule:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/std_srvs_generate_messages_nodejs.dir/rule
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/std_srvs_generate_messages_nodejs.dir/rule
+>>>>>>> fix
 .PHONY : baebot_master/CMakeFiles/std_srvs_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -554,12 +840,20 @@ std_srvs_generate_messages_nodejs: baebot_master/CMakeFiles/std_srvs_generate_me
 
 # fast build rule for target.
 std_srvs_generate_messages_nodejs/fast:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/std_srvs_generate_messages_nodejs.dir/build.make baebot_master/CMakeFiles/std_srvs_generate_messages_nodejs.dir/build
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/std_srvs_generate_messages_nodejs.dir/build.make baebot_master/CMakeFiles/std_srvs_generate_messages_nodejs.dir/build
+>>>>>>> fix
 .PHONY : std_srvs_generate_messages_nodejs/fast
 
 # Convenience name for target.
 baebot_master/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
+>>>>>>> fix
 .PHONY : baebot_master/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -569,12 +863,66 @@ rosgraph_msgs_generate_messages_lisp: baebot_master/CMakeFiles/rosgraph_msgs_gen
 
 # fast build rule for target.
 rosgraph_msgs_generate_messages_lisp/fast:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make baebot_master/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build
 .PHONY : rosgraph_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
 baebot_master/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule:
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make baebot_master/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build
+.PHONY : rosgraph_msgs_generate_messages_lisp/fast
+
+# Convenience name for target.
+baebot_master/CMakeFiles/actionlib_generate_messages_cpp.dir/rule:
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/actionlib_generate_messages_cpp.dir/rule
+.PHONY : baebot_master/CMakeFiles/actionlib_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+actionlib_generate_messages_cpp: baebot_master/CMakeFiles/actionlib_generate_messages_cpp.dir/rule
+
+.PHONY : actionlib_generate_messages_cpp
+
+# fast build rule for target.
+actionlib_generate_messages_cpp/fast:
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/actionlib_generate_messages_cpp.dir/build.make baebot_master/CMakeFiles/actionlib_generate_messages_cpp.dir/build
+.PHONY : actionlib_generate_messages_cpp/fast
+
+# Convenience name for target.
+baebot_master/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule:
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule
+.PHONY : baebot_master/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+sensor_msgs_generate_messages_nodejs: baebot_master/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule
+
+.PHONY : sensor_msgs_generate_messages_nodejs
+
+# fast build rule for target.
+sensor_msgs_generate_messages_nodejs/fast:
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build.make baebot_master/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build
+.PHONY : sensor_msgs_generate_messages_nodejs/fast
+
+# Convenience name for target.
+baebot_master/CMakeFiles/roscpp_generate_messages_cpp.dir/rule:
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
+.PHONY : baebot_master/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+roscpp_generate_messages_cpp: baebot_master/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
+
+.PHONY : roscpp_generate_messages_cpp
+
+# fast build rule for target.
+roscpp_generate_messages_cpp/fast:
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make baebot_master/CMakeFiles/roscpp_generate_messages_cpp.dir/build
+.PHONY : roscpp_generate_messages_cpp/fast
+
+# Convenience name for target.
+baebot_master/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule:
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule
+>>>>>>> fix
 .PHONY : baebot_master/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -584,12 +932,20 @@ rosgraph_msgs_generate_messages_eus: baebot_master/CMakeFiles/rosgraph_msgs_gene
 
 # fast build rule for target.
 rosgraph_msgs_generate_messages_eus/fast:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build.make baebot_master/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build.make baebot_master/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build
+>>>>>>> fix
 .PHONY : rosgraph_msgs_generate_messages_eus/fast
 
 # Convenience name for target.
 baebot_master/CMakeFiles/std_srvs_generate_messages_cpp.dir/rule:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/std_srvs_generate_messages_cpp.dir/rule
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/std_srvs_generate_messages_cpp.dir/rule
+>>>>>>> fix
 .PHONY : baebot_master/CMakeFiles/std_srvs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -599,12 +955,20 @@ std_srvs_generate_messages_cpp: baebot_master/CMakeFiles/std_srvs_generate_messa
 
 # fast build rule for target.
 std_srvs_generate_messages_cpp/fast:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/std_srvs_generate_messages_cpp.dir/build.make baebot_master/CMakeFiles/std_srvs_generate_messages_cpp.dir/build
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/std_srvs_generate_messages_cpp.dir/build.make baebot_master/CMakeFiles/std_srvs_generate_messages_cpp.dir/build
+>>>>>>> fix
 .PHONY : std_srvs_generate_messages_cpp/fast
 
 # Convenience name for target.
 baebot_master/CMakeFiles/nodelet_generate_messages_lisp.dir/rule:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/nodelet_generate_messages_lisp.dir/rule
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/nodelet_generate_messages_lisp.dir/rule
+>>>>>>> fix
 .PHONY : baebot_master/CMakeFiles/nodelet_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -614,12 +978,20 @@ nodelet_generate_messages_lisp: baebot_master/CMakeFiles/nodelet_generate_messag
 
 # fast build rule for target.
 nodelet_generate_messages_lisp/fast:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/nodelet_generate_messages_lisp.dir/build.make baebot_master/CMakeFiles/nodelet_generate_messages_lisp.dir/build
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/nodelet_generate_messages_lisp.dir/build.make baebot_master/CMakeFiles/nodelet_generate_messages_lisp.dir/build
+>>>>>>> fix
 .PHONY : nodelet_generate_messages_lisp/fast
 
 # Convenience name for target.
 baebot_master/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/rule:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/rule
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/rule
+>>>>>>> fix
 .PHONY : baebot_master/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -629,12 +1001,20 @@ actionlib_msgs_generate_messages_lisp: baebot_master/CMakeFiles/actionlib_msgs_g
 
 # fast build rule for target.
 actionlib_msgs_generate_messages_lisp/fast:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/build.make baebot_master/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/build
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/build.make baebot_master/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/build
+>>>>>>> fix
 .PHONY : actionlib_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
 baebot_master/CMakeFiles/actionlib_msgs_generate_messages_py.dir/rule:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/actionlib_msgs_generate_messages_py.dir/rule
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/actionlib_msgs_generate_messages_py.dir/rule
+>>>>>>> fix
 .PHONY : baebot_master/CMakeFiles/actionlib_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -644,12 +1024,20 @@ actionlib_msgs_generate_messages_py: baebot_master/CMakeFiles/actionlib_msgs_gen
 
 # fast build rule for target.
 actionlib_msgs_generate_messages_py/fast:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/actionlib_msgs_generate_messages_py.dir/build.make baebot_master/CMakeFiles/actionlib_msgs_generate_messages_py.dir/build
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/actionlib_msgs_generate_messages_py.dir/build.make baebot_master/CMakeFiles/actionlib_msgs_generate_messages_py.dir/build
+>>>>>>> fix
 .PHONY : actionlib_msgs_generate_messages_py/fast
 
 # Convenience name for target.
 baebot_master/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
+>>>>>>> fix
 .PHONY : baebot_master/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -659,12 +1047,20 @@ std_msgs_generate_messages_cpp: baebot_master/CMakeFiles/std_msgs_generate_messa
 
 # fast build rule for target.
 std_msgs_generate_messages_cpp/fast:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make baebot_master/CMakeFiles/std_msgs_generate_messages_cpp.dir/build
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make baebot_master/CMakeFiles/std_msgs_generate_messages_cpp.dir/build
+>>>>>>> fix
 .PHONY : std_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
 baebot_master/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule
+>>>>>>> fix
 .PHONY : baebot_master/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -674,12 +1070,20 @@ sensor_msgs_generate_messages_py: baebot_master/CMakeFiles/sensor_msgs_generate_
 
 # fast build rule for target.
 sensor_msgs_generate_messages_py/fast:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/sensor_msgs_generate_messages_py.dir/build.make baebot_master/CMakeFiles/sensor_msgs_generate_messages_py.dir/build
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/sensor_msgs_generate_messages_py.dir/build.make baebot_master/CMakeFiles/sensor_msgs_generate_messages_py.dir/build
+>>>>>>> fix
 .PHONY : sensor_msgs_generate_messages_py/fast
 
 # Convenience name for target.
 baebot_master/CMakeFiles/nodelet_generate_messages_py.dir/rule:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/nodelet_generate_messages_py.dir/rule
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/nodelet_generate_messages_py.dir/rule
+>>>>>>> fix
 .PHONY : baebot_master/CMakeFiles/nodelet_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -689,12 +1093,20 @@ nodelet_generate_messages_py: baebot_master/CMakeFiles/nodelet_generate_messages
 
 # fast build rule for target.
 nodelet_generate_messages_py/fast:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/nodelet_generate_messages_py.dir/build.make baebot_master/CMakeFiles/nodelet_generate_messages_py.dir/build
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/nodelet_generate_messages_py.dir/build.make baebot_master/CMakeFiles/nodelet_generate_messages_py.dir/build
+>>>>>>> fix
 .PHONY : nodelet_generate_messages_py/fast
 
 # Convenience name for target.
 baebot_master/CMakeFiles/roscpp_generate_messages_eus.dir/rule:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/roscpp_generate_messages_eus.dir/rule
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/roscpp_generate_messages_eus.dir/rule
+>>>>>>> fix
 .PHONY : baebot_master/CMakeFiles/roscpp_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -704,12 +1116,20 @@ roscpp_generate_messages_eus: baebot_master/CMakeFiles/roscpp_generate_messages_
 
 # fast build rule for target.
 roscpp_generate_messages_eus/fast:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/roscpp_generate_messages_eus.dir/build.make baebot_master/CMakeFiles/roscpp_generate_messages_eus.dir/build
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/roscpp_generate_messages_eus.dir/build.make baebot_master/CMakeFiles/roscpp_generate_messages_eus.dir/build
+>>>>>>> fix
 .PHONY : roscpp_generate_messages_eus/fast
 
 # Convenience name for target.
 baebot_master/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/rule:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/rule
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/rule
+>>>>>>> fix
 .PHONY : baebot_master/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -719,12 +1139,20 @@ actionlib_msgs_generate_messages_eus: baebot_master/CMakeFiles/actionlib_msgs_ge
 
 # fast build rule for target.
 actionlib_msgs_generate_messages_eus/fast:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/build.make baebot_master/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/build
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/build.make baebot_master/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/build
+>>>>>>> fix
 .PHONY : actionlib_msgs_generate_messages_eus/fast
 
 # Convenience name for target.
 baebot_master/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
+>>>>>>> fix
 .PHONY : baebot_master/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -734,12 +1162,20 @@ rosgraph_msgs_generate_messages_py: baebot_master/CMakeFiles/rosgraph_msgs_gener
 
 # fast build rule for target.
 rosgraph_msgs_generate_messages_py/fast:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make baebot_master/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make baebot_master/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
+>>>>>>> fix
 .PHONY : rosgraph_msgs_generate_messages_py/fast
 
 # Convenience name for target.
 baebot_master/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
+>>>>>>> fix
 .PHONY : baebot_master/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -749,12 +1185,20 @@ rosgraph_msgs_generate_messages_nodejs: baebot_master/CMakeFiles/rosgraph_msgs_g
 
 # fast build rule for target.
 rosgraph_msgs_generate_messages_nodejs/fast:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build.make baebot_master/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build.make baebot_master/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build
+>>>>>>> fix
 .PHONY : rosgraph_msgs_generate_messages_nodejs/fast
 
 # Convenience name for target.
 baebot_master/CMakeFiles/std_msgs_generate_messages_eus.dir/rule:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
+>>>>>>> fix
 .PHONY : baebot_master/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -764,6 +1208,7 @@ std_msgs_generate_messages_eus: baebot_master/CMakeFiles/std_msgs_generate_messa
 
 # fast build rule for target.
 std_msgs_generate_messages_eus/fast:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/std_msgs_generate_messages_eus.dir/build.make baebot_master/CMakeFiles/std_msgs_generate_messages_eus.dir/build
 .PHONY : std_msgs_generate_messages_eus/fast
 
@@ -830,6 +1275,14 @@ topic_tools_generate_messages_cpp/fast:
 # Convenience name for target.
 baebot_master/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule:
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/std_msgs_generate_messages_eus.dir/build.make baebot_master/CMakeFiles/std_msgs_generate_messages_eus.dir/build
+.PHONY : std_msgs_generate_messages_eus/fast
+
+# Convenience name for target.
+baebot_master/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule:
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule
+>>>>>>> fix
 .PHONY : baebot_master/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -839,12 +1292,20 @@ sensor_msgs_generate_messages_eus: baebot_master/CMakeFiles/sensor_msgs_generate
 
 # fast build rule for target.
 sensor_msgs_generate_messages_eus/fast:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build.make baebot_master/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build.make baebot_master/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build
+>>>>>>> fix
 .PHONY : sensor_msgs_generate_messages_eus/fast
 
 # Convenience name for target.
 baebot_master/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
+>>>>>>> fix
 .PHONY : baebot_master/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -854,12 +1315,20 @@ sensor_msgs_generate_messages_cpp: baebot_master/CMakeFiles/sensor_msgs_generate
 
 # fast build rule for target.
 sensor_msgs_generate_messages_cpp/fast:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build.make baebot_master/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build.make baebot_master/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build
+>>>>>>> fix
 .PHONY : sensor_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
 baebot_master/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
+>>>>>>> fix
 .PHONY : baebot_master/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -869,12 +1338,20 @@ roscpp_generate_messages_nodejs: baebot_master/CMakeFiles/roscpp_generate_messag
 
 # fast build rule for target.
 roscpp_generate_messages_nodejs/fast:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make baebot_master/CMakeFiles/roscpp_generate_messages_nodejs.dir/build
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make baebot_master/CMakeFiles/roscpp_generate_messages_nodejs.dir/build
+>>>>>>> fix
 .PHONY : roscpp_generate_messages_nodejs/fast
 
 # Convenience name for target.
 baebot_master/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
+>>>>>>> fix
 .PHONY : baebot_master/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -884,12 +1361,20 @@ std_msgs_generate_messages_lisp: baebot_master/CMakeFiles/std_msgs_generate_mess
 
 # fast build rule for target.
 std_msgs_generate_messages_lisp/fast:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make baebot_master/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make baebot_master/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
+>>>>>>> fix
 .PHONY : std_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
 baebot_master/CMakeFiles/std_msgs_generate_messages_py.dir/rule:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/std_msgs_generate_messages_py.dir/rule
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/std_msgs_generate_messages_py.dir/rule
+>>>>>>> fix
 .PHONY : baebot_master/CMakeFiles/std_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -899,6 +1384,7 @@ std_msgs_generate_messages_py: baebot_master/CMakeFiles/std_msgs_generate_messag
 
 # fast build rule for target.
 std_msgs_generate_messages_py/fast:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/std_msgs_generate_messages_py.dir/build.make baebot_master/CMakeFiles/std_msgs_generate_messages_py.dir/build
 .PHONY : std_msgs_generate_messages_py/fast
 
@@ -935,6 +1421,14 @@ dynamic_reconfigure_generate_messages_lisp/fast:
 # Convenience name for target.
 baebot_master/CMakeFiles/pcl_msgs_generate_messages_eus.dir/rule:
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/pcl_msgs_generate_messages_eus.dir/rule
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/std_msgs_generate_messages_py.dir/build.make baebot_master/CMakeFiles/std_msgs_generate_messages_py.dir/build
+.PHONY : std_msgs_generate_messages_py/fast
+
+# Convenience name for target.
+baebot_master/CMakeFiles/pcl_msgs_generate_messages_eus.dir/rule:
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/pcl_msgs_generate_messages_eus.dir/rule
+>>>>>>> fix
 .PHONY : baebot_master/CMakeFiles/pcl_msgs_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -944,12 +1438,20 @@ pcl_msgs_generate_messages_eus: baebot_master/CMakeFiles/pcl_msgs_generate_messa
 
 # fast build rule for target.
 pcl_msgs_generate_messages_eus/fast:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/pcl_msgs_generate_messages_eus.dir/build.make baebot_master/CMakeFiles/pcl_msgs_generate_messages_eus.dir/build
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/pcl_msgs_generate_messages_eus.dir/build.make baebot_master/CMakeFiles/pcl_msgs_generate_messages_eus.dir/build
+>>>>>>> fix
 .PHONY : pcl_msgs_generate_messages_eus/fast
 
 # Convenience name for target.
 baebot_master/CMakeFiles/topic_tools_generate_messages_eus.dir/rule:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/topic_tools_generate_messages_eus.dir/rule
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/topic_tools_generate_messages_eus.dir/rule
+>>>>>>> fix
 .PHONY : baebot_master/CMakeFiles/topic_tools_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -959,12 +1461,20 @@ topic_tools_generate_messages_eus: baebot_master/CMakeFiles/topic_tools_generate
 
 # fast build rule for target.
 topic_tools_generate_messages_eus/fast:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/topic_tools_generate_messages_eus.dir/build.make baebot_master/CMakeFiles/topic_tools_generate_messages_eus.dir/build
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/topic_tools_generate_messages_eus.dir/build.make baebot_master/CMakeFiles/topic_tools_generate_messages_eus.dir/build
+>>>>>>> fix
 .PHONY : topic_tools_generate_messages_eus/fast
 
 # Convenience name for target.
 baebot_master/CMakeFiles/nav_msgs_generate_messages_lisp.dir/rule:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/nav_msgs_generate_messages_lisp.dir/rule
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/nav_msgs_generate_messages_lisp.dir/rule
+>>>>>>> fix
 .PHONY : baebot_master/CMakeFiles/nav_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -974,12 +1484,20 @@ nav_msgs_generate_messages_lisp: baebot_master/CMakeFiles/nav_msgs_generate_mess
 
 # fast build rule for target.
 nav_msgs_generate_messages_lisp/fast:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/nav_msgs_generate_messages_lisp.dir/build.make baebot_master/CMakeFiles/nav_msgs_generate_messages_lisp.dir/build
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/nav_msgs_generate_messages_lisp.dir/build.make baebot_master/CMakeFiles/nav_msgs_generate_messages_lisp.dir/build
+>>>>>>> fix
 .PHONY : nav_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
 baebot_master/CMakeFiles/pcl_msgs_generate_messages_nodejs.dir/rule:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/pcl_msgs_generate_messages_nodejs.dir/rule
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/pcl_msgs_generate_messages_nodejs.dir/rule
+>>>>>>> fix
 .PHONY : baebot_master/CMakeFiles/pcl_msgs_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -989,12 +1507,20 @@ pcl_msgs_generate_messages_nodejs: baebot_master/CMakeFiles/pcl_msgs_generate_me
 
 # fast build rule for target.
 pcl_msgs_generate_messages_nodejs/fast:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/pcl_msgs_generate_messages_nodejs.dir/build.make baebot_master/CMakeFiles/pcl_msgs_generate_messages_nodejs.dir/build
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/pcl_msgs_generate_messages_nodejs.dir/build.make baebot_master/CMakeFiles/pcl_msgs_generate_messages_nodejs.dir/build
+>>>>>>> fix
 .PHONY : pcl_msgs_generate_messages_nodejs/fast
 
 # Convenience name for target.
 baebot_master/CMakeFiles/nodelet_generate_messages_nodejs.dir/rule:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/nodelet_generate_messages_nodejs.dir/rule
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/nodelet_generate_messages_nodejs.dir/rule
+>>>>>>> fix
 .PHONY : baebot_master/CMakeFiles/nodelet_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -1004,12 +1530,20 @@ nodelet_generate_messages_nodejs: baebot_master/CMakeFiles/nodelet_generate_mess
 
 # fast build rule for target.
 nodelet_generate_messages_nodejs/fast:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/nodelet_generate_messages_nodejs.dir/build.make baebot_master/CMakeFiles/nodelet_generate_messages_nodejs.dir/build
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/nodelet_generate_messages_nodejs.dir/build.make baebot_master/CMakeFiles/nodelet_generate_messages_nodejs.dir/build
+>>>>>>> fix
 .PHONY : nodelet_generate_messages_nodejs/fast
 
 # Convenience name for target.
 baebot_master/CMakeFiles/actionlib_generate_messages_eus.dir/rule:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/actionlib_generate_messages_eus.dir/rule
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/actionlib_generate_messages_eus.dir/rule
+>>>>>>> fix
 .PHONY : baebot_master/CMakeFiles/actionlib_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -1019,12 +1553,20 @@ actionlib_generate_messages_eus: baebot_master/CMakeFiles/actionlib_generate_mes
 
 # fast build rule for target.
 actionlib_generate_messages_eus/fast:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/actionlib_generate_messages_eus.dir/build.make baebot_master/CMakeFiles/actionlib_generate_messages_eus.dir/build
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/actionlib_generate_messages_eus.dir/build.make baebot_master/CMakeFiles/actionlib_generate_messages_eus.dir/build
+>>>>>>> fix
 .PHONY : actionlib_generate_messages_eus/fast
 
 # Convenience name for target.
 baebot_master/CMakeFiles/pcl_msgs_generate_messages_py.dir/rule:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/pcl_msgs_generate_messages_py.dir/rule
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/pcl_msgs_generate_messages_py.dir/rule
+>>>>>>> fix
 .PHONY : baebot_master/CMakeFiles/pcl_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -1034,12 +1576,20 @@ pcl_msgs_generate_messages_py: baebot_master/CMakeFiles/pcl_msgs_generate_messag
 
 # fast build rule for target.
 pcl_msgs_generate_messages_py/fast:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/pcl_msgs_generate_messages_py.dir/build.make baebot_master/CMakeFiles/pcl_msgs_generate_messages_py.dir/build
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/pcl_msgs_generate_messages_py.dir/build.make baebot_master/CMakeFiles/pcl_msgs_generate_messages_py.dir/build
+>>>>>>> fix
 .PHONY : pcl_msgs_generate_messages_py/fast
 
 # Convenience name for target.
 baebot_master/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/rule:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/rule
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/rule
+>>>>>>> fix
 .PHONY : baebot_master/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -1049,12 +1599,20 @@ dynamic_reconfigure_generate_messages_eus: baebot_master/CMakeFiles/dynamic_reco
 
 # fast build rule for target.
 dynamic_reconfigure_generate_messages_eus/fast:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/build.make baebot_master/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/build
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/build.make baebot_master/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/build
+>>>>>>> fix
 .PHONY : dynamic_reconfigure_generate_messages_eus/fast
 
 # Convenience name for target.
 baebot_master/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/rule:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/rule
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/rule
+>>>>>>> fix
 .PHONY : baebot_master/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -1064,12 +1622,20 @@ dynamic_reconfigure_generate_messages_nodejs: baebot_master/CMakeFiles/dynamic_r
 
 # fast build rule for target.
 dynamic_reconfigure_generate_messages_nodejs/fast:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/build.make baebot_master/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/build
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/build.make baebot_master/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/build
+>>>>>>> fix
 .PHONY : dynamic_reconfigure_generate_messages_nodejs/fast
 
 # Convenience name for target.
 baebot_master/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule
+>>>>>>> fix
 .PHONY : baebot_master/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -1079,12 +1645,20 @@ dynamic_reconfigure_generate_messages_py: baebot_master/CMakeFiles/dynamic_recon
 
 # fast build rule for target.
 dynamic_reconfigure_generate_messages_py/fast:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/build.make baebot_master/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/build
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/build.make baebot_master/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/build
+>>>>>>> fix
 .PHONY : dynamic_reconfigure_generate_messages_py/fast
 
 # Convenience name for target.
 baebot_master/CMakeFiles/nodelet_generate_messages_eus.dir/rule:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/nodelet_generate_messages_eus.dir/rule
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/nodelet_generate_messages_eus.dir/rule
+>>>>>>> fix
 .PHONY : baebot_master/CMakeFiles/nodelet_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -1094,12 +1668,20 @@ nodelet_generate_messages_eus: baebot_master/CMakeFiles/nodelet_generate_message
 
 # fast build rule for target.
 nodelet_generate_messages_eus/fast:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/nodelet_generate_messages_eus.dir/build.make baebot_master/CMakeFiles/nodelet_generate_messages_eus.dir/build
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/nodelet_generate_messages_eus.dir/build.make baebot_master/CMakeFiles/nodelet_generate_messages_eus.dir/build
+>>>>>>> fix
 .PHONY : nodelet_generate_messages_eus/fast
 
 # Convenience name for target.
 baebot_master/CMakeFiles/bond_generate_messages_cpp.dir/rule:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/bond_generate_messages_cpp.dir/rule
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/bond_generate_messages_cpp.dir/rule
+>>>>>>> fix
 .PHONY : baebot_master/CMakeFiles/bond_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -1109,12 +1691,20 @@ bond_generate_messages_cpp: baebot_master/CMakeFiles/bond_generate_messages_cpp.
 
 # fast build rule for target.
 bond_generate_messages_cpp/fast:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/bond_generate_messages_cpp.dir/build.make baebot_master/CMakeFiles/bond_generate_messages_cpp.dir/build
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/bond_generate_messages_cpp.dir/build.make baebot_master/CMakeFiles/bond_generate_messages_cpp.dir/build
+>>>>>>> fix
 .PHONY : bond_generate_messages_cpp/fast
 
 # Convenience name for target.
 baebot_master/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/rule:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/rule
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/rule
+>>>>>>> fix
 .PHONY : baebot_master/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -1124,12 +1714,20 @@ actionlib_msgs_generate_messages_cpp: baebot_master/CMakeFiles/actionlib_msgs_ge
 
 # fast build rule for target.
 actionlib_msgs_generate_messages_cpp/fast:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/build.make baebot_master/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/build
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/build.make baebot_master/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/build
+>>>>>>> fix
 .PHONY : actionlib_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
 baebot_master/CMakeFiles/tf_generate_messages_eus.dir/rule:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/tf_generate_messages_eus.dir/rule
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/tf_generate_messages_eus.dir/rule
+>>>>>>> fix
 .PHONY : baebot_master/CMakeFiles/tf_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -1139,12 +1737,20 @@ tf_generate_messages_eus: baebot_master/CMakeFiles/tf_generate_messages_eus.dir/
 
 # fast build rule for target.
 tf_generate_messages_eus/fast:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/tf_generate_messages_eus.dir/build.make baebot_master/CMakeFiles/tf_generate_messages_eus.dir/build
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/tf_generate_messages_eus.dir/build.make baebot_master/CMakeFiles/tf_generate_messages_eus.dir/build
+>>>>>>> fix
 .PHONY : tf_generate_messages_eus/fast
 
 # Convenience name for target.
 baebot_master/CMakeFiles/bond_generate_messages_nodejs.dir/rule:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/bond_generate_messages_nodejs.dir/rule
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/bond_generate_messages_nodejs.dir/rule
+>>>>>>> fix
 .PHONY : baebot_master/CMakeFiles/bond_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -1154,12 +1760,20 @@ bond_generate_messages_nodejs: baebot_master/CMakeFiles/bond_generate_messages_n
 
 # fast build rule for target.
 bond_generate_messages_nodejs/fast:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/bond_generate_messages_nodejs.dir/build.make baebot_master/CMakeFiles/bond_generate_messages_nodejs.dir/build
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/bond_generate_messages_nodejs.dir/build.make baebot_master/CMakeFiles/bond_generate_messages_nodejs.dir/build
+>>>>>>> fix
 .PHONY : bond_generate_messages_nodejs/fast
 
 # Convenience name for target.
 baebot_master/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/rule:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/rule
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/rule
+>>>>>>> fix
 .PHONY : baebot_master/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -1169,12 +1783,20 @@ actionlib_msgs_generate_messages_nodejs: baebot_master/CMakeFiles/actionlib_msgs
 
 # fast build rule for target.
 actionlib_msgs_generate_messages_nodejs/fast:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/build.make baebot_master/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/build
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/build.make baebot_master/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/build
+>>>>>>> fix
 .PHONY : actionlib_msgs_generate_messages_nodejs/fast
 
 # Convenience name for target.
 baebot_master/CMakeFiles/topic_tools_generate_messages_py.dir/rule:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/topic_tools_generate_messages_py.dir/rule
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/topic_tools_generate_messages_py.dir/rule
+>>>>>>> fix
 .PHONY : baebot_master/CMakeFiles/topic_tools_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -1184,12 +1806,20 @@ topic_tools_generate_messages_py: baebot_master/CMakeFiles/topic_tools_generate_
 
 # fast build rule for target.
 topic_tools_generate_messages_py/fast:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/topic_tools_generate_messages_py.dir/build.make baebot_master/CMakeFiles/topic_tools_generate_messages_py.dir/build
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/topic_tools_generate_messages_py.dir/build.make baebot_master/CMakeFiles/topic_tools_generate_messages_py.dir/build
+>>>>>>> fix
 .PHONY : topic_tools_generate_messages_py/fast
 
 # Convenience name for target.
 baebot_master/CMakeFiles/nodelet_topic_tools_gencfg.dir/rule:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/nodelet_topic_tools_gencfg.dir/rule
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/nodelet_topic_tools_gencfg.dir/rule
+>>>>>>> fix
 .PHONY : baebot_master/CMakeFiles/nodelet_topic_tools_gencfg.dir/rule
 
 # Convenience name for target.
@@ -1199,6 +1829,7 @@ nodelet_topic_tools_gencfg: baebot_master/CMakeFiles/nodelet_topic_tools_gencfg.
 
 # fast build rule for target.
 nodelet_topic_tools_gencfg/fast:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/nodelet_topic_tools_gencfg.dir/build.make baebot_master/CMakeFiles/nodelet_topic_tools_gencfg.dir/build
 .PHONY : nodelet_topic_tools_gencfg/fast
 
@@ -1220,6 +1851,14 @@ _catkin_empty_exported_target/fast:
 # Convenience name for target.
 baebot_master/CMakeFiles/std_srvs_generate_messages_lisp.dir/rule:
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/std_srvs_generate_messages_lisp.dir/rule
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/nodelet_topic_tools_gencfg.dir/build.make baebot_master/CMakeFiles/nodelet_topic_tools_gencfg.dir/build
+.PHONY : nodelet_topic_tools_gencfg/fast
+
+# Convenience name for target.
+baebot_master/CMakeFiles/std_srvs_generate_messages_lisp.dir/rule:
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/std_srvs_generate_messages_lisp.dir/rule
+>>>>>>> fix
 .PHONY : baebot_master/CMakeFiles/std_srvs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -1229,12 +1868,20 @@ std_srvs_generate_messages_lisp: baebot_master/CMakeFiles/std_srvs_generate_mess
 
 # fast build rule for target.
 std_srvs_generate_messages_lisp/fast:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/std_srvs_generate_messages_lisp.dir/build.make baebot_master/CMakeFiles/std_srvs_generate_messages_lisp.dir/build
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/std_srvs_generate_messages_lisp.dir/build.make baebot_master/CMakeFiles/std_srvs_generate_messages_lisp.dir/build
+>>>>>>> fix
 .PHONY : std_srvs_generate_messages_lisp/fast
 
 # Convenience name for target.
 baebot_master/CMakeFiles/topic_tools_generate_messages_lisp.dir/rule:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/topic_tools_generate_messages_lisp.dir/rule
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/topic_tools_generate_messages_lisp.dir/rule
+>>>>>>> fix
 .PHONY : baebot_master/CMakeFiles/topic_tools_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -1244,12 +1891,20 @@ topic_tools_generate_messages_lisp: baebot_master/CMakeFiles/topic_tools_generat
 
 # fast build rule for target.
 topic_tools_generate_messages_lisp/fast:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/topic_tools_generate_messages_lisp.dir/build.make baebot_master/CMakeFiles/topic_tools_generate_messages_lisp.dir/build
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/topic_tools_generate_messages_lisp.dir/build.make baebot_master/CMakeFiles/topic_tools_generate_messages_lisp.dir/build
+>>>>>>> fix
 .PHONY : topic_tools_generate_messages_lisp/fast
 
 # Convenience name for target.
 baebot_master/CMakeFiles/std_srvs_generate_messages_py.dir/rule:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/std_srvs_generate_messages_py.dir/rule
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/std_srvs_generate_messages_py.dir/rule
+>>>>>>> fix
 .PHONY : baebot_master/CMakeFiles/std_srvs_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -1259,12 +1914,20 @@ std_srvs_generate_messages_py: baebot_master/CMakeFiles/std_srvs_generate_messag
 
 # fast build rule for target.
 std_srvs_generate_messages_py/fast:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/std_srvs_generate_messages_py.dir/build.make baebot_master/CMakeFiles/std_srvs_generate_messages_py.dir/build
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/std_srvs_generate_messages_py.dir/build.make baebot_master/CMakeFiles/std_srvs_generate_messages_py.dir/build
+>>>>>>> fix
 .PHONY : std_srvs_generate_messages_py/fast
 
 # Convenience name for target.
 baebot_master/CMakeFiles/actionlib_generate_messages_nodejs.dir/rule:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/actionlib_generate_messages_nodejs.dir/rule
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/actionlib_generate_messages_nodejs.dir/rule
+>>>>>>> fix
 .PHONY : baebot_master/CMakeFiles/actionlib_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -1274,12 +1937,20 @@ actionlib_generate_messages_nodejs: baebot_master/CMakeFiles/actionlib_generate_
 
 # fast build rule for target.
 actionlib_generate_messages_nodejs/fast:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/actionlib_generate_messages_nodejs.dir/build.make baebot_master/CMakeFiles/actionlib_generate_messages_nodejs.dir/build
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/actionlib_generate_messages_nodejs.dir/build.make baebot_master/CMakeFiles/actionlib_generate_messages_nodejs.dir/build
+>>>>>>> fix
 .PHONY : actionlib_generate_messages_nodejs/fast
 
 # Convenience name for target.
 baebot_master/CMakeFiles/pcl_msgs_generate_messages_lisp.dir/rule:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/pcl_msgs_generate_messages_lisp.dir/rule
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/pcl_msgs_generate_messages_lisp.dir/rule
+>>>>>>> fix
 .PHONY : baebot_master/CMakeFiles/pcl_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -1289,12 +1960,20 @@ pcl_msgs_generate_messages_lisp: baebot_master/CMakeFiles/pcl_msgs_generate_mess
 
 # fast build rule for target.
 pcl_msgs_generate_messages_lisp/fast:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/pcl_msgs_generate_messages_lisp.dir/build.make baebot_master/CMakeFiles/pcl_msgs_generate_messages_lisp.dir/build
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/pcl_msgs_generate_messages_lisp.dir/build.make baebot_master/CMakeFiles/pcl_msgs_generate_messages_lisp.dir/build
+>>>>>>> fix
 .PHONY : pcl_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
 baebot_master/CMakeFiles/tf_generate_messages_cpp.dir/rule:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/tf_generate_messages_cpp.dir/rule
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/tf_generate_messages_cpp.dir/rule
+>>>>>>> fix
 .PHONY : baebot_master/CMakeFiles/tf_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -1304,12 +1983,20 @@ tf_generate_messages_cpp: baebot_master/CMakeFiles/tf_generate_messages_cpp.dir/
 
 # fast build rule for target.
 tf_generate_messages_cpp/fast:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/tf_generate_messages_cpp.dir/build.make baebot_master/CMakeFiles/tf_generate_messages_cpp.dir/build
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/tf_generate_messages_cpp.dir/build.make baebot_master/CMakeFiles/tf_generate_messages_cpp.dir/build
+>>>>>>> fix
 .PHONY : tf_generate_messages_cpp/fast
 
 # Convenience name for target.
 baebot_master/CMakeFiles/tf_generate_messages_lisp.dir/rule:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/tf_generate_messages_lisp.dir/rule
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/tf_generate_messages_lisp.dir/rule
+>>>>>>> fix
 .PHONY : baebot_master/CMakeFiles/tf_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -1319,12 +2006,20 @@ tf_generate_messages_lisp: baebot_master/CMakeFiles/tf_generate_messages_lisp.di
 
 # fast build rule for target.
 tf_generate_messages_lisp/fast:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/tf_generate_messages_lisp.dir/build.make baebot_master/CMakeFiles/tf_generate_messages_lisp.dir/build
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/tf_generate_messages_lisp.dir/build.make baebot_master/CMakeFiles/tf_generate_messages_lisp.dir/build
+>>>>>>> fix
 .PHONY : tf_generate_messages_lisp/fast
 
 # Convenience name for target.
 baebot_master/CMakeFiles/tf_generate_messages_nodejs.dir/rule:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/tf_generate_messages_nodejs.dir/rule
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/tf_generate_messages_nodejs.dir/rule
+>>>>>>> fix
 .PHONY : baebot_master/CMakeFiles/tf_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -1334,12 +2029,20 @@ tf_generate_messages_nodejs: baebot_master/CMakeFiles/tf_generate_messages_nodej
 
 # fast build rule for target.
 tf_generate_messages_nodejs/fast:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/tf_generate_messages_nodejs.dir/build.make baebot_master/CMakeFiles/tf_generate_messages_nodejs.dir/build
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/tf_generate_messages_nodejs.dir/build.make baebot_master/CMakeFiles/tf_generate_messages_nodejs.dir/build
+>>>>>>> fix
 .PHONY : tf_generate_messages_nodejs/fast
 
 # Convenience name for target.
 baebot_master/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/rule:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/rule
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/rule
+>>>>>>> fix
 .PHONY : baebot_master/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -1349,12 +2052,20 @@ tf2_msgs_generate_messages_cpp: baebot_master/CMakeFiles/tf2_msgs_generate_messa
 
 # fast build rule for target.
 tf2_msgs_generate_messages_cpp/fast:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/build.make baebot_master/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/build
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/build.make baebot_master/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/build
+>>>>>>> fix
 .PHONY : tf2_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
 baebot_master/CMakeFiles/nav_msgs_generate_messages_eus.dir/rule:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/nav_msgs_generate_messages_eus.dir/rule
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/nav_msgs_generate_messages_eus.dir/rule
+>>>>>>> fix
 .PHONY : baebot_master/CMakeFiles/nav_msgs_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -1364,12 +2075,20 @@ nav_msgs_generate_messages_eus: baebot_master/CMakeFiles/nav_msgs_generate_messa
 
 # fast build rule for target.
 nav_msgs_generate_messages_eus/fast:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/nav_msgs_generate_messages_eus.dir/build.make baebot_master/CMakeFiles/nav_msgs_generate_messages_eus.dir/build
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/nav_msgs_generate_messages_eus.dir/build.make baebot_master/CMakeFiles/nav_msgs_generate_messages_eus.dir/build
+>>>>>>> fix
 .PHONY : nav_msgs_generate_messages_eus/fast
 
 # Convenience name for target.
 baebot_master/CMakeFiles/tf2_msgs_generate_messages_eus.dir/rule:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/tf2_msgs_generate_messages_eus.dir/rule
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/tf2_msgs_generate_messages_eus.dir/rule
+>>>>>>> fix
 .PHONY : baebot_master/CMakeFiles/tf2_msgs_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -1379,12 +2098,20 @@ tf2_msgs_generate_messages_eus: baebot_master/CMakeFiles/tf2_msgs_generate_messa
 
 # fast build rule for target.
 tf2_msgs_generate_messages_eus/fast:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/tf2_msgs_generate_messages_eus.dir/build.make baebot_master/CMakeFiles/tf2_msgs_generate_messages_eus.dir/build
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/tf2_msgs_generate_messages_eus.dir/build.make baebot_master/CMakeFiles/tf2_msgs_generate_messages_eus.dir/build
+>>>>>>> fix
 .PHONY : tf2_msgs_generate_messages_eus/fast
 
 # Convenience name for target.
 baebot_master/CMakeFiles/nav_msgs_generate_messages_py.dir/rule:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/nav_msgs_generate_messages_py.dir/rule
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/nav_msgs_generate_messages_py.dir/rule
+>>>>>>> fix
 .PHONY : baebot_master/CMakeFiles/nav_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -1394,12 +2121,20 @@ nav_msgs_generate_messages_py: baebot_master/CMakeFiles/nav_msgs_generate_messag
 
 # fast build rule for target.
 nav_msgs_generate_messages_py/fast:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/nav_msgs_generate_messages_py.dir/build.make baebot_master/CMakeFiles/nav_msgs_generate_messages_py.dir/build
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/nav_msgs_generate_messages_py.dir/build.make baebot_master/CMakeFiles/nav_msgs_generate_messages_py.dir/build
+>>>>>>> fix
 .PHONY : nav_msgs_generate_messages_py/fast
 
 # Convenience name for target.
 baebot_master/CMakeFiles/dynamic_reconfigure_gencfg.dir/rule:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/dynamic_reconfigure_gencfg.dir/rule
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/dynamic_reconfigure_gencfg.dir/rule
+>>>>>>> fix
 .PHONY : baebot_master/CMakeFiles/dynamic_reconfigure_gencfg.dir/rule
 
 # Convenience name for target.
@@ -1409,12 +2144,20 @@ dynamic_reconfigure_gencfg: baebot_master/CMakeFiles/dynamic_reconfigure_gencfg.
 
 # fast build rule for target.
 dynamic_reconfigure_gencfg/fast:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/dynamic_reconfigure_gencfg.dir/build.make baebot_master/CMakeFiles/dynamic_reconfigure_gencfg.dir/build
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/dynamic_reconfigure_gencfg.dir/build.make baebot_master/CMakeFiles/dynamic_reconfigure_gencfg.dir/build
+>>>>>>> fix
 .PHONY : dynamic_reconfigure_gencfg/fast
 
 # Convenience name for target.
 baebot_master/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/rule:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/rule
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/rule
+>>>>>>> fix
 .PHONY : baebot_master/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -1424,12 +2167,51 @@ tf2_msgs_generate_messages_lisp: baebot_master/CMakeFiles/tf2_msgs_generate_mess
 
 # fast build rule for target.
 tf2_msgs_generate_messages_lisp/fast:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/build.make baebot_master/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/build
 .PHONY : tf2_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
 baebot_master/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/rule:
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/rule
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/build.make baebot_master/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/build
+.PHONY : tf2_msgs_generate_messages_lisp/fast
+
+# Convenience name for target.
+baebot_master/CMakeFiles/actionlib_generate_messages_py.dir/rule:
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/actionlib_generate_messages_py.dir/rule
+.PHONY : baebot_master/CMakeFiles/actionlib_generate_messages_py.dir/rule
+
+# Convenience name for target.
+actionlib_generate_messages_py: baebot_master/CMakeFiles/actionlib_generate_messages_py.dir/rule
+
+.PHONY : actionlib_generate_messages_py
+
+# fast build rule for target.
+actionlib_generate_messages_py/fast:
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/actionlib_generate_messages_py.dir/build.make baebot_master/CMakeFiles/actionlib_generate_messages_py.dir/build
+.PHONY : actionlib_generate_messages_py/fast
+
+# Convenience name for target.
+baebot_master/CMakeFiles/tf2_msgs_generate_messages_py.dir/rule:
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/tf2_msgs_generate_messages_py.dir/rule
+.PHONY : baebot_master/CMakeFiles/tf2_msgs_generate_messages_py.dir/rule
+
+# Convenience name for target.
+tf2_msgs_generate_messages_py: baebot_master/CMakeFiles/tf2_msgs_generate_messages_py.dir/rule
+
+.PHONY : tf2_msgs_generate_messages_py
+
+# fast build rule for target.
+tf2_msgs_generate_messages_py/fast:
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/tf2_msgs_generate_messages_py.dir/build.make baebot_master/CMakeFiles/tf2_msgs_generate_messages_py.dir/build
+.PHONY : tf2_msgs_generate_messages_py/fast
+
+# Convenience name for target.
+baebot_master/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/rule:
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/rule
+>>>>>>> fix
 .PHONY : baebot_master/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -1439,7 +2221,11 @@ tf2_msgs_generate_messages_nodejs: baebot_master/CMakeFiles/tf2_msgs_generate_me
 
 # fast build rule for target.
 tf2_msgs_generate_messages_nodejs/fast:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/build.make baebot_master/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/build
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/build.make baebot_master/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/build
+>>>>>>> fix
 .PHONY : tf2_msgs_generate_messages_nodejs/fast
 
 src/BaeBotMaster.o: src/BaeBotMaster.cpp.o
@@ -1448,7 +2234,11 @@ src/BaeBotMaster.o: src/BaeBotMaster.cpp.o
 
 # target to build an object file
 src/BaeBotMaster.cpp.o:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/BaeBotMaster.dir/build.make baebot_master/CMakeFiles/BaeBotMaster.dir/src/BaeBotMaster.cpp.o
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/BaeBotMaster.dir/build.make baebot_master/CMakeFiles/BaeBotMaster.dir/src/BaeBotMaster.cpp.o
+>>>>>>> fix
 .PHONY : src/BaeBotMaster.cpp.o
 
 src/BaeBotMaster.i: src/BaeBotMaster.cpp.i
@@ -1457,7 +2247,11 @@ src/BaeBotMaster.i: src/BaeBotMaster.cpp.i
 
 # target to preprocess a source file
 src/BaeBotMaster.cpp.i:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/BaeBotMaster.dir/build.make baebot_master/CMakeFiles/BaeBotMaster.dir/src/BaeBotMaster.cpp.i
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/BaeBotMaster.dir/build.make baebot_master/CMakeFiles/BaeBotMaster.dir/src/BaeBotMaster.cpp.i
+>>>>>>> fix
 .PHONY : src/BaeBotMaster.cpp.i
 
 src/BaeBotMaster.s: src/BaeBotMaster.cpp.s
@@ -1466,7 +2260,11 @@ src/BaeBotMaster.s: src/BaeBotMaster.cpp.s
 
 # target to generate assembly for a file
 src/BaeBotMaster.cpp.s:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/BaeBotMaster.dir/build.make baebot_master/CMakeFiles/BaeBotMaster.dir/src/BaeBotMaster.cpp.s
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/BaeBotMaster.dir/build.make baebot_master/CMakeFiles/BaeBotMaster.dir/src/BaeBotMaster.cpp.s
+>>>>>>> fix
 .PHONY : src/BaeBotMaster.cpp.s
 
 src/baebotMasterMain.o: src/baebotMasterMain.cpp.o
@@ -1475,7 +2273,11 @@ src/baebotMasterMain.o: src/baebotMasterMain.cpp.o
 
 # target to build an object file
 src/baebotMasterMain.cpp.o:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/BaeBotMaster.dir/build.make baebot_master/CMakeFiles/BaeBotMaster.dir/src/baebotMasterMain.cpp.o
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/BaeBotMaster.dir/build.make baebot_master/CMakeFiles/BaeBotMaster.dir/src/baebotMasterMain.cpp.o
+>>>>>>> fix
 .PHONY : src/baebotMasterMain.cpp.o
 
 src/baebotMasterMain.i: src/baebotMasterMain.cpp.i
@@ -1484,7 +2286,11 @@ src/baebotMasterMain.i: src/baebotMasterMain.cpp.i
 
 # target to preprocess a source file
 src/baebotMasterMain.cpp.i:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/BaeBotMaster.dir/build.make baebot_master/CMakeFiles/BaeBotMaster.dir/src/baebotMasterMain.cpp.i
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/BaeBotMaster.dir/build.make baebot_master/CMakeFiles/BaeBotMaster.dir/src/baebotMasterMain.cpp.i
+>>>>>>> fix
 .PHONY : src/baebotMasterMain.cpp.i
 
 src/baebotMasterMain.s: src/baebotMasterMain.cpp.s
@@ -1493,7 +2299,11 @@ src/baebotMasterMain.s: src/baebotMasterMain.cpp.s
 
 # target to generate assembly for a file
 src/baebotMasterMain.cpp.s:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/BaeBotMaster.dir/build.make baebot_master/CMakeFiles/BaeBotMaster.dir/src/baebotMasterMain.cpp.s
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/BaeBotMaster.dir/build.make baebot_master/CMakeFiles/BaeBotMaster.dir/src/baebotMasterMain.cpp.s
+>>>>>>> fix
 .PHONY : src/baebotMasterMain.cpp.s
 
 src/bb_control/BbControl.o: src/bb_control/BbControl.cpp.o
@@ -1502,7 +2312,11 @@ src/bb_control/BbControl.o: src/bb_control/BbControl.cpp.o
 
 # target to build an object file
 src/bb_control/BbControl.cpp.o:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/BaeBotMaster.dir/build.make baebot_master/CMakeFiles/BaeBotMaster.dir/src/bb_control/BbControl.cpp.o
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/BaeBotMaster.dir/build.make baebot_master/CMakeFiles/BaeBotMaster.dir/src/bb_control/BbControl.cpp.o
+>>>>>>> fix
 .PHONY : src/bb_control/BbControl.cpp.o
 
 src/bb_control/BbControl.i: src/bb_control/BbControl.cpp.i
@@ -1511,7 +2325,11 @@ src/bb_control/BbControl.i: src/bb_control/BbControl.cpp.i
 
 # target to preprocess a source file
 src/bb_control/BbControl.cpp.i:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/BaeBotMaster.dir/build.make baebot_master/CMakeFiles/BaeBotMaster.dir/src/bb_control/BbControl.cpp.i
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/BaeBotMaster.dir/build.make baebot_master/CMakeFiles/BaeBotMaster.dir/src/bb_control/BbControl.cpp.i
+>>>>>>> fix
 .PHONY : src/bb_control/BbControl.cpp.i
 
 src/bb_control/BbControl.s: src/bb_control/BbControl.cpp.s
@@ -1520,7 +2338,11 @@ src/bb_control/BbControl.s: src/bb_control/BbControl.cpp.s
 
 # target to generate assembly for a file
 src/bb_control/BbControl.cpp.s:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/BaeBotMaster.dir/build.make baebot_master/CMakeFiles/BaeBotMaster.dir/src/bb_control/BbControl.cpp.s
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/BaeBotMaster.dir/build.make baebot_master/CMakeFiles/BaeBotMaster.dir/src/bb_control/BbControl.cpp.s
+>>>>>>> fix
 .PHONY : src/bb_control/BbControl.cpp.s
 
 src/bb_sensors/BbImage.o: src/bb_sensors/BbImage.cpp.o
@@ -1529,7 +2351,11 @@ src/bb_sensors/BbImage.o: src/bb_sensors/BbImage.cpp.o
 
 # target to build an object file
 src/bb_sensors/BbImage.cpp.o:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/BaeBotMaster.dir/build.make baebot_master/CMakeFiles/BaeBotMaster.dir/src/bb_sensors/BbImage.cpp.o
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/BaeBotMaster.dir/build.make baebot_master/CMakeFiles/BaeBotMaster.dir/src/bb_sensors/BbImage.cpp.o
+>>>>>>> fix
 .PHONY : src/bb_sensors/BbImage.cpp.o
 
 src/bb_sensors/BbImage.i: src/bb_sensors/BbImage.cpp.i
@@ -1538,7 +2364,11 @@ src/bb_sensors/BbImage.i: src/bb_sensors/BbImage.cpp.i
 
 # target to preprocess a source file
 src/bb_sensors/BbImage.cpp.i:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/BaeBotMaster.dir/build.make baebot_master/CMakeFiles/BaeBotMaster.dir/src/bb_sensors/BbImage.cpp.i
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/BaeBotMaster.dir/build.make baebot_master/CMakeFiles/BaeBotMaster.dir/src/bb_sensors/BbImage.cpp.i
+>>>>>>> fix
 .PHONY : src/bb_sensors/BbImage.cpp.i
 
 src/bb_sensors/BbImage.s: src/bb_sensors/BbImage.cpp.s
@@ -1547,7 +2377,11 @@ src/bb_sensors/BbImage.s: src/bb_sensors/BbImage.cpp.s
 
 # target to generate assembly for a file
 src/bb_sensors/BbImage.cpp.s:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/BaeBotMaster.dir/build.make baebot_master/CMakeFiles/BaeBotMaster.dir/src/bb_sensors/BbImage.cpp.s
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/BaeBotMaster.dir/build.make baebot_master/CMakeFiles/BaeBotMaster.dir/src/bb_sensors/BbImage.cpp.s
+>>>>>>> fix
 .PHONY : src/bb_sensors/BbImage.cpp.s
 
 src/bb_sensors/BbLaser.o: src/bb_sensors/BbLaser.cpp.o
@@ -1556,7 +2390,11 @@ src/bb_sensors/BbLaser.o: src/bb_sensors/BbLaser.cpp.o
 
 # target to build an object file
 src/bb_sensors/BbLaser.cpp.o:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/BaeBotMaster.dir/build.make baebot_master/CMakeFiles/BaeBotMaster.dir/src/bb_sensors/BbLaser.cpp.o
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/BaeBotMaster.dir/build.make baebot_master/CMakeFiles/BaeBotMaster.dir/src/bb_sensors/BbLaser.cpp.o
+>>>>>>> fix
 .PHONY : src/bb_sensors/BbLaser.cpp.o
 
 src/bb_sensors/BbLaser.i: src/bb_sensors/BbLaser.cpp.i
@@ -1565,7 +2403,11 @@ src/bb_sensors/BbLaser.i: src/bb_sensors/BbLaser.cpp.i
 
 # target to preprocess a source file
 src/bb_sensors/BbLaser.cpp.i:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/BaeBotMaster.dir/build.make baebot_master/CMakeFiles/BaeBotMaster.dir/src/bb_sensors/BbLaser.cpp.i
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/BaeBotMaster.dir/build.make baebot_master/CMakeFiles/BaeBotMaster.dir/src/bb_sensors/BbLaser.cpp.i
+>>>>>>> fix
 .PHONY : src/bb_sensors/BbLaser.cpp.i
 
 src/bb_sensors/BbLaser.s: src/bb_sensors/BbLaser.cpp.s
@@ -1574,7 +2416,11 @@ src/bb_sensors/BbLaser.s: src/bb_sensors/BbLaser.cpp.s
 
 # target to generate assembly for a file
 src/bb_sensors/BbLaser.cpp.s:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/BaeBotMaster.dir/build.make baebot_master/CMakeFiles/BaeBotMaster.dir/src/bb_sensors/BbLaser.cpp.s
+=======
+	cd /home/kyle/baebot_ws/build && $(MAKE) -f baebot_master/CMakeFiles/BaeBotMaster.dir/build.make baebot_master/CMakeFiles/BaeBotMaster.dir/src/bb_sensors/BbLaser.cpp.s
+>>>>>>> fix
 .PHONY : src/bb_sensors/BbLaser.cpp.s
 
 # Help Target
@@ -1592,20 +2438,34 @@ help:
 	@echo "... nav_msgs_generate_messages_nodejs"
 	@echo "... geometry_msgs_generate_messages_py"
 	@echo "... geometry_msgs_generate_messages_lisp"
+<<<<<<< refs/remotes/origin/master
 	@echo "... nav_msgs_generate_messages_cpp"
 	@echo "... sensor_msgs_generate_messages_lisp"
+=======
+	@echo "... pcl_msgs_generate_messages_cpp"
+	@echo "... dynamic_reconfigure_generate_messages_lisp"
+	@echo "... nav_msgs_generate_messages_cpp"
+	@echo "... sensor_msgs_generate_messages_lisp"
+	@echo "... rosgraph_msgs_generate_messages_cpp"
+	@echo "... tf_generate_messages_py"
+	@echo "... dynamic_reconfigure_generate_messages_cpp"
+	@echo "... topic_tools_generate_messages_cpp"
+>>>>>>> fix
 	@echo "... geometry_msgs_generate_messages_eus"
 	@echo "... roscpp_generate_messages_py"
 	@echo "... geometry_msgs_generate_messages_nodejs"
 	@echo "... std_srvs_generate_messages_eus"
 	@echo "... roscpp_generate_messages_lisp"
 	@echo "... bond_generate_messages_eus"
+<<<<<<< refs/remotes/origin/master
 	@echo "... roscpp_generate_messages_cpp"
 	@echo "... rebuild_cache"
 	@echo "... actionlib_generate_messages_cpp"
 	@echo "... sensor_msgs_generate_messages_nodejs"
 	@echo "... tf2_msgs_generate_messages_py"
 	@echo "... actionlib_generate_messages_py"
+=======
+>>>>>>> fix
 	@echo "... pcl_ros_gencfg"
 	@echo "... topic_tools_generate_messages_nodejs"
 	@echo "... std_msgs_generate_messages_nodejs"
@@ -1616,6 +2476,13 @@ help:
 	@echo "... bond_generate_messages_py"
 	@echo "... std_srvs_generate_messages_nodejs"
 	@echo "... rosgraph_msgs_generate_messages_lisp"
+<<<<<<< refs/remotes/origin/master
+=======
+	@echo "... rebuild_cache"
+	@echo "... actionlib_generate_messages_cpp"
+	@echo "... sensor_msgs_generate_messages_nodejs"
+	@echo "... roscpp_generate_messages_cpp"
+>>>>>>> fix
 	@echo "... rosgraph_msgs_generate_messages_eus"
 	@echo "... std_srvs_generate_messages_cpp"
 	@echo "... nodelet_generate_messages_lisp"
@@ -1630,17 +2497,23 @@ help:
 	@echo "... rosgraph_msgs_generate_messages_nodejs"
 	@echo "... edit_cache"
 	@echo "... std_msgs_generate_messages_eus"
+<<<<<<< refs/remotes/origin/master
 	@echo "... rosgraph_msgs_generate_messages_cpp"
 	@echo "... tf_generate_messages_py"
 	@echo "... dynamic_reconfigure_generate_messages_cpp"
 	@echo "... topic_tools_generate_messages_cpp"
+=======
+>>>>>>> fix
 	@echo "... sensor_msgs_generate_messages_eus"
 	@echo "... sensor_msgs_generate_messages_cpp"
 	@echo "... roscpp_generate_messages_nodejs"
 	@echo "... std_msgs_generate_messages_lisp"
 	@echo "... std_msgs_generate_messages_py"
+<<<<<<< refs/remotes/origin/master
 	@echo "... pcl_msgs_generate_messages_cpp"
 	@echo "... dynamic_reconfigure_generate_messages_lisp"
+=======
+>>>>>>> fix
 	@echo "... pcl_msgs_generate_messages_eus"
 	@echo "... topic_tools_generate_messages_eus"
 	@echo "... nav_msgs_generate_messages_lisp"
@@ -1659,7 +2532,10 @@ help:
 	@echo "... actionlib_msgs_generate_messages_nodejs"
 	@echo "... topic_tools_generate_messages_py"
 	@echo "... nodelet_topic_tools_gencfg"
+<<<<<<< refs/remotes/origin/master
 	@echo "... _catkin_empty_exported_target"
+=======
+>>>>>>> fix
 	@echo "... std_srvs_generate_messages_lisp"
 	@echo "... topic_tools_generate_messages_lisp"
 	@echo "... std_srvs_generate_messages_py"
@@ -1674,6 +2550,11 @@ help:
 	@echo "... nav_msgs_generate_messages_py"
 	@echo "... dynamic_reconfigure_gencfg"
 	@echo "... tf2_msgs_generate_messages_lisp"
+<<<<<<< refs/remotes/origin/master
+=======
+	@echo "... actionlib_generate_messages_py"
+	@echo "... tf2_msgs_generate_messages_py"
+>>>>>>> fix
 	@echo "... tf2_msgs_generate_messages_nodejs"
 	@echo "... src/BaeBotMaster.o"
 	@echo "... src/BaeBotMaster.i"
@@ -1701,6 +2582,10 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
+<<<<<<< refs/remotes/origin/master
 	cd /home/nanorobot/baebot_ws/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+=======
+	cd /home/kyle/baebot_ws/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+>>>>>>> fix
 .PHONY : cmake_check_build_system
 

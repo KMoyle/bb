@@ -48,10 +48,17 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
+<<<<<<< refs/remotes/origin/master
 CMAKE_SOURCE_DIR = /home/nanorobot/baebot_ws/src
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/nanorobot/baebot_ws/build
+=======
+CMAKE_SOURCE_DIR = /home/kyle/baebot_ws/src
+
+# The top-level build directory on which CMake was run.
+CMAKE_BINARY_DIR = /home/kyle/baebot_ws/build
+>>>>>>> fix
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -137,9 +144,15 @@ test/fast: test
 
 # The main all target
 all: cmake_check_build_system
+<<<<<<< refs/remotes/origin/master
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/nanorobot/baebot_ws/build/CMakeFiles /home/nanorobot/baebot_ws/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/nanorobot/baebot_ws/build/CMakeFiles 0
+=======
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kyle/baebot_ws/build/CMakeFiles /home/kyle/baebot_ws/build/CMakeFiles/progress.marks
+	$(MAKE) -f CMakeFiles/Makefile2 all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kyle/baebot_ws/build/CMakeFiles 0
+>>>>>>> fix
 .PHONY : all
 
 # The main clean target
@@ -285,6 +298,22 @@ gtest/fast:
 .PHONY : gtest/fast
 
 #=============================================================================
+<<<<<<< refs/remotes/origin/master
+=======
+# Target rules for targets named _catkin_empty_exported_target
+
+# Build rule for target.
+_catkin_empty_exported_target: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _catkin_empty_exported_target
+.PHONY : _catkin_empty_exported_target
+
+# fast build rule for target.
+_catkin_empty_exported_target/fast:
+	$(MAKE) -f baebot_sim/CMakeFiles/_catkin_empty_exported_target.dir/build.make baebot_sim/CMakeFiles/_catkin_empty_exported_target.dir/build
+.PHONY : _catkin_empty_exported_target/fast
+
+#=============================================================================
+>>>>>>> fix
 # Target rules for targets named BaeBotMaster
 
 # Build rule for target.
@@ -337,6 +366,35 @@ geometry_msgs_generate_messages_lisp/fast:
 .PHONY : geometry_msgs_generate_messages_lisp/fast
 
 #=============================================================================
+<<<<<<< refs/remotes/origin/master
+=======
+# Target rules for targets named pcl_msgs_generate_messages_cpp
+
+# Build rule for target.
+pcl_msgs_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pcl_msgs_generate_messages_cpp
+.PHONY : pcl_msgs_generate_messages_cpp
+
+# fast build rule for target.
+pcl_msgs_generate_messages_cpp/fast:
+	$(MAKE) -f baebot_master/CMakeFiles/pcl_msgs_generate_messages_cpp.dir/build.make baebot_master/CMakeFiles/pcl_msgs_generate_messages_cpp.dir/build
+.PHONY : pcl_msgs_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named dynamic_reconfigure_generate_messages_lisp
+
+# Build rule for target.
+dynamic_reconfigure_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 dynamic_reconfigure_generate_messages_lisp
+.PHONY : dynamic_reconfigure_generate_messages_lisp
+
+# fast build rule for target.
+dynamic_reconfigure_generate_messages_lisp/fast:
+	$(MAKE) -f baebot_master/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/build.make baebot_master/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/build
+.PHONY : dynamic_reconfigure_generate_messages_lisp/fast
+
+#=============================================================================
+>>>>>>> fix
 # Target rules for targets named nav_msgs_generate_messages_cpp
 
 # Build rule for target.
@@ -363,6 +421,61 @@ sensor_msgs_generate_messages_lisp/fast:
 .PHONY : sensor_msgs_generate_messages_lisp/fast
 
 #=============================================================================
+<<<<<<< refs/remotes/origin/master
+=======
+# Target rules for targets named rosgraph_msgs_generate_messages_cpp
+
+# Build rule for target.
+rosgraph_msgs_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rosgraph_msgs_generate_messages_cpp
+.PHONY : rosgraph_msgs_generate_messages_cpp
+
+# fast build rule for target.
+rosgraph_msgs_generate_messages_cpp/fast:
+	$(MAKE) -f baebot_master/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make baebot_master/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
+.PHONY : rosgraph_msgs_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named tf_generate_messages_py
+
+# Build rule for target.
+tf_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 tf_generate_messages_py
+.PHONY : tf_generate_messages_py
+
+# fast build rule for target.
+tf_generate_messages_py/fast:
+	$(MAKE) -f baebot_master/CMakeFiles/tf_generate_messages_py.dir/build.make baebot_master/CMakeFiles/tf_generate_messages_py.dir/build
+.PHONY : tf_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named dynamic_reconfigure_generate_messages_cpp
+
+# Build rule for target.
+dynamic_reconfigure_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 dynamic_reconfigure_generate_messages_cpp
+.PHONY : dynamic_reconfigure_generate_messages_cpp
+
+# fast build rule for target.
+dynamic_reconfigure_generate_messages_cpp/fast:
+	$(MAKE) -f baebot_master/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/build.make baebot_master/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/build
+.PHONY : dynamic_reconfigure_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named topic_tools_generate_messages_cpp
+
+# Build rule for target.
+topic_tools_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 topic_tools_generate_messages_cpp
+.PHONY : topic_tools_generate_messages_cpp
+
+# fast build rule for target.
+topic_tools_generate_messages_cpp/fast:
+	$(MAKE) -f baebot_master/CMakeFiles/topic_tools_generate_messages_cpp.dir/build.make baebot_master/CMakeFiles/topic_tools_generate_messages_cpp.dir/build
+.PHONY : topic_tools_generate_messages_cpp/fast
+
+#=============================================================================
+>>>>>>> fix
 # Target rules for targets named geometry_msgs_generate_messages_eus
 
 # Build rule for target.
@@ -441,6 +554,7 @@ bond_generate_messages_eus/fast:
 .PHONY : bond_generate_messages_eus/fast
 
 #=============================================================================
+<<<<<<< refs/remotes/origin/master
 # Target rules for targets named roscpp_generate_messages_cpp
 
 # Build rule for target.
@@ -506,6 +620,8 @@ actionlib_generate_messages_py/fast:
 .PHONY : actionlib_generate_messages_py/fast
 
 #=============================================================================
+=======
+>>>>>>> fix
 # Target rules for targets named pcl_ros_gencfg
 
 # Build rule for target.
@@ -636,6 +752,48 @@ rosgraph_msgs_generate_messages_lisp/fast:
 .PHONY : rosgraph_msgs_generate_messages_lisp/fast
 
 #=============================================================================
+<<<<<<< refs/remotes/origin/master
+=======
+# Target rules for targets named actionlib_generate_messages_cpp
+
+# Build rule for target.
+actionlib_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 actionlib_generate_messages_cpp
+.PHONY : actionlib_generate_messages_cpp
+
+# fast build rule for target.
+actionlib_generate_messages_cpp/fast:
+	$(MAKE) -f baebot_master/CMakeFiles/actionlib_generate_messages_cpp.dir/build.make baebot_master/CMakeFiles/actionlib_generate_messages_cpp.dir/build
+.PHONY : actionlib_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named sensor_msgs_generate_messages_nodejs
+
+# Build rule for target.
+sensor_msgs_generate_messages_nodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sensor_msgs_generate_messages_nodejs
+.PHONY : sensor_msgs_generate_messages_nodejs
+
+# fast build rule for target.
+sensor_msgs_generate_messages_nodejs/fast:
+	$(MAKE) -f baebot_master/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build.make baebot_master/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build
+.PHONY : sensor_msgs_generate_messages_nodejs/fast
+
+#=============================================================================
+# Target rules for targets named roscpp_generate_messages_cpp
+
+# Build rule for target.
+roscpp_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 roscpp_generate_messages_cpp
+.PHONY : roscpp_generate_messages_cpp
+
+# fast build rule for target.
+roscpp_generate_messages_cpp/fast:
+	$(MAKE) -f baebot_master/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make baebot_master/CMakeFiles/roscpp_generate_messages_cpp.dir/build
+.PHONY : roscpp_generate_messages_cpp/fast
+
+#=============================================================================
+>>>>>>> fix
 # Target rules for targets named rosgraph_msgs_generate_messages_eus
 
 # Build rule for target.
@@ -805,6 +963,7 @@ std_msgs_generate_messages_eus/fast:
 .PHONY : std_msgs_generate_messages_eus/fast
 
 #=============================================================================
+<<<<<<< refs/remotes/origin/master
 # Target rules for targets named rosgraph_msgs_generate_messages_cpp
 
 # Build rule for target.
@@ -857,6 +1016,8 @@ topic_tools_generate_messages_cpp/fast:
 .PHONY : topic_tools_generate_messages_cpp/fast
 
 #=============================================================================
+=======
+>>>>>>> fix
 # Target rules for targets named sensor_msgs_generate_messages_eus
 
 # Build rule for target.
@@ -922,6 +1083,7 @@ std_msgs_generate_messages_py/fast:
 .PHONY : std_msgs_generate_messages_py/fast
 
 #=============================================================================
+<<<<<<< refs/remotes/origin/master
 # Target rules for targets named pcl_msgs_generate_messages_cpp
 
 # Build rule for target.
@@ -948,6 +1110,8 @@ dynamic_reconfigure_generate_messages_lisp/fast:
 .PHONY : dynamic_reconfigure_generate_messages_lisp/fast
 
 #=============================================================================
+=======
+>>>>>>> fix
 # Target rules for targets named pcl_msgs_generate_messages_eus
 
 # Build rule for target.
@@ -1182,6 +1346,7 @@ nodelet_topic_tools_gencfg/fast:
 .PHONY : nodelet_topic_tools_gencfg/fast
 
 #=============================================================================
+<<<<<<< refs/remotes/origin/master
 # Target rules for targets named _catkin_empty_exported_target
 
 # Build rule for target.
@@ -1195,6 +1360,8 @@ _catkin_empty_exported_target/fast:
 .PHONY : _catkin_empty_exported_target/fast
 
 #=============================================================================
+=======
+>>>>>>> fix
 # Target rules for targets named std_srvs_generate_messages_lisp
 
 # Build rule for target.
@@ -1377,6 +1544,35 @@ tf2_msgs_generate_messages_lisp/fast:
 .PHONY : tf2_msgs_generate_messages_lisp/fast
 
 #=============================================================================
+<<<<<<< refs/remotes/origin/master
+=======
+# Target rules for targets named actionlib_generate_messages_py
+
+# Build rule for target.
+actionlib_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 actionlib_generate_messages_py
+.PHONY : actionlib_generate_messages_py
+
+# fast build rule for target.
+actionlib_generate_messages_py/fast:
+	$(MAKE) -f baebot_master/CMakeFiles/actionlib_generate_messages_py.dir/build.make baebot_master/CMakeFiles/actionlib_generate_messages_py.dir/build
+.PHONY : actionlib_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named tf2_msgs_generate_messages_py
+
+# Build rule for target.
+tf2_msgs_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 tf2_msgs_generate_messages_py
+.PHONY : tf2_msgs_generate_messages_py
+
+# fast build rule for target.
+tf2_msgs_generate_messages_py/fast:
+	$(MAKE) -f baebot_master/CMakeFiles/tf2_msgs_generate_messages_py.dir/build.make baebot_master/CMakeFiles/tf2_msgs_generate_messages_py.dir/build
+.PHONY : tf2_msgs_generate_messages_py/fast
+
+#=============================================================================
+>>>>>>> fix
 # Target rules for targets named tf2_msgs_generate_messages_nodejs
 
 # Build rule for target.
@@ -1411,23 +1607,41 @@ help:
 	@echo "... gmock"
 	@echo "... gtest_main"
 	@echo "... gtest"
+<<<<<<< refs/remotes/origin/master
+=======
+	@echo "... _catkin_empty_exported_target"
+>>>>>>> fix
 	@echo "... BaeBotMaster"
 	@echo "... nav_msgs_generate_messages_nodejs"
 	@echo "... geometry_msgs_generate_messages_py"
 	@echo "... geometry_msgs_generate_messages_lisp"
+<<<<<<< refs/remotes/origin/master
 	@echo "... nav_msgs_generate_messages_cpp"
 	@echo "... sensor_msgs_generate_messages_lisp"
+=======
+	@echo "... pcl_msgs_generate_messages_cpp"
+	@echo "... dynamic_reconfigure_generate_messages_lisp"
+	@echo "... nav_msgs_generate_messages_cpp"
+	@echo "... sensor_msgs_generate_messages_lisp"
+	@echo "... rosgraph_msgs_generate_messages_cpp"
+	@echo "... tf_generate_messages_py"
+	@echo "... dynamic_reconfigure_generate_messages_cpp"
+	@echo "... topic_tools_generate_messages_cpp"
+>>>>>>> fix
 	@echo "... geometry_msgs_generate_messages_eus"
 	@echo "... roscpp_generate_messages_py"
 	@echo "... geometry_msgs_generate_messages_nodejs"
 	@echo "... std_srvs_generate_messages_eus"
 	@echo "... roscpp_generate_messages_lisp"
 	@echo "... bond_generate_messages_eus"
+<<<<<<< refs/remotes/origin/master
 	@echo "... roscpp_generate_messages_cpp"
 	@echo "... actionlib_generate_messages_cpp"
 	@echo "... sensor_msgs_generate_messages_nodejs"
 	@echo "... tf2_msgs_generate_messages_py"
 	@echo "... actionlib_generate_messages_py"
+=======
+>>>>>>> fix
 	@echo "... pcl_ros_gencfg"
 	@echo "... topic_tools_generate_messages_nodejs"
 	@echo "... std_msgs_generate_messages_nodejs"
@@ -1438,6 +1652,12 @@ help:
 	@echo "... bond_generate_messages_py"
 	@echo "... std_srvs_generate_messages_nodejs"
 	@echo "... rosgraph_msgs_generate_messages_lisp"
+<<<<<<< refs/remotes/origin/master
+=======
+	@echo "... actionlib_generate_messages_cpp"
+	@echo "... sensor_msgs_generate_messages_nodejs"
+	@echo "... roscpp_generate_messages_cpp"
+>>>>>>> fix
 	@echo "... rosgraph_msgs_generate_messages_eus"
 	@echo "... std_srvs_generate_messages_cpp"
 	@echo "... nodelet_generate_messages_lisp"
@@ -1451,17 +1671,23 @@ help:
 	@echo "... rosgraph_msgs_generate_messages_py"
 	@echo "... rosgraph_msgs_generate_messages_nodejs"
 	@echo "... std_msgs_generate_messages_eus"
+<<<<<<< refs/remotes/origin/master
 	@echo "... rosgraph_msgs_generate_messages_cpp"
 	@echo "... tf_generate_messages_py"
 	@echo "... dynamic_reconfigure_generate_messages_cpp"
 	@echo "... topic_tools_generate_messages_cpp"
+=======
+>>>>>>> fix
 	@echo "... sensor_msgs_generate_messages_eus"
 	@echo "... sensor_msgs_generate_messages_cpp"
 	@echo "... roscpp_generate_messages_nodejs"
 	@echo "... std_msgs_generate_messages_lisp"
 	@echo "... std_msgs_generate_messages_py"
+<<<<<<< refs/remotes/origin/master
 	@echo "... pcl_msgs_generate_messages_cpp"
 	@echo "... dynamic_reconfigure_generate_messages_lisp"
+=======
+>>>>>>> fix
 	@echo "... pcl_msgs_generate_messages_eus"
 	@echo "... topic_tools_generate_messages_eus"
 	@echo "... nav_msgs_generate_messages_lisp"
@@ -1480,7 +1706,10 @@ help:
 	@echo "... actionlib_msgs_generate_messages_nodejs"
 	@echo "... topic_tools_generate_messages_py"
 	@echo "... nodelet_topic_tools_gencfg"
+<<<<<<< refs/remotes/origin/master
 	@echo "... _catkin_empty_exported_target"
+=======
+>>>>>>> fix
 	@echo "... std_srvs_generate_messages_lisp"
 	@echo "... topic_tools_generate_messages_lisp"
 	@echo "... std_srvs_generate_messages_py"
@@ -1495,6 +1724,11 @@ help:
 	@echo "... nav_msgs_generate_messages_py"
 	@echo "... dynamic_reconfigure_gencfg"
 	@echo "... tf2_msgs_generate_messages_lisp"
+<<<<<<< refs/remotes/origin/master
+=======
+	@echo "... actionlib_generate_messages_py"
+	@echo "... tf2_msgs_generate_messages_py"
+>>>>>>> fix
 	@echo "... tf2_msgs_generate_messages_nodejs"
 .PHONY : help
 
