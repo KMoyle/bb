@@ -278,11 +278,15 @@ if __name__ == '__main__':
 
         if not args.local:
             # environment at generation time
+<<<<<<< HEAD
 <<<<<<< refs/remotes/origin/master
             CMAKE_PREFIX_PATH = '/home/nanorobot/baebot_ws/devel;/home/nanorobot/catkin_ws/devel;/opt/ros/melodic'.split(';')
 =======
             CMAKE_PREFIX_PATH = '/home/kyle/gazebo_ws/devel;/home/kyle/baebot_ws/devel;/home/kyle/cartographer_ws/devel;/home/kyle/catkin_ws/devel;/opt/ros/melodic'.split(';')
 >>>>>>> fix
+=======
+            CMAKE_PREFIX_PATH = '/home/kyle/gazebo_ws/devel;/home/kyle/baebot_ws/devel;/home/kyle/cartographer_ws/devel;/home/kyle/catkin_ws/devel;/opt/ros/melodic'.split(';')
+>>>>>>> devel
         else:
             # don't consider any other prefix path than this one
             CMAKE_PREFIX_PATH = []

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< refs/remotes/origin/master
 baebot_master
 -DCATKIN_DEVEL_PREFIX=/home/nanorobot/baebot_ws/devel -DCMAKE_INSTALL_PREFIX=/home/nanorobot/baebot_ws/install -G Unix Makefiles
@@ -5,3 +6,7 @@ baebot_master
 baebot_master:baebot_sim
 -DCATKIN_DEVEL_PREFIX=/home/kyle/baebot_ws/devel -DCMAKE_INSTALL_PREFIX=/home/kyle/baebot_ws/install -G Unix Makefiles
 >>>>>>> fix
+=======
+baebot_master:baebot_sim
+-DCATKIN_DEVEL_PREFIX=/home/kyle/baebot_ws/devel -DCMAKE_INSTALL_PREFIX=/home/kyle/baebot_ws/install -G Unix Makefiles
+>>>>>>> devel

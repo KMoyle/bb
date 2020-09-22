@@ -65,6 +65,7 @@ void BaeBotMaster::updateLoop(){
     //sensorUpdate();
 
     //ODOM TEST
+<<<<<<< HEAD
 <<<<<<< refs/remotes/origin/master
    // doASpin();
    goStraight();
@@ -72,6 +73,10 @@ void BaeBotMaster::updateLoop(){
     //doASpin();
     //goStraight();
 >>>>>>> Added a BB Gazebo robot and world, bb subs to cmd_vel
+=======
+    //doASpin();
+    //goStraight();
+>>>>>>> devel
 
 
     // Update the pose and navigation parameters

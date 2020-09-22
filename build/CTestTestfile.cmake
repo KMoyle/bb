@@ -10,8 +10,12 @@
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.
 subdirs("gtest")
+<<<<<<< HEAD
 <<<<<<< refs/remotes/origin/master
 =======
 subdirs("baebot_sim")
 >>>>>>> fix
+=======
+subdirs("baebot_sim")
+>>>>>>> devel
 subdirs("baebot_master")

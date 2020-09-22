@@ -94,6 +94,9 @@ make[1]: *** [cmTC_7f9b2] Error 1
 make[1]: Leaving directory '/home/kyle/baebot_ws/build/CMakeFiles/CMakeTmp'
 Makefile:126: recipe for target 'cmTC_7f9b2/fast' failed
 make: *** [cmTC_7f9b2/fast] Error 2
+<<<<<<< HEAD
 >>>>>>> fix
+=======
+>>>>>>> devel
 
 

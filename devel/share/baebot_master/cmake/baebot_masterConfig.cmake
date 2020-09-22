@@ -167,11 +167,15 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
+<<<<<<< HEAD
 <<<<<<< refs/remotes/origin/master
     foreach(path /home/nanorobot/baebot_ws/devel/lib;/home/nanorobot/baebot_ws/devel/lib;/home/nanorobot/catkin_ws/devel/lib;/opt/ros/melodic/lib)
 =======
     foreach(path /home/kyle/baebot_ws/devel/lib;/home/kyle/gazebo_ws/devel/lib;/home/kyle/baebot_ws/devel/lib;/home/kyle/cartographer_ws/devel/lib;/home/kyle/catkin_ws/devel/lib;/opt/ros/melodic/lib)
 >>>>>>> fix
+=======
+    foreach(path /home/kyle/baebot_ws/devel/lib;/home/kyle/gazebo_ws/devel/lib;/home/kyle/baebot_ws/devel/lib;/home/kyle/cartographer_ws/devel/lib;/home/kyle/catkin_ws/devel/lib;/opt/ros/melodic/lib)
+>>>>>>> devel
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

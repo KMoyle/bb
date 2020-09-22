@@ -502,8 +502,11 @@ clean: gtest/googlemock/gtest/CMakeFiles/gtest.dir/clean
 .PHONY : clean
 
 #=============================================================================
+<<<<<<< HEAD
 <<<<<<< refs/remotes/origin/master
 =======
+=======
+>>>>>>> devel
 # Directory level rules for directory baebot_sim
 
 # Convenience name for "all" pass in the directory.
@@ -554,7 +557,10 @@ clean: baebot_sim/CMakeFiles/_catkin_empty_exported_target.dir/clean
 .PHONY : clean
 
 #=============================================================================
+<<<<<<< HEAD
 >>>>>>> fix
+=======
+>>>>>>> devel
 # Directory level rules for directory baebot_master
 
 # Convenience name for "all" pass in the directory.
@@ -567,6 +573,7 @@ baebot_master/clean: baebot_master/CMakeFiles/BaeBotMaster.dir/clean
 baebot_master/clean: baebot_master/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/clean
 baebot_master/clean: baebot_master/CMakeFiles/geometry_msgs_generate_messages_py.dir/clean
 baebot_master/clean: baebot_master/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/clean
+<<<<<<< HEAD
 <<<<<<< refs/remotes/origin/master
 baebot_master/clean: baebot_master/CMakeFiles/nav_msgs_generate_messages_cpp.dir/clean
 baebot_master/clean: baebot_master/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/clean
@@ -575,17 +582,27 @@ baebot_master/clean: baebot_master/CMakeFiles/pcl_msgs_generate_messages_cpp.dir
 baebot_master/clean: baebot_master/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/clean
 baebot_master/clean: baebot_master/CMakeFiles/nav_msgs_generate_messages_cpp.dir/clean
 baebot_master/clean: baebot_master/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/clean
+=======
+baebot_master/clean: baebot_master/CMakeFiles/pcl_msgs_generate_messages_cpp.dir/clean
+baebot_master/clean: baebot_master/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/clean
+baebot_master/clean: baebot_master/CMakeFiles/nav_msgs_generate_messages_cpp.dir/clean
+baebot_master/clean: baebot_master/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/clean
+>>>>>>> devel
 baebot_master/clean: baebot_master/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean
 baebot_master/clean: baebot_master/CMakeFiles/tf_generate_messages_py.dir/clean
 baebot_master/clean: baebot_master/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/clean
 baebot_master/clean: baebot_master/CMakeFiles/topic_tools_generate_messages_cpp.dir/clean
+<<<<<<< HEAD
 >>>>>>> fix
+=======
+>>>>>>> devel
 baebot_master/clean: baebot_master/CMakeFiles/geometry_msgs_generate_messages_eus.dir/clean
 baebot_master/clean: baebot_master/CMakeFiles/roscpp_generate_messages_py.dir/clean
 baebot_master/clean: baebot_master/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/clean
 baebot_master/clean: baebot_master/CMakeFiles/std_srvs_generate_messages_eus.dir/clean
 baebot_master/clean: baebot_master/CMakeFiles/roscpp_generate_messages_lisp.dir/clean
 baebot_master/clean: baebot_master/CMakeFiles/bond_generate_messages_eus.dir/clean
+<<<<<<< HEAD
 <<<<<<< refs/remotes/origin/master
 baebot_master/clean: baebot_master/CMakeFiles/roscpp_generate_messages_cpp.dir/clean
 baebot_master/clean: baebot_master/CMakeFiles/actionlib_generate_messages_cpp.dir/clean
@@ -594,6 +611,8 @@ baebot_master/clean: baebot_master/CMakeFiles/tf2_msgs_generate_messages_py.dir/
 baebot_master/clean: baebot_master/CMakeFiles/actionlib_generate_messages_py.dir/clean
 =======
 >>>>>>> fix
+=======
+>>>>>>> devel
 baebot_master/clean: baebot_master/CMakeFiles/pcl_ros_gencfg.dir/clean
 baebot_master/clean: baebot_master/CMakeFiles/topic_tools_generate_messages_nodejs.dir/clean
 baebot_master/clean: baebot_master/CMakeFiles/std_msgs_generate_messages_nodejs.dir/clean
@@ -604,12 +623,18 @@ baebot_master/clean: baebot_master/CMakeFiles/nodelet_generate_messages_cpp.dir/
 baebot_master/clean: baebot_master/CMakeFiles/bond_generate_messages_py.dir/clean
 baebot_master/clean: baebot_master/CMakeFiles/std_srvs_generate_messages_nodejs.dir/clean
 baebot_master/clean: baebot_master/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/clean
+<<<<<<< HEAD
 <<<<<<< refs/remotes/origin/master
 =======
 baebot_master/clean: baebot_master/CMakeFiles/actionlib_generate_messages_cpp.dir/clean
 baebot_master/clean: baebot_master/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/clean
 baebot_master/clean: baebot_master/CMakeFiles/roscpp_generate_messages_cpp.dir/clean
 >>>>>>> fix
+=======
+baebot_master/clean: baebot_master/CMakeFiles/actionlib_generate_messages_cpp.dir/clean
+baebot_master/clean: baebot_master/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/clean
+baebot_master/clean: baebot_master/CMakeFiles/roscpp_generate_messages_cpp.dir/clean
+>>>>>>> devel
 baebot_master/clean: baebot_master/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/clean
 baebot_master/clean: baebot_master/CMakeFiles/std_srvs_generate_messages_cpp.dir/clean
 baebot_master/clean: baebot_master/CMakeFiles/nodelet_generate_messages_lisp.dir/clean
@@ -623,6 +648,7 @@ baebot_master/clean: baebot_master/CMakeFiles/actionlib_msgs_generate_messages_e
 baebot_master/clean: baebot_master/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/clean
 baebot_master/clean: baebot_master/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/clean
 baebot_master/clean: baebot_master/CMakeFiles/std_msgs_generate_messages_eus.dir/clean
+<<<<<<< HEAD
 <<<<<<< refs/remotes/origin/master
 baebot_master/clean: baebot_master/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean
 baebot_master/clean: baebot_master/CMakeFiles/tf_generate_messages_py.dir/clean
@@ -630,16 +656,21 @@ baebot_master/clean: baebot_master/CMakeFiles/dynamic_reconfigure_generate_messa
 baebot_master/clean: baebot_master/CMakeFiles/topic_tools_generate_messages_cpp.dir/clean
 =======
 >>>>>>> fix
+=======
+>>>>>>> devel
 baebot_master/clean: baebot_master/CMakeFiles/sensor_msgs_generate_messages_eus.dir/clean
 baebot_master/clean: baebot_master/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/clean
 baebot_master/clean: baebot_master/CMakeFiles/roscpp_generate_messages_nodejs.dir/clean
 baebot_master/clean: baebot_master/CMakeFiles/std_msgs_generate_messages_lisp.dir/clean
 baebot_master/clean: baebot_master/CMakeFiles/std_msgs_generate_messages_py.dir/clean
+<<<<<<< HEAD
 <<<<<<< refs/remotes/origin/master
 baebot_master/clean: baebot_master/CMakeFiles/pcl_msgs_generate_messages_cpp.dir/clean
 baebot_master/clean: baebot_master/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/clean
 =======
 >>>>>>> fix
+=======
+>>>>>>> devel
 baebot_master/clean: baebot_master/CMakeFiles/pcl_msgs_generate_messages_eus.dir/clean
 baebot_master/clean: baebot_master/CMakeFiles/topic_tools_generate_messages_eus.dir/clean
 baebot_master/clean: baebot_master/CMakeFiles/nav_msgs_generate_messages_lisp.dir/clean
@@ -658,10 +689,13 @@ baebot_master/clean: baebot_master/CMakeFiles/bond_generate_messages_nodejs.dir/
 baebot_master/clean: baebot_master/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/clean
 baebot_master/clean: baebot_master/CMakeFiles/topic_tools_generate_messages_py.dir/clean
 baebot_master/clean: baebot_master/CMakeFiles/nodelet_topic_tools_gencfg.dir/clean
+<<<<<<< HEAD
 <<<<<<< refs/remotes/origin/master
 baebot_master/clean: baebot_master/CMakeFiles/_catkin_empty_exported_target.dir/clean
 =======
 >>>>>>> fix
+=======
+>>>>>>> devel
 baebot_master/clean: baebot_master/CMakeFiles/std_srvs_generate_messages_lisp.dir/clean
 baebot_master/clean: baebot_master/CMakeFiles/topic_tools_generate_messages_lisp.dir/clean
 baebot_master/clean: baebot_master/CMakeFiles/std_srvs_generate_messages_py.dir/clean
@@ -676,11 +710,16 @@ baebot_master/clean: baebot_master/CMakeFiles/tf2_msgs_generate_messages_eus.dir
 baebot_master/clean: baebot_master/CMakeFiles/nav_msgs_generate_messages_py.dir/clean
 baebot_master/clean: baebot_master/CMakeFiles/dynamic_reconfigure_gencfg.dir/clean
 baebot_master/clean: baebot_master/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/clean
+<<<<<<< HEAD
 <<<<<<< refs/remotes/origin/master
 =======
 baebot_master/clean: baebot_master/CMakeFiles/actionlib_generate_messages_py.dir/clean
 baebot_master/clean: baebot_master/CMakeFiles/tf2_msgs_generate_messages_py.dir/clean
 >>>>>>> fix
+=======
+baebot_master/clean: baebot_master/CMakeFiles/actionlib_generate_messages_py.dir/clean
+baebot_master/clean: baebot_master/CMakeFiles/tf2_msgs_generate_messages_py.dir/clean
+>>>>>>> devel
 baebot_master/clean: baebot_master/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/clean
 
 .PHONY : baebot_master/clean
@@ -864,8 +903,11 @@ clean: baebot_master/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/clean
 .PHONY : clean
 
 #=============================================================================
+<<<<<<< HEAD
 <<<<<<< refs/remotes/origin/master
 =======
+=======
+>>>>>>> devel
 # Target rules for target baebot_master/CMakeFiles/pcl_msgs_generate_messages_cpp.dir
 
 # All Build rule for target.
@@ -930,7 +972,10 @@ clean: baebot_master/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/c
 .PHONY : clean
 
 #=============================================================================
+<<<<<<< HEAD
 >>>>>>> fix
+=======
+>>>>>>> devel
 # Target rules for target baebot_master/CMakeFiles/nav_msgs_generate_messages_cpp.dir
 
 # All Build rule for target.
@@ -1015,8 +1060,11 @@ clean: baebot_master/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/clean
 .PHONY : clean
 
 #=============================================================================
+<<<<<<< HEAD
 <<<<<<< refs/remotes/origin/master
 =======
+=======
+>>>>>>> devel
 # Target rules for target baebot_master/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir
 
 # All Build rule for target.
@@ -1145,7 +1193,10 @@ clean: baebot_master/CMakeFiles/topic_tools_generate_messages_cpp.dir/clean
 .PHONY : clean
 
 #=============================================================================
+<<<<<<< HEAD
 >>>>>>> fix
+=======
+>>>>>>> devel
 # Target rules for target baebot_master/CMakeFiles/geometry_msgs_generate_messages_eus.dir
 
 # All Build rule for target.
@@ -1352,6 +1403,7 @@ baebot_master/CMakeFiles/roscpp_generate_messages_lisp.dir/clean:
 
 # clean rule for target.
 clean: baebot_master/CMakeFiles/roscpp_generate_messages_lisp.dir/clean
+<<<<<<< HEAD
 
 .PHONY : clean
 
@@ -1523,13 +1575,16 @@ baebot_master/CMakeFiles/tf2_msgs_generate_messages_py.dir/clean:
 
 # clean rule for target.
 clean: baebot_master/CMakeFiles/tf2_msgs_generate_messages_py.dir/clean
+=======
+>>>>>>> devel
 
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target baebot_master/CMakeFiles/actionlib_generate_messages_py.dir
+# Target rules for target baebot_master/CMakeFiles/bond_generate_messages_eus.dir
 
 # All Build rule for target.
+<<<<<<< HEAD
 baebot_master/CMakeFiles/actionlib_generate_messages_py.dir/all:
 	$(MAKE) -f baebot_master/CMakeFiles/actionlib_generate_messages_py.dir/build.make baebot_master/CMakeFiles/actionlib_generate_messages_py.dir/depend
 	$(MAKE) -f baebot_master/CMakeFiles/actionlib_generate_messages_py.dir/build.make baebot_master/CMakeFiles/actionlib_generate_messages_py.dir/build
@@ -1542,19 +1597,33 @@ baebot_master/CMakeFiles/actionlib_generate_messages_py.dir/rule: cmake_check_bu
 	$(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/actionlib_generate_messages_py.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/nanorobot/baebot_ws/build/CMakeFiles 0
 .PHONY : baebot_master/CMakeFiles/actionlib_generate_messages_py.dir/rule
+=======
+baebot_master/CMakeFiles/bond_generate_messages_eus.dir/all:
+	$(MAKE) -f baebot_master/CMakeFiles/bond_generate_messages_eus.dir/build.make baebot_master/CMakeFiles/bond_generate_messages_eus.dir/depend
+	$(MAKE) -f baebot_master/CMakeFiles/bond_generate_messages_eus.dir/build.make baebot_master/CMakeFiles/bond_generate_messages_eus.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kyle/baebot_ws/build/CMakeFiles --progress-num= "Built target bond_generate_messages_eus"
+.PHONY : baebot_master/CMakeFiles/bond_generate_messages_eus.dir/all
+
+# Build rule for subdir invocation for target.
+baebot_master/CMakeFiles/bond_generate_messages_eus.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kyle/baebot_ws/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/bond_generate_messages_eus.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kyle/baebot_ws/build/CMakeFiles 0
+.PHONY : baebot_master/CMakeFiles/bond_generate_messages_eus.dir/rule
+>>>>>>> devel
 
 # Convenience name for target.
-actionlib_generate_messages_py: baebot_master/CMakeFiles/actionlib_generate_messages_py.dir/rule
+bond_generate_messages_eus: baebot_master/CMakeFiles/bond_generate_messages_eus.dir/rule
 
-.PHONY : actionlib_generate_messages_py
-
-# clean rule for target.
-baebot_master/CMakeFiles/actionlib_generate_messages_py.dir/clean:
-	$(MAKE) -f baebot_master/CMakeFiles/actionlib_generate_messages_py.dir/build.make baebot_master/CMakeFiles/actionlib_generate_messages_py.dir/clean
-.PHONY : baebot_master/CMakeFiles/actionlib_generate_messages_py.dir/clean
+.PHONY : bond_generate_messages_eus
 
 # clean rule for target.
-clean: baebot_master/CMakeFiles/actionlib_generate_messages_py.dir/clean
+baebot_master/CMakeFiles/bond_generate_messages_eus.dir/clean:
+	$(MAKE) -f baebot_master/CMakeFiles/bond_generate_messages_eus.dir/build.make baebot_master/CMakeFiles/bond_generate_messages_eus.dir/clean
+.PHONY : baebot_master/CMakeFiles/bond_generate_messages_eus.dir/clean
+
+# clean rule for target.
+clean: baebot_master/CMakeFiles/bond_generate_messages_eus.dir/clean
 
 .PHONY : clean
 
@@ -2081,7 +2150,10 @@ baebot_master/CMakeFiles/roscpp_generate_messages_cpp.dir/clean:
 
 # clean rule for target.
 clean: baebot_master/CMakeFiles/roscpp_generate_messages_cpp.dir/clean
+<<<<<<< HEAD
 >>>>>>> fix
+=======
+>>>>>>> devel
 
 .PHONY : clean
 
@@ -2474,6 +2546,7 @@ baebot_master/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/all:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nanorobot/baebot_ws/build/CMakeFiles --progress-num= "Built target actionlib_msgs_generate_messages_eus"
 =======
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kyle/baebot_ws/build/CMakeFiles --progress-num= "Built target actionlib_msgs_generate_messages_eus"
+<<<<<<< HEAD
 >>>>>>> fix
 .PHONY : baebot_master/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/all
 
@@ -2648,26 +2721,37 @@ baebot_master/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule: cmake_che
 	$(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/nanorobot/baebot_ws/build/CMakeFiles 0
 .PHONY : baebot_master/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
+=======
+.PHONY : baebot_master/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/all
+
+# Build rule for subdir invocation for target.
+baebot_master/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kyle/baebot_ws/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kyle/baebot_ws/build/CMakeFiles 0
+.PHONY : baebot_master/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/rule
+>>>>>>> devel
 
 # Convenience name for target.
-rosgraph_msgs_generate_messages_cpp: baebot_master/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
+actionlib_msgs_generate_messages_eus: baebot_master/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/rule
 
-.PHONY : rosgraph_msgs_generate_messages_cpp
-
-# clean rule for target.
-baebot_master/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean:
-	$(MAKE) -f baebot_master/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make baebot_master/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean
-.PHONY : baebot_master/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean
+.PHONY : actionlib_msgs_generate_messages_eus
 
 # clean rule for target.
-clean: baebot_master/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean
+baebot_master/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/clean:
+	$(MAKE) -f baebot_master/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/build.make baebot_master/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/clean
+.PHONY : baebot_master/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/clean
+
+# clean rule for target.
+clean: baebot_master/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/clean
 
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target baebot_master/CMakeFiles/tf_generate_messages_py.dir
+# Target rules for target baebot_master/CMakeFiles/rosgraph_msgs_generate_messages_py.dir
 
 # All Build rule for target.
+<<<<<<< HEAD
 baebot_master/CMakeFiles/tf_generate_messages_py.dir/all:
 	$(MAKE) -f baebot_master/CMakeFiles/tf_generate_messages_py.dir/build.make baebot_master/CMakeFiles/tf_generate_messages_py.dir/depend
 	$(MAKE) -f baebot_master/CMakeFiles/tf_generate_messages_py.dir/build.make baebot_master/CMakeFiles/tf_generate_messages_py.dir/build
@@ -2680,26 +2764,41 @@ baebot_master/CMakeFiles/tf_generate_messages_py.dir/rule: cmake_check_build_sys
 	$(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/tf_generate_messages_py.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/nanorobot/baebot_ws/build/CMakeFiles 0
 .PHONY : baebot_master/CMakeFiles/tf_generate_messages_py.dir/rule
+=======
+baebot_master/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all:
+	$(MAKE) -f baebot_master/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make baebot_master/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/depend
+	$(MAKE) -f baebot_master/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make baebot_master/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kyle/baebot_ws/build/CMakeFiles --progress-num= "Built target rosgraph_msgs_generate_messages_py"
+.PHONY : baebot_master/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
+
+# Build rule for subdir invocation for target.
+baebot_master/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kyle/baebot_ws/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kyle/baebot_ws/build/CMakeFiles 0
+.PHONY : baebot_master/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
+>>>>>>> devel
 
 # Convenience name for target.
-tf_generate_messages_py: baebot_master/CMakeFiles/tf_generate_messages_py.dir/rule
+rosgraph_msgs_generate_messages_py: baebot_master/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
 
-.PHONY : tf_generate_messages_py
-
-# clean rule for target.
-baebot_master/CMakeFiles/tf_generate_messages_py.dir/clean:
-	$(MAKE) -f baebot_master/CMakeFiles/tf_generate_messages_py.dir/build.make baebot_master/CMakeFiles/tf_generate_messages_py.dir/clean
-.PHONY : baebot_master/CMakeFiles/tf_generate_messages_py.dir/clean
+.PHONY : rosgraph_msgs_generate_messages_py
 
 # clean rule for target.
-clean: baebot_master/CMakeFiles/tf_generate_messages_py.dir/clean
+baebot_master/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/clean:
+	$(MAKE) -f baebot_master/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make baebot_master/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/clean
+.PHONY : baebot_master/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/clean
+
+# clean rule for target.
+clean: baebot_master/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/clean
 
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target baebot_master/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir
+# Target rules for target baebot_master/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir
 
 # All Build rule for target.
+<<<<<<< HEAD
 baebot_master/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/all:
 	$(MAKE) -f baebot_master/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/build.make baebot_master/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/depend
 	$(MAKE) -f baebot_master/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/build.make baebot_master/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/build
@@ -2712,26 +2811,41 @@ baebot_master/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule: cma
 	$(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/nanorobot/baebot_ws/build/CMakeFiles 0
 .PHONY : baebot_master/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule
+=======
+baebot_master/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all:
+	$(MAKE) -f baebot_master/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build.make baebot_master/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/depend
+	$(MAKE) -f baebot_master/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build.make baebot_master/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kyle/baebot_ws/build/CMakeFiles --progress-num= "Built target rosgraph_msgs_generate_messages_nodejs"
+.PHONY : baebot_master/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all
+
+# Build rule for subdir invocation for target.
+baebot_master/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kyle/baebot_ws/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kyle/baebot_ws/build/CMakeFiles 0
+.PHONY : baebot_master/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
+>>>>>>> devel
 
 # Convenience name for target.
-dynamic_reconfigure_generate_messages_cpp: baebot_master/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule
+rosgraph_msgs_generate_messages_nodejs: baebot_master/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
 
-.PHONY : dynamic_reconfigure_generate_messages_cpp
-
-# clean rule for target.
-baebot_master/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/clean:
-	$(MAKE) -f baebot_master/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/build.make baebot_master/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/clean
-.PHONY : baebot_master/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/clean
+.PHONY : rosgraph_msgs_generate_messages_nodejs
 
 # clean rule for target.
-clean: baebot_master/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/clean
+baebot_master/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/clean:
+	$(MAKE) -f baebot_master/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build.make baebot_master/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/clean
+.PHONY : baebot_master/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/clean
+
+# clean rule for target.
+clean: baebot_master/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/clean
 
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target baebot_master/CMakeFiles/topic_tools_generate_messages_cpp.dir
+# Target rules for target baebot_master/CMakeFiles/std_msgs_generate_messages_eus.dir
 
 # All Build rule for target.
+<<<<<<< HEAD
 baebot_master/CMakeFiles/topic_tools_generate_messages_cpp.dir/all:
 	$(MAKE) -f baebot_master/CMakeFiles/topic_tools_generate_messages_cpp.dir/build.make baebot_master/CMakeFiles/topic_tools_generate_messages_cpp.dir/depend
 	$(MAKE) -f baebot_master/CMakeFiles/topic_tools_generate_messages_cpp.dir/build.make baebot_master/CMakeFiles/topic_tools_generate_messages_cpp.dir/build
@@ -2744,19 +2858,33 @@ baebot_master/CMakeFiles/topic_tools_generate_messages_cpp.dir/rule: cmake_check
 	$(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/topic_tools_generate_messages_cpp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/nanorobot/baebot_ws/build/CMakeFiles 0
 .PHONY : baebot_master/CMakeFiles/topic_tools_generate_messages_cpp.dir/rule
+=======
+baebot_master/CMakeFiles/std_msgs_generate_messages_eus.dir/all:
+	$(MAKE) -f baebot_master/CMakeFiles/std_msgs_generate_messages_eus.dir/build.make baebot_master/CMakeFiles/std_msgs_generate_messages_eus.dir/depend
+	$(MAKE) -f baebot_master/CMakeFiles/std_msgs_generate_messages_eus.dir/build.make baebot_master/CMakeFiles/std_msgs_generate_messages_eus.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kyle/baebot_ws/build/CMakeFiles --progress-num= "Built target std_msgs_generate_messages_eus"
+.PHONY : baebot_master/CMakeFiles/std_msgs_generate_messages_eus.dir/all
+
+# Build rule for subdir invocation for target.
+baebot_master/CMakeFiles/std_msgs_generate_messages_eus.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kyle/baebot_ws/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/std_msgs_generate_messages_eus.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kyle/baebot_ws/build/CMakeFiles 0
+.PHONY : baebot_master/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
+>>>>>>> devel
 
 # Convenience name for target.
-topic_tools_generate_messages_cpp: baebot_master/CMakeFiles/topic_tools_generate_messages_cpp.dir/rule
+std_msgs_generate_messages_eus: baebot_master/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
 
-.PHONY : topic_tools_generate_messages_cpp
-
-# clean rule for target.
-baebot_master/CMakeFiles/topic_tools_generate_messages_cpp.dir/clean:
-	$(MAKE) -f baebot_master/CMakeFiles/topic_tools_generate_messages_cpp.dir/build.make baebot_master/CMakeFiles/topic_tools_generate_messages_cpp.dir/clean
-.PHONY : baebot_master/CMakeFiles/topic_tools_generate_messages_cpp.dir/clean
+.PHONY : std_msgs_generate_messages_eus
 
 # clean rule for target.
-clean: baebot_master/CMakeFiles/topic_tools_generate_messages_cpp.dir/clean
+baebot_master/CMakeFiles/std_msgs_generate_messages_eus.dir/clean:
+	$(MAKE) -f baebot_master/CMakeFiles/std_msgs_generate_messages_eus.dir/build.make baebot_master/CMakeFiles/std_msgs_generate_messages_eus.dir/clean
+.PHONY : baebot_master/CMakeFiles/std_msgs_generate_messages_eus.dir/clean
+
+# clean rule for target.
+clean: baebot_master/CMakeFiles/std_msgs_generate_messages_eus.dir/clean
 
 .PHONY : clean
 
@@ -2973,6 +3101,7 @@ clean: baebot_master/CMakeFiles/std_msgs_generate_messages_py.dir/clean
 .PHONY : clean
 
 #=============================================================================
+<<<<<<< HEAD
 <<<<<<< refs/remotes/origin/master
 # Target rules for target baebot_master/CMakeFiles/pcl_msgs_generate_messages_cpp.dir
 
@@ -3040,6 +3169,8 @@ clean: baebot_master/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/c
 #=============================================================================
 =======
 >>>>>>> fix
+=======
+>>>>>>> devel
 # Target rules for target baebot_master/CMakeFiles/pcl_msgs_generate_messages_eus.dir
 
 # All Build rule for target.
@@ -3796,6 +3927,7 @@ clean: baebot_master/CMakeFiles/nodelet_topic_tools_gencfg.dir/clean
 .PHONY : clean
 
 #=============================================================================
+<<<<<<< HEAD
 <<<<<<< refs/remotes/origin/master
 # Target rules for target baebot_master/CMakeFiles/_catkin_empty_exported_target.dir
 
@@ -3831,6 +3963,8 @@ clean: baebot_master/CMakeFiles/_catkin_empty_exported_target.dir/clean
 #=============================================================================
 =======
 >>>>>>> fix
+=======
+>>>>>>> devel
 # Target rules for target baebot_master/CMakeFiles/std_srvs_generate_messages_lisp.dir
 
 # All Build rule for target.
@@ -4419,8 +4553,11 @@ clean: baebot_master/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/clean
 .PHONY : clean
 
 #=============================================================================
+<<<<<<< HEAD
 <<<<<<< refs/remotes/origin/master
 =======
+=======
+>>>>>>> devel
 # Target rules for target baebot_master/CMakeFiles/actionlib_generate_messages_py.dir
 
 # All Build rule for target.
@@ -4485,7 +4622,10 @@ clean: baebot_master/CMakeFiles/tf2_msgs_generate_messages_py.dir/clean
 .PHONY : clean
 
 #=============================================================================
+<<<<<<< HEAD
 >>>>>>> fix
+=======
+>>>>>>> devel
 # Target rules for target baebot_master/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir
 
 # All Build rule for target.

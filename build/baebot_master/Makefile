@@ -562,6 +562,7 @@ bond_generate_messages_eus/fast:
 .PHONY : bond_generate_messages_eus/fast
 
 # Convenience name for target.
+<<<<<<< HEAD
 baebot_master/CMakeFiles/roscpp_generate_messages_cpp.dir/rule:
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
 .PHONY : baebot_master/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
@@ -637,6 +638,8 @@ actionlib_generate_messages_py/fast:
 .PHONY : actionlib_generate_messages_py/fast
 
 # Convenience name for target.
+=======
+>>>>>>> devel
 baebot_master/CMakeFiles/pcl_ros_gencfg.dir/rule:
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/pcl_ros_gencfg.dir/rule
 =======
@@ -1213,6 +1216,7 @@ std_msgs_generate_messages_eus/fast:
 .PHONY : std_msgs_generate_messages_eus/fast
 
 # Convenience name for target.
+<<<<<<< HEAD
 baebot_master/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule:
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
 .PHONY : baebot_master/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
@@ -1273,6 +1277,8 @@ topic_tools_generate_messages_cpp/fast:
 .PHONY : topic_tools_generate_messages_cpp/fast
 
 # Convenience name for target.
+=======
+>>>>>>> devel
 baebot_master/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule:
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule
 =======
@@ -1389,6 +1395,7 @@ std_msgs_generate_messages_py/fast:
 .PHONY : std_msgs_generate_messages_py/fast
 
 # Convenience name for target.
+<<<<<<< HEAD
 baebot_master/CMakeFiles/pcl_msgs_generate_messages_cpp.dir/rule:
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/pcl_msgs_generate_messages_cpp.dir/rule
 .PHONY : baebot_master/CMakeFiles/pcl_msgs_generate_messages_cpp.dir/rule
@@ -1419,6 +1426,8 @@ dynamic_reconfigure_generate_messages_lisp/fast:
 .PHONY : dynamic_reconfigure_generate_messages_lisp/fast
 
 # Convenience name for target.
+=======
+>>>>>>> devel
 baebot_master/CMakeFiles/pcl_msgs_generate_messages_eus.dir/rule:
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/pcl_msgs_generate_messages_eus.dir/rule
 =======
@@ -1834,6 +1843,7 @@ nodelet_topic_tools_gencfg/fast:
 .PHONY : nodelet_topic_tools_gencfg/fast
 
 # Convenience name for target.
+<<<<<<< HEAD
 baebot_master/CMakeFiles/_catkin_empty_exported_target.dir/rule:
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/_catkin_empty_exported_target.dir/rule
 .PHONY : baebot_master/CMakeFiles/_catkin_empty_exported_target.dir/rule
@@ -1849,6 +1859,8 @@ _catkin_empty_exported_target/fast:
 .PHONY : _catkin_empty_exported_target/fast
 
 # Convenience name for target.
+=======
+>>>>>>> devel
 baebot_master/CMakeFiles/std_srvs_generate_messages_lisp.dir/rule:
 	cd /home/nanorobot/baebot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baebot_master/CMakeFiles/std_srvs_generate_messages_lisp.dir/rule
 =======
@@ -2438,10 +2450,13 @@ help:
 	@echo "... nav_msgs_generate_messages_nodejs"
 	@echo "... geometry_msgs_generate_messages_py"
 	@echo "... geometry_msgs_generate_messages_lisp"
+<<<<<<< HEAD
 <<<<<<< refs/remotes/origin/master
 	@echo "... nav_msgs_generate_messages_cpp"
 	@echo "... sensor_msgs_generate_messages_lisp"
 =======
+=======
+>>>>>>> devel
 	@echo "... pcl_msgs_generate_messages_cpp"
 	@echo "... dynamic_reconfigure_generate_messages_lisp"
 	@echo "... nav_msgs_generate_messages_cpp"
@@ -2450,13 +2465,17 @@ help:
 	@echo "... tf_generate_messages_py"
 	@echo "... dynamic_reconfigure_generate_messages_cpp"
 	@echo "... topic_tools_generate_messages_cpp"
+<<<<<<< HEAD
 >>>>>>> fix
+=======
+>>>>>>> devel
 	@echo "... geometry_msgs_generate_messages_eus"
 	@echo "... roscpp_generate_messages_py"
 	@echo "... geometry_msgs_generate_messages_nodejs"
 	@echo "... std_srvs_generate_messages_eus"
 	@echo "... roscpp_generate_messages_lisp"
 	@echo "... bond_generate_messages_eus"
+<<<<<<< HEAD
 <<<<<<< refs/remotes/origin/master
 	@echo "... roscpp_generate_messages_cpp"
 	@echo "... rebuild_cache"
@@ -2466,6 +2485,8 @@ help:
 	@echo "... actionlib_generate_messages_py"
 =======
 >>>>>>> fix
+=======
+>>>>>>> devel
 	@echo "... pcl_ros_gencfg"
 	@echo "... topic_tools_generate_messages_nodejs"
 	@echo "... std_msgs_generate_messages_nodejs"
@@ -2476,13 +2497,19 @@ help:
 	@echo "... bond_generate_messages_py"
 	@echo "... std_srvs_generate_messages_nodejs"
 	@echo "... rosgraph_msgs_generate_messages_lisp"
+<<<<<<< HEAD
 <<<<<<< refs/remotes/origin/master
 =======
+=======
+>>>>>>> devel
 	@echo "... rebuild_cache"
 	@echo "... actionlib_generate_messages_cpp"
 	@echo "... sensor_msgs_generate_messages_nodejs"
 	@echo "... roscpp_generate_messages_cpp"
+<<<<<<< HEAD
 >>>>>>> fix
+=======
+>>>>>>> devel
 	@echo "... rosgraph_msgs_generate_messages_eus"
 	@echo "... std_srvs_generate_messages_cpp"
 	@echo "... nodelet_generate_messages_lisp"
@@ -2497,6 +2524,7 @@ help:
 	@echo "... rosgraph_msgs_generate_messages_nodejs"
 	@echo "... edit_cache"
 	@echo "... std_msgs_generate_messages_eus"
+<<<<<<< HEAD
 <<<<<<< refs/remotes/origin/master
 	@echo "... rosgraph_msgs_generate_messages_cpp"
 	@echo "... tf_generate_messages_py"
@@ -2504,16 +2532,21 @@ help:
 	@echo "... topic_tools_generate_messages_cpp"
 =======
 >>>>>>> fix
+=======
+>>>>>>> devel
 	@echo "... sensor_msgs_generate_messages_eus"
 	@echo "... sensor_msgs_generate_messages_cpp"
 	@echo "... roscpp_generate_messages_nodejs"
 	@echo "... std_msgs_generate_messages_lisp"
 	@echo "... std_msgs_generate_messages_py"
+<<<<<<< HEAD
 <<<<<<< refs/remotes/origin/master
 	@echo "... pcl_msgs_generate_messages_cpp"
 	@echo "... dynamic_reconfigure_generate_messages_lisp"
 =======
 >>>>>>> fix
+=======
+>>>>>>> devel
 	@echo "... pcl_msgs_generate_messages_eus"
 	@echo "... topic_tools_generate_messages_eus"
 	@echo "... nav_msgs_generate_messages_lisp"
@@ -2532,10 +2565,13 @@ help:
 	@echo "... actionlib_msgs_generate_messages_nodejs"
 	@echo "... topic_tools_generate_messages_py"
 	@echo "... nodelet_topic_tools_gencfg"
+<<<<<<< HEAD
 <<<<<<< refs/remotes/origin/master
 	@echo "... _catkin_empty_exported_target"
 =======
 >>>>>>> fix
+=======
+>>>>>>> devel
 	@echo "... std_srvs_generate_messages_lisp"
 	@echo "... topic_tools_generate_messages_lisp"
 	@echo "... std_srvs_generate_messages_py"
@@ -2550,11 +2586,16 @@ help:
 	@echo "... nav_msgs_generate_messages_py"
 	@echo "... dynamic_reconfigure_gencfg"
 	@echo "... tf2_msgs_generate_messages_lisp"
+<<<<<<< HEAD
 <<<<<<< refs/remotes/origin/master
 =======
 	@echo "... actionlib_generate_messages_py"
 	@echo "... tf2_msgs_generate_messages_py"
 >>>>>>> fix
+=======
+	@echo "... actionlib_generate_messages_py"
+	@echo "... tf2_msgs_generate_messages_py"
+>>>>>>> devel
 	@echo "... tf2_msgs_generate_messages_nodejs"
 	@echo "... src/BaeBotMaster.o"
 	@echo "... src/BaeBotMaster.i"

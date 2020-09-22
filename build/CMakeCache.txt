@@ -320,12 +320,15 @@ actionlib_DIR:PATH=/opt/ros/melodic/share/actionlib/cmake
 actionlib_msgs_DIR:PATH=/opt/ros/melodic/share/actionlib_msgs/cmake
 
 //Value Computed by CMake
+<<<<<<< HEAD
 <<<<<<< refs/remotes/origin/master
 baebot_master_BINARY_DIR:STATIC=/home/nanorobot/baebot_ws/build/baebot_master
 
 //Value Computed by CMake
 baebot_master_SOURCE_DIR:STATIC=/home/nanorobot/baebot_ws/src/baebot_master
 =======
+=======
+>>>>>>> devel
 babebot_sim_BINARY_DIR:STATIC=/home/kyle/baebot_ws/build/baebot_sim
 
 //Value Computed by CMake
@@ -342,7 +345,10 @@ baebot_sim_BINARY_DIR:STATIC=/home/kyle/baebot_ws/build/baebot_sim
 
 //Value Computed by CMake
 baebot_sim_SOURCE_DIR:STATIC=/home/kyle/baebot_ws/src/baebot_sim
+<<<<<<< HEAD
 >>>>>>> fix
+=======
+>>>>>>> devel
 
 //The directory containing a CMake configuration file for bond.
 bond_DIR:PATH=/opt/ros/melodic/share/bond/cmake
@@ -684,11 +690,15 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
+<<<<<<< HEAD
 <<<<<<< refs/remotes/origin/master
 CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=5
 =======
 CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=6
 >>>>>>> fix
+=======
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=6
+>>>>>>> devel
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
