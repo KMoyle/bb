@@ -30,13 +30,19 @@ int main( int argc, char **argv){
     baebotMaster->goto_points.push_back(P3);
     baebotMaster->goto_points.push_back(P2);
     baebotMaster->goto_points.push_back(P1);
+<<<<<<< refs/remotes/origin/master
 
+=======
+>>>>>>> Added a BB Gazebo robot and world, bb subs to cmd_vel
     baebotMaster->goto_points.push_back(P5);
     baebotMaster->goto_points.push_back(P4);
     baebotMaster->goto_points.push_back(P3);
     baebotMaster->goto_points.push_back(P2);
     baebotMaster->goto_points.push_back(P1);
+<<<<<<< refs/remotes/origin/master
 
+=======
+>>>>>>> Added a BB Gazebo robot and world, bb subs to cmd_vel
 
 
 
