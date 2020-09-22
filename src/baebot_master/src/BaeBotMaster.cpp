@@ -6,29 +6,23 @@
 BaeBotMaster::BaeBotMaster(ros::NodeHandle *nh ) :
                 it_(*nh)
 {
-
-
-
-        //laser_sub = nh->subscribe<sensor_msgs::LaserScan>("/rplidar_scan" , 1, &BaeBotMaster::rpLidarCallback, this);
+        // Subscribers
         laser_sub = nh->subscribe<sensor_msgs::LaserScan>("/scan" , 1, &BaeBotMaster::rpLidarCallback, this);
+
         pose_sub = nh->subscribe<nav_msgs::Odometry>("/odom" , 1, &BaeBotMaster::bbPoseCallback, this);
-        poseDmd_sub = nh->subscribe<nav_msgs::Odometry>("/poseDmd_odom" , 1, &BaeBotMaster::bbPoseDmdCallback, this);
-        //laser_sub = nh->subscribe<sensor_msgs::MultiEchoLaserScan>("/horizontal_laser_2d" , 1, &BaeBotMaster::rpLidarCallback, this);
+
         image_sub = it_.subscribe("/camera/image_raw" , 1, &BaeBotMaster::cameraImageCallback, this);
         //image_sub = it_.subscribe("/BaeBot/camera/image_raw" , 1, &BaeBotMaster::cameraImageCallback, this);
+
         battery_sub = nh->subscribe("/battery" , 1, &BaeBotMaster::batteryStateCallback, this);
 
         // MISSION STATUS INIT
         mission_status = AWAITING_MISSION;
 
         // Intitalising the sensor last updates
-        sensorTimeOut = 5.0;
         timeSinceLastLidarUpdate = sensorTimeOut;
         timeSinceLastCameraUpdate = sensorTimeOut;
         timeSinceLastPoseUpdate = sensorTimeOut;
-
-
-        goto_time = ros::Time::now();
 
         ROS_INFO("ctor");
 };
@@ -71,12 +65,12 @@ void BaeBotMaster::updateLoop(){
     //sensorUpdate();
 
     //ODOM TEST
-    doASpin();
-    goStraight();
+    //doASpin();
+    //goStraight();
 
 
     // Update the pose and navigation parameters
-    //navUpdate();
+    navUpdate();
 
 
 
@@ -189,7 +183,7 @@ void BaeBotMaster::missionUpdate(){
         ROS_INFO("AWAITING_MISSION");
     }else if (mission_status == MISSION_RUNNING){
         motor_cmds_vw = baeBotControl.controllerProportional( pose, poseDmd );
-        //ROS_INFO("MISSION_RUNNING");
+        ROS_INFO("MISSION_RUNNING");
     }else if (mission_status == MISSION_COMPLETED){
         motor_cmds_vw.first = 0;
         motor_cmds_vw.second = 0;
@@ -205,11 +199,11 @@ void BaeBotMaster::missionUpdate(){
     }else if (mission_status == MISSION_DO_A_SPIN){
         motor_cmds_vw.first = 0;
         motor_cmds_vw.second = 1;
-        ROS_INFO("MISSION_STOPPED");
+        ROS_INFO("MISSION_DO_A_SPIN");
     }else if (mission_status == MISSION_GO_STRAIGHT){
-        motor_cmds_vw.first = 1;
+        motor_cmds_vw.first = 0.5;
         motor_cmds_vw.second = 0;
-        ROS_INFO("MISSION_STOPPED");
+        ROS_INFO("MISSION_GO_STRAIGHT");
     }
 
 
@@ -272,18 +266,6 @@ void BaeBotMaster::bbPoseCallback(const nav_msgs::Odometry::ConstPtr& msg){
 
 }
 
-void BaeBotMaster::bbPoseDmdCallback(const nav_msgs::Odometry::ConstPtr& msg){
-
-
-    //mission_status = MISSION_RUNNING;
-
-    // Updating the poseDmd info from writing topic
-    poseDmd.x = msg->pose.pose.position.x;
-    poseDmd.y = msg->pose.pose.position.y;
-    //poseDmd.theta = yaw;
-
-
-}
 
 void BaeBotMaster::batteryStateCallback(const sensor_msgs::BatteryState::ConstPtr& msg){
 

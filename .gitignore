@@ -9,3 +9,5 @@ devel/
 *.make
 
 src/bags/
+
+*.cmake

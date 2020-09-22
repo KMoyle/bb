@@ -30,9 +30,11 @@ int main( int argc, char **argv){
     baebotMaster->goto_points.push_back(P3);
     baebotMaster->goto_points.push_back(P2);
     baebotMaster->goto_points.push_back(P1);
-
-
-
+    baebotMaster->goto_points.push_back(P5);
+    baebotMaster->goto_points.push_back(P4);
+    baebotMaster->goto_points.push_back(P3);
+    baebotMaster->goto_points.push_back(P2);
+    baebotMaster->goto_points.push_back(P1);
 
 
 
