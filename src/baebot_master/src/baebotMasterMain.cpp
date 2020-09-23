@@ -80,6 +80,7 @@ int main( int argc, char **argv){
     baebotMaster->goto_points.push_back(P1);
     */
 
+    //commit for change!
 
     /*
     *   Initialise Threads
