@@ -21,6 +21,7 @@
 #include "bb_sensors/BbLaser.h"
 #include "bb_control/BbControl.h"
 #include <math.h>
+#include <queue>
 
 
 class BaeBotMaster {
@@ -40,8 +41,8 @@ class BaeBotMaster {
 
     public:
 
-    // Points to check control and senors data
-    std::vector<std::pair<double, double> > goto_points;
+        // Points to check control and senors data
+    std::queue<std::pair<double, double> > goto_points;
     //Motor cmds to publish
     std::pair<double, double> motor_cmds_vw;
 

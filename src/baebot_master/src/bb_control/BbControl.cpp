@@ -32,46 +32,38 @@ BaeBotControl::BaeBotControl(){
  */
 
 
-int   BaeBotControl::controllerPurePursuit( POSE p, POSE pd ){
+std::pair<double, double>  BaeBotControl::controllerPurePursuit( POSE p, POSE pd ){
 
-    double d = 0.15; // pure pursuit stand back distance
-    double theta_star;
     static double error_over_time = 0;
-    double ang_diff;
 
+    //Distance between points minus the lead
     pure_pursuit_error = sqrt( pow( pd.x - p.x, 2) + pow( pd.y - p.y, 2) ) - d;
-
+    //adding the error
     error_over_time = error_over_time + pure_pursuit_error;
-
-    // Proportional velocity
+    // PI
     p.v = Kp*pure_pursuit_error + Ki*error_over_time;
-
     //Proportional steering angle
     theta_star = atan2( ( pd.y - p.y ) , ( pd.x - p.x ) );
-
+    //Checking for wrap around angle
     ang_diff = angsDiff( theta_star, p.theta);
 
     p.w = Kn*ang_diff;
 
-    //TODO -- Need a function to turn v and w into motor cmds, need to look at how they do it
+    motor_cmds_vw.first = p.v;
+    motor_cmds_vw.second = p.w;
 
-    //TODO -- function to send motor cmds
+    return motor_cmds_vw;
 
 
 };
 
 std::pair<double, double>   BaeBotControl::controllerProportional( POSE p, POSE pd ){
 
-    double ang_diff;
-    double theta_star;
-    std::pair<double, double> motor_cmds_vw;
-
     // Proportional control
     p.v = Kp*sqrt( pow( pd.x - p.x, 2) + pow( pd.y - p.y, 2) );
-
     //Proportional steering angle
     theta_star = atan2( ( pd.y - p.y ) , ( pd.x - p.x ) );
-
+    //Checking for wrap around angle
     ang_diff = angsDiff( theta_star, p.theta );
 
     p.w = Kn*ang_diff;
