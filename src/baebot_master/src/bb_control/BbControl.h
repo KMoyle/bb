@@ -12,13 +12,14 @@ public:
 
 
     BaeBotControl();
-
-    int controllerPurePursuit( POSE, POSE );
+    // Different controllers
+    std::pair<double, double> controllerPurePursuit( POSE, POSE );
     std::pair<double, double>  controllerProportional( POSE, POSE );
     double angsDiff( double, double );
 
+
     // Maximum allowable motor commands
-    double  MOTOR_MAX_MAIN_PERCENTAGE = 20.0;
+    //double  MOTOR_MAX_MAIN_PERCENTAGE = 20.0;
 
     // Sum of control axis integrator
     double pure_pursuit_error;
@@ -29,9 +30,14 @@ public:
     double  Kn;
 
     // Velocity and anguluar velocity
+    std::pair<double, double> motor_cmds_vw;
     double v;
     double w;
 
+    // wrap around angle
+    double ang_diff;
+    double d = 0.05; // pure pursuit stand back distance (m)
+    double theta_star;
 
 private:
 

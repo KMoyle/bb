@@ -30,7 +30,7 @@ BaeBotMaster::BaeBotMaster(ros::NodeHandle *nh ) :
 BaeBotMaster::~BaeBotMaster(){
 
 
-
+        ROS_INFO("dtor");
 
 
 };
@@ -124,29 +124,29 @@ void BaeBotMaster::updateDt(){
 void BaeBotMaster::navUpdate(){
 
     static int num_wp = 0;
+    static int bread_crumb_counter = 0;
 
     ros::Time currentTime = ros::Time::now();
 
+    // Initial waypoint
     if ( !we_are_off ){
         ROS_INFO("Off on our first mission");
         mission_status = MISSION_RUNNING;
-        poseDmd.x = goto_points.back().first;
-        poseDmd.y = goto_points.back().second;
-        goto_points.pop_back();
+        poseDmd.x = goto_points.front().first;
+        poseDmd.y = goto_points.front().second;
+        goto_points.pop();
         we_are_off = true;
     }
-    if ( dist_to_pose() < THRESH_DIST && !goto_points.empty() ){
+    if ( !goto_points.empty() && bread_crumb_counter++ > (int) sampleRate){
         num_wp++;
         ROS_INFO("ONTO NEXT WAY POINT - %d", num_wp);
-        poseDmd.x = goto_points.back().first;
-        poseDmd.y = goto_points.back().second;
-        goto_points.pop_back();
+        poseDmd.x = goto_points.front().first;
+        poseDmd.y = goto_points.front().second;
+        ROS_INFO( " poseDmd= ( %f , %f )", poseDmd.x, poseDmd.y);
+        goto_points.pop();
+        bread_crumb_counter = 0;
 
     }
-    // calculate the forward and angular velocities [v,w]
-    // publish the cmd_vel msg, Twsit
-
-
 
 
 }
@@ -176,35 +176,51 @@ void BaeBotMaster::sensorUpdate(){
 void BaeBotMaster::missionUpdate(){
 
 
+    // MISSION SWITCH
+    switch( mission_status ){
 
-    if (mission_status == AWAITING_MISSION){
-        motor_cmds_vw.first = 0;
-        motor_cmds_vw.second = 0;
-        ROS_INFO("AWAITING_MISSION");
-    }else if (mission_status == MISSION_RUNNING){
-        motor_cmds_vw = baeBotControl.controllerProportional( pose, poseDmd );
-        ROS_INFO("MISSION_RUNNING");
-    }else if (mission_status == MISSION_COMPLETED){
-        motor_cmds_vw.first = 0;
-        motor_cmds_vw.second = 0;
-        ROS_INFO("MISSION_COMPLETED");
-    }else if (mission_status == MISSION_PAUSED){
-        motor_cmds_vw.first = 0;
-        motor_cmds_vw.second = 0;
-        ROS_INFO("MISSION_PAUSED");
-    }else if (mission_status == MISSION_STOPPED){
-        motor_cmds_vw.first = 0;
-        motor_cmds_vw.second = 0;
-        ROS_INFO("MISSION_STOPPED");
-    }else if (mission_status == MISSION_DO_A_SPIN){
-        motor_cmds_vw.first = 0;
-        motor_cmds_vw.second = 1;
-        ROS_INFO("MISSION_DO_A_SPIN");
-    }else if (mission_status == MISSION_GO_STRAIGHT){
-        motor_cmds_vw.first = 0.5;
-        motor_cmds_vw.second = 0;
-        ROS_INFO("MISSION_GO_STRAIGHT");
-    }
+        case AWAITING_MISSION:
+            motor_cmds_vw.first = 0;
+            motor_cmds_vw.second = 0;
+            ROS_INFO("AWAITING_MISSION");
+            break;
+
+        case MISSION_RUNNING:
+            motor_cmds_vw = baeBotControl.controllerPurePursuit( pose, poseDmd );
+            //motor_cmds_vw = baeBotControl.controllerProportional( pose, poseDmd );
+            ROS_INFO("MISSION_RUNNING");
+            break;
+
+        case MISSION_COMPLETED:
+            motor_cmds_vw.first = 0;
+            motor_cmds_vw.second = 0;
+            ROS_INFO("MISSION_COMPLETED");
+            break;
+
+        case MISSION_PAUSED:
+            motor_cmds_vw.first = 0;
+            motor_cmds_vw.second = 0;
+            ROS_INFO("MISSION_PAUSED");
+            break;
+
+        case MISSION_STOPPED:
+            motor_cmds_vw.first = 0;
+            motor_cmds_vw.second = 0;
+            ROS_INFO("MISSION_STOPPED");
+            break;
+
+        case MISSION_DO_A_SPIN:
+            motor_cmds_vw.first = 0;
+            motor_cmds_vw.second = 1;
+            ROS_INFO("MISSION_DO_A_SPIN");
+            break;
+
+        case MISSION_GO_STRAIGHT:
+            motor_cmds_vw.first = 0.5;
+            motor_cmds_vw.second = 0;
+            ROS_INFO("MISSION_GO_STRAIGHT");
+            break;
+}
 
 
 }
