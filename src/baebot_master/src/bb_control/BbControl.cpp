@@ -12,7 +12,7 @@ BaeBotControl::BaeBotControl(){
         // PROPORTAIONAL CONTROLLER GAIN
         Kp = 0.2;
         // ANGLE DIFF GAIN
-        Kn = 0.5;
+        Kn = 0.65;
         // PP ERROR
         pure_pursuit_error = 0;
         // bb intendend velocities

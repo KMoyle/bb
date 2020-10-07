@@ -137,7 +137,7 @@ void BaeBotMaster::navUpdate(){
         goto_points.pop();
         we_are_off = true;
     }
-    if ( !goto_points.empty() && bread_crumb_counter++ > (int) sampleRate){
+    if ( !goto_points.empty() && bread_crumb_counter++ > (int) ( 2*sampleRate )){
         num_wp++;
         ROS_INFO("ONTO NEXT WAY POINT - %d", num_wp);
         poseDmd.x = goto_points.front().first;
