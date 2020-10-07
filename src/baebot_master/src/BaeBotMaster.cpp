@@ -216,7 +216,7 @@ void BaeBotMaster::missionUpdate(){
             break;
 
         case MISSION_GO_STRAIGHT:
-            motor_cmds_vw.first = 0.5;
+            motor_cmds_vw.first = 0.03;
             motor_cmds_vw.second = 0;
             ROS_INFO("MISSION_GO_STRAIGHT");
             break;

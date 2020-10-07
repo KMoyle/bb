@@ -26,7 +26,7 @@ int main( int argc, char **argv){
     //Filling (x,y) points for pp testing
     for ( int i =0; i < 5; i++ ){
         if( i == 0 ){
-            for ( int k = 0; k < 5; k++ ){
+            for ( int k = 0; k < 3; k++ ){
                 P_new.first = P_old.first + delta_dist;
                 P_new.second = P_old.second + delta_dist;
                 baebotMaster->goto_points.push(P_new);
@@ -34,7 +34,7 @@ int main( int argc, char **argv){
             }
         }
         if( i == 1 ){
-            for ( int k = 0; k < 10; k++ ){
+            for ( int k = 0; k < 6; k++ ){
                 P_new.first = P_old.first - delta_dist;
                 //P_new.second = P_old.second + delta_dist;
                 baebotMaster->goto_points.push(P_new);
@@ -42,7 +42,7 @@ int main( int argc, char **argv){
             }
         }
         if( i == 2 ){
-            for ( int k = 0; k < 10; k++ ){
+            for ( int k = 0; k < 6; k++ ){
                 P_new.first = P_old.first + delta_dist;
                 P_new.second = P_old.second - delta_dist;
                 baebotMaster->goto_points.push(P_new);
@@ -50,7 +50,7 @@ int main( int argc, char **argv){
             }
         }
         if( i == 3 ){
-            for ( int k = 0; k < 10; k++ ){
+            for ( int k = 0; k < 6; k++ ){
                 P_new.first = P_old.first - delta_dist;
                 //P_new.second = P_old.second - delta_dist;
                 baebotMaster->goto_points.push(P_new);
@@ -58,7 +58,7 @@ int main( int argc, char **argv){
             }
         }
          if( i == 4 ){
-            for ( int k = 0; k < 5; k++ ){
+            for ( int k = 0; k < 3; k++ ){
                 P_new.first = P_old.first + delta_dist;
                 P_new.second = P_old.second + delta_dist;
                 baebotMaster->goto_points.push(P_new);
