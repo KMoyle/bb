@@ -41,8 +41,8 @@ public:
 
 private:
 
-    const double MAX_FORWARD_VELOCITY = 0.05;
-    const double MAX_ANGULAR_VELOCITY = 1;
+    const double MAX_FORWARD_VELOCITY = 0.06;
+    const double MAX_ANGULAR_VELOCITY = 1.5;
 
 
 };
