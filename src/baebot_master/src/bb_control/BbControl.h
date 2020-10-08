@@ -36,13 +36,13 @@ public:
 
     // wrap around angle
     double ang_diff;
-    double d = 0.05; // pure pursuit stand back distance (m)
+    double d = 0.01; // pure pursuit stand back distance (m)
     double theta_star;
 
 private:
 
-    const int MAX_FORWARD_VELOCITY = 0.05;
-    const int MAX_ANGULAR_VELOCITY = 0.05;
+    const double MAX_FORWARD_VELOCITY = 0.05;
+    const double MAX_ANGULAR_VELOCITY = 1;
 
 
 };

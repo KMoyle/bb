@@ -10,9 +10,9 @@ BaeBotControl::BaeBotControl(){
         // INTEGRAL CONTROLLER GAIN
         Ki = 0.008;
         // PROPORTAIONAL CONTROLLER GAIN
-        Kp = 0.2;
+        Kp = 0.5;
         // ANGLE DIFF GAIN
-        Kn = 0.65;
+        Kn = 0.8;
         // PP ERROR
         pure_pursuit_error = 0;
         // bb intendend velocities
@@ -49,8 +49,17 @@ std::pair<double, double>  BaeBotControl::controllerPurePursuit( POSE p, POSE pd
 
     p.w = Kn*ang_diff;
 
-    motor_cmds_vw.first = p.v;
-    motor_cmds_vw.second = p.w;
+    if ( p.v > MAX_FORWARD_VELOCITY ) {
+        motor_cmds_vw.first = MAX_FORWARD_VELOCITY;
+    }else{
+        motor_cmds_vw.first = p.v;
+    }
+
+    if ( p.w > MAX_ANGULAR_VELOCITY ) {
+        motor_cmds_vw.second = MAX_ANGULAR_VELOCITY;
+    }else{
+        motor_cmds_vw.second = p.w;
+    }
 
     return motor_cmds_vw;
 
@@ -70,9 +79,18 @@ std::pair<double, double>   BaeBotControl::controllerProportional( POSE p, POSE 
 
     ROS_INFO("velocity=  %f \t angle=  %f", p.v, p.w);
 
+    if ( p.v > MAX_FORWARD_VELOCITY ) {
+        motor_cmds_vw.first = MAX_FORWARD_VELOCITY;
+    }else{
+        motor_cmds_vw.first = p.v;
+    }
 
-    motor_cmds_vw.first = p.v;
-    motor_cmds_vw.second = p.w;
+    if ( p.w > MAX_ANGULAR_VELOCITY ) {
+        motor_cmds_vw.second = MAX_ANGULAR_VELOCITY;
+    }else{
+        motor_cmds_vw.second = p.w;
+    }
+
 
     return motor_cmds_vw;
 
