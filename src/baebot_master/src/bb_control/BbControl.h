@@ -41,6 +41,9 @@ public:
 
 private:
 
+    const int MAX_FORWARD_VELOCITY = 0.05;
+    const int MAX_ANGULAR_VELOCITY = 0.05;
+
 
 };
 #endif // BAEBOTMASTER_H_INCLUDED

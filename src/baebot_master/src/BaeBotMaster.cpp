@@ -65,8 +65,8 @@ void BaeBotMaster::updateLoop(){
     //sensorUpdate();
 
     //ODOM TEST
-    //doASpin();
-    goStraight();
+    doASpin();
+    //goStraight();
 
 
     // Update the pose and navigation parameters
