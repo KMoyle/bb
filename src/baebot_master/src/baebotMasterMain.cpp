@@ -19,8 +19,8 @@ int main( int argc, char **argv){
 
 
     double delta_dist = 0.1;
-    std::pair<double, double> P_old({0,0});
-    std::pair<double, double> P_new({0,0});
+    std::pair<double, double> P_old({2,2});
+    std::pair<double, double> P_new({2,2});
 
 
     //Filling (x,y) points for pp testing

@@ -10,7 +10,7 @@ BaeBotControl::BaeBotControl(){
         // INTEGRAL CONTROLLER GAIN
         Ki = 0.008;
         // PROPORTAIONAL CONTROLLER GAIN
-        Kp = 0.5;
+        Kp = 0.8;
         // ANGLE DIFF GAIN
         Kn = 0.8;
         // PP ERROR

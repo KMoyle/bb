@@ -11,7 +11,7 @@ BaeBotMaster::BaeBotMaster(ros::NodeHandle *nh ) :
 
         pose_sub = nh->subscribe<nav_msgs::Odometry>("/odom" , 1, &BaeBotMaster::bbPoseCallback, this);
 
-        image_sub = it_.subscribe("/camera/image_raw" , 1, &BaeBotMaster::cameraImageCallback, this);
+        image_sub = it_.subscribe("/camera/rgb/image_raw" , 1, &BaeBotMaster::cameraImageCallback, this);
         //image_sub = it_.subscribe("/BaeBot/camera/image_raw" , 1, &BaeBotMaster::cameraImageCallback, this);
 
         battery_sub = nh->subscribe("/battery" , 1, &BaeBotMaster::batteryStateCallback, this);
@@ -66,11 +66,11 @@ void BaeBotMaster::updateLoop(){
 
     //ODOM TEST
     //doASpin();
-    //goStraight();
+    goStraight();
 
 
     // Update the pose and navigation parameters
-    navUpdate();
+    //navUpdate();
 
 
 
@@ -128,6 +128,7 @@ void BaeBotMaster::navUpdate(){
 
     ros::Time currentTime = ros::Time::now();
 
+    // TODO -->> LOGIC TO DETERMINE WHAT CONTROLLER IM USING
     // Initial waypoint
     if ( !we_are_off ){
         ROS_INFO("Off on our first mission");
