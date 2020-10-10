@@ -1,4 +1,7 @@
 <launch>
+    <node pkg="tf2_ros" type="static_transform_publisher" name="laser_broadcaster" args="0 0 0.06 0 0 0 1 base_link laser" />
+
+   <!-- TODO CAMERA STATIC PUB -->
 
     <node pkg="baebot_master" name="BaeBotMaster" type="BaeBotMaster" output="screen"/>
 
