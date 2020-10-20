@@ -207,3 +207,13 @@ include_directories(
 
 ## Add folders to be run by python nosetests
 # catkin_add_nosetests(test)
+add_executable( BaeBotPathPlanner
+
+    src/A_Star_Path_Planner.cpp
+    include/A_Star_Path_Planner.h
+    include/Map_Cell.h
+
+
+)
+
+target_link_libraries( BaeBotPathPlanner ${catkin_LIBRARIES})

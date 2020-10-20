@@ -1,6 +1,9 @@
 #ifndef A_STAR_PATH_PLANNER_H
 #define A_STAR_PATH_PLANNER_H
 
+
+#include "ros/ros.h"
+
 #include <vector>
 #include <list>
 #include <cmath>

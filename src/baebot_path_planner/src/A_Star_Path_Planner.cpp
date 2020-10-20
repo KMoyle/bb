@@ -1,7 +1,19 @@
 #include "../include/A_Star_Path_Planner.h"
 
+
+int main(int argc, char **argv) {
+
+    ros::init(argc, argv, "a_star_planner");
+    A_Star_Path_Planner planner("planner_action");
+    ros::spin();
+
+    return 0;
+}
+
+
 A_Star_Path_Planner::A_Star_Path_Planner( MapCell start, MapCell goal,  std::vector<char> map )
 {
+
     start_ = &start;
     goal_ = &goal;
     map_ = map;
