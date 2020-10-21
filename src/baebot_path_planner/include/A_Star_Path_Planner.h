@@ -10,6 +10,11 @@
 #include <iostream>
 #include <algorithm>
 
+#include <actionlib/server/simple_action_server.h>
+#include <baebot_path_planner/PathPlannerAction.h>
+
+#include <nav_msgs/OccupancyGrid.h>
+
 #include "Map_Cell.h"
 
 
@@ -17,7 +22,9 @@
 class A_Star_Path_Planner
 {
     public:
-        A_Star_Path_Planner( MapCell , MapCell,  std::vector<char> );
+        A_Star_Path_Planner( std::string name );
+
+        void pathPlannerCallBack( const baebot_path_planner::PathPlannerGoal::ConstPtr );
 
         float return_g_score( MapCell* ,unsigned int );
         float return_h_score( MapCell* );
@@ -30,20 +37,29 @@ class A_Star_Path_Planner
 
         ~A_Star_Path_Planner();
 
-        bool found_goal;
 
+        actionlib::SimpleActionServer<baebot_path_planner::PathPlannerAction> as_;
+        std::string action_name_;
+        baebot_path_planner::PathPlannerFeedback feedback_;
+        baebot_path_planner::PathPlannerResult result_;
+
+        bool found_goal;
         bool DEBUG = true;
 
+        MapCell * start_;
+        MapCell * goal_;
+        nav_msgs::OccupancyGrid map_;
 
 
     private:
 
+        ros::NodeHandle n_;
 
-        const int map_width_ = 10;
-        const int map_height_= 10;
+        bool map_ok_;
 
-        MapCell *start_;
-        MapCell *goal_;
+        const int map_width_ = 100;
+        const int map_height_= 100;
+
 
         // A star Search variables
         std::vector<MapCell> grid_; //main grid containing map cells
@@ -61,7 +77,6 @@ class A_Star_Path_Planner
         std::vector<float> h_; //layer array containing h values for each map cell -->> dist to goal
         std::vector<float> f_; //layer array containing f values for each map cell -->> total cost
 
-        std::vector<char> map_; //layer array representing OccupancyGrid map
 
 
 

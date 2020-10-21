@@ -4,19 +4,18 @@
 int main(int argc, char **argv) {
 
     ros::init(argc, argv, "a_star_planner");
-    A_Star_Path_Planner planner("planner_action");
+    A_Star_Path_Planner bbPathPlanner( "path_planner" );
     ros::spin();
 
     return 0;
 }
 
 
-A_Star_Path_Planner::A_Star_Path_Planner( MapCell start, MapCell goal,  std::vector<char> map )
-{
+A_Star_Path_Planner::A_Star_Path_Planner( std::string name  )
+        : map_ok_( false ),
+         as_(n_, name, boost::bind( &A_Star_Path_Planner::pathPlannerCallBack, this, _1), false ),
+         action_name_( name ) {
 
-    start_ = &start;
-    goal_ = &goal;
-    map_ = map;
 
     //init sizes of all a* vecs
     grid_.resize( map_height_ * map_width_ );
@@ -43,6 +42,19 @@ A_Star_Path_Planner::A_Star_Path_Planner( MapCell start, MapCell goal,  std::vec
         }
     }
 
+    goal_ = NULL;
+    start_ = NULL;
+    map_ = nav_msgs::OccupancyGrid();
+
+
+
+
+}
+
+void A_Star_Path_Planner::pathPlannerCallBack ( const baebot_path_planner::PathPlannerGoal::ConstPtr &goal ) {
+
+
+if (map_ok_){
     //init lists with start mapcell
     open_set_.push_back( start_ );
     opened_[ start_->get_x() + start_->get_y() * map_width_ ] = true;
@@ -125,6 +137,10 @@ A_Star_Path_Planner::A_Star_Path_Planner( MapCell start, MapCell goal,  std::vec
         map_[ current->get_x() + current->get_y() * map_width_ ] = 'V';
     }
 
+    } else {
+        ROS_WARN( "map not updated yet");
+        as_.setAborted();
+    }
 
 
 
@@ -308,3 +324,4 @@ A_Star_Path_Planner::~A_Star_Path_Planner()
 {
     //dtor
 }
+

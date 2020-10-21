@@ -18,67 +18,6 @@ int main( int argc, char **argv){
     BaeBotMaster *baebotMaster = new BaeBotMaster( &nh );
 
 
-    double delta_dist = 0.1;
-    std::pair<double, double> P_old({2,2});
-    std::pair<double, double> P_new({2,2});
-
-
-    //Filling (x,y) points for pp testing
-    for ( int i =0; i < 5; i++ ){
-        if( i == 0 ){
-            for ( int k = 0; k < 3; k++ ){
-                P_new.first = P_old.first + delta_dist;
-                P_new.second = P_old.second + delta_dist;
-                baebotMaster->goto_points.push(P_new);
-                P_old = P_new;
-            }
-        }
-        if( i == 1 ){
-            for ( int k = 0; k < 6; k++ ){
-                P_new.first = P_old.first - delta_dist;
-                //P_new.second = P_old.second + delta_dist;
-                baebotMaster->goto_points.push(P_new);
-                P_old = P_new;
-            }
-        }
-        if( i == 2 ){
-            for ( int k = 0; k < 6; k++ ){
-                P_new.first = P_old.first + delta_dist;
-                P_new.second = P_old.second - delta_dist;
-                baebotMaster->goto_points.push(P_new);
-                P_old = P_new;
-            }
-        }
-        if( i == 3 ){
-            for ( int k = 0; k < 6; k++ ){
-                P_new.first = P_old.first - delta_dist;
-                //P_new.second = P_old.second - delta_dist;
-                baebotMaster->goto_points.push(P_new);
-                P_old = P_new;
-            }
-        }
-         if( i == 4 ){
-            for ( int k = 0; k < 3; k++ ){
-                P_new.first = P_old.first + delta_dist;
-                P_new.second = P_old.second + delta_dist;
-                baebotMaster->goto_points.push(P_new);
-                P_old = P_new;
-            }
-        }
-    }
-
-    /*
-    baebotMaster->goto_points.push_back(P5);
-    baebotMaster->goto_points.push_back(P4);
-    baebotMaster->goto_points.push_back(P3);
-    baebotMaster->goto_points.push_back(P2);
-    baebotMaster->goto_points.push_back(P1);
-    baebotMaster->goto_points.push_back(P5);
-    baebotMaster->goto_points.push_back(P4);
-    baebotMaster->goto_points.push_back(P3);
-    baebotMaster->goto_points.push_back(P2);
-    baebotMaster->goto_points.push_back(P1);
-    */
 
     //commit for change!
 
@@ -88,7 +27,6 @@ int main( int argc, char **argv){
     // Control threads
     // Planner threads
         baebotMaster->motorDmd_pub = nh.advertise< geometry_msgs::Twist >( "cmd_vel", 1 );
-
 
 
         boost::thread controlLoopThread( boost::bind( &BaeBotMaster::controlLoopFunc, baebotMaster ) );
