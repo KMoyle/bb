@@ -23,6 +23,7 @@ find_package(catkin REQUIRED COMPONENTS
   message_filters
   geometry_msgs
   image_transport
+  baebot_path_planner
 )
 
 ## System dependencies are found with CMake's conventions

@@ -17,6 +17,9 @@
 
 #include <image_transport/image_transport.h>
 
+#include <actionlib/client/simple_action_client.h>
+#include <baebot_path_planner/PathPlannerAction.h>
+
 #include "baebot_global.h"
 #include "bb_sensors/BbLaser.h"
 #include "bb_control/BbControl.h"
@@ -36,6 +39,9 @@ class BaeBotMaster {
     image_transport::Subscriber image_sub;
     image_transport::ImageTransport it_;
 
+    baebot_path_planner::PathPlannerGoal pathgoal;
+    baebot_path_planner::PathPlannerResultConstPtr pathResult;
+
 
 
 
@@ -54,6 +60,11 @@ class BaeBotMaster {
     bool we_are_off = false;
     //Threshold dist for Proportional control
     const double THRESH_DIST = 0.05; //5cm
+    //Require new path from planner
+    bool need_new_path = false;
+    bool waiting_for_path = false;
+
+
 
     //Declaring state and control objects
     BaeBotControl baeBotControl;
@@ -91,6 +102,11 @@ class BaeBotMaster {
     void setNewPose_xy( Point2D );
     void setNewPose( POSE );
 
+    void setnewPathGoal( int x, int y ){
+        pathgoal.goal_x;
+        pathgoal.goal_y;
+    }
+
     // GETS
 
     // CALLBACK FUNCTIONS
@@ -102,6 +118,7 @@ class BaeBotMaster {
 
     // OPERATIONAL CONTROL FUNCTION
     void controlLoopFunc();
+    void pathPlannerLoopFunc();
     void updateLoop();
     void updateDt();
     void navUpdate();
@@ -110,6 +127,7 @@ class BaeBotMaster {
     void updateCurrentTask();
     void publishMotorCommands();
     void publishPoseMessages();
+
 
     //DATA gathering functions to TEST ODOM
     void doASpin();

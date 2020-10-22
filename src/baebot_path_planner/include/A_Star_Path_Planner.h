@@ -24,7 +24,7 @@ class A_Star_Path_Planner
     public:
         A_Star_Path_Planner( std::string name );
 
-        void pathPlannerCallBack( const baebot_path_planner::PathPlannerGoal::ConstPtr );
+        void pathPlannerCallBack( const baebot_path_planner::PathPlannerGoal::ConstPtr& );
 
         float return_g_score( MapCell* ,unsigned int );
         float return_h_score( MapCell* );
@@ -33,7 +33,6 @@ class A_Star_Path_Planner
         MapCell *get_best_neighbour( );
 
         void compute_path( MapCell* );
-        void print_map();
 
         ~A_Star_Path_Planner();
 

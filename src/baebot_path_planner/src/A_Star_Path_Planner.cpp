@@ -46,12 +46,14 @@ A_Star_Path_Planner::A_Star_Path_Planner( std::string name  )
     start_ = NULL;
     map_ = nav_msgs::OccupancyGrid();
 
+    as_.start();
+
 
 
 
 }
 
-void A_Star_Path_Planner::pathPlannerCallBack ( const baebot_path_planner::PathPlannerGoal::ConstPtr &goal ) {
+void A_Star_Path_Planner::pathPlannerCallBack( const baebot_path_planner::PathPlannerGoal::ConstPtr &goal ) {
 
 
 if (map_ok_){
@@ -83,8 +85,6 @@ if (map_ok_){
         //remove current point from opened set and place in closed set and set closed to true
         closed_set_.push_back( open_set_.front() );
         closed_[ current_id_ ] = true;
-        map_[ current_id_ ] = 'C';
-        if( DEBUG ) print_map();
 
         //get valid neighbours of current i.e. within bounds
         neighbour_ids_.clear();
@@ -129,12 +129,10 @@ if (map_ok_){
                 g_[ *itn ] = cost;
                 h_[ *itn ] = return_h_score( &grid_[ *itn ] );
                 f_[ *itn ] = g_[ *itn ] + h_[ *itn ];
-                map_[ *itn ] = 'O';
 
             }
         }
 
-        map_[ current->get_x() + current->get_y() * map_width_ ] = 'V';
     }
 
     } else {
@@ -208,7 +206,7 @@ void A_Star_Path_Planner::add_neighbours( MapCell *cmp ){
     for ( int y = -1; y < 2; y++){
         for ( int x = -1; x < 2; x++ ){
 
-            if ( ( cmp->get_x() > 0 ) &&  cmp->get_y() > 0 && ( cmp->get_x() + 1 ) < map_width_ && ( cmp->get_y() + 1 ) < map_height_ && !closed_[ ( cmp->get_x() + (x) ) + ( cmp->get_y() + (y) ) * map_width_] && map_[ ( cmp->get_x() + (x) ) + ( cmp->get_y() + (y) ) * map_width_] != 'X'){
+            if ( ( cmp->get_x() > 0 ) &&  cmp->get_y() > 0 && ( cmp->get_x() + 1 ) < map_width_ && ( cmp->get_y() + 1 ) < map_height_ && !closed_[ ( cmp->get_x() + (x) ) + ( cmp->get_y() + (y) ) * map_width_] && map_.data[ ( cmp->get_x() + (x) ) + ( cmp->get_y() + (y) ) * map_width_] <= 0 ){
                 neighbour_id = ( cmp->get_x() + (x) ) + ( cmp->get_y() + (y) ) * map_width_;
                 //std::cout << "NEW Neighbour -- >> " << "( " << grid_[neighbour_id].get_x() << " , " <<grid_[neighbour_id].get_y()<< " )" << std::endl;
                 neighbour_ids_.push_back( neighbour_id );
@@ -216,7 +214,7 @@ void A_Star_Path_Planner::add_neighbours( MapCell *cmp ){
                     parent_[ neighbour_id ] = &grid_[current_id_];
                 }
 
-            } else if ( ( cmp->get_x() == 0 ) && ( cmp->get_y() > 0 ) && !closed_[ ( cmp->get_y() + (y) ) * map_width_] && map_[ ( cmp->get_y() + (y) ) * map_width_] != 'X' ){
+            } else if ( ( cmp->get_x() == 0 ) && ( cmp->get_y() > 0 ) && !closed_[ ( cmp->get_y() + (y) ) * map_width_] && map_.data[ ( cmp->get_y() + (y) ) * map_width_] <= 0 ){
                 neighbour_id =  ( cmp->get_y() + (y) ) * map_width_;
                 //std::cout << "NEW Neighbour -- >> " << "( " << grid_[neighbour_id].get_x() << " , " <<grid_[neighbour_id].get_y()<< " )" << std::endl;
                 neighbour_ids_.push_back( neighbour_id );
@@ -225,7 +223,7 @@ void A_Star_Path_Planner::add_neighbours( MapCell *cmp ){
                     parent_[ neighbour_id ] = &grid_[current_id_];
                 }
 
-            } else if ( ( cmp->get_x() > 0 ) && ( cmp->get_y() == 0 ) && !closed_[ ( cmp->get_x() + (x) ) ] && map_[ ( cmp->get_x() + (x) ) ] != 'X'){
+            } else if ( ( cmp->get_x() > 0 ) && ( cmp->get_y() == 0 ) && !closed_[ ( cmp->get_x() + (x) ) ] && map_.data[ ( cmp->get_x() + (x) ) ] <= 0 ){
                 neighbour_id = ( cmp->get_x() );
                 //std::cout << "NEW Neighbour -- >> " << "( " << grid_[neighbour_id].get_x() << " , " <<grid_[neighbour_id].get_y()<< " )" << std::endl;
                 neighbour_ids_.push_back( neighbour_id );
@@ -234,7 +232,7 @@ void A_Star_Path_Planner::add_neighbours( MapCell *cmp ){
                     parent_[ neighbour_id ] = &grid_[current_id_];
                 }
 
-            } else if ( ( (cmp->get_x() + 1 ) ==  map_width_ ) && ( cmp->get_y() + 1 ) < map_height_ && !closed_[ ( cmp->get_x() ) +  ( cmp->get_y() + 1 ) * map_width_] && map_[ ( cmp->get_x() ) +  ( cmp->get_y() + 1 ) * map_width_ ] != 'X'){
+            } else if ( ( (cmp->get_x() + 1 ) ==  map_width_ ) && ( cmp->get_y() + 1 ) < map_height_ && !closed_[ ( cmp->get_x() ) +  ( cmp->get_y() + 1 ) * map_width_] && map_.data[ ( cmp->get_x() ) +  ( cmp->get_y() + 1 ) * map_width_ ] <= 0 ){
                 neighbour_id = ( ( cmp->get_x() ) +  ( cmp->get_y() + 1 ) * map_width_ );
                 //std::cout << "NEW Neighbour -- >> " << "( " << grid_[neighbour_id].get_x() << " , " <<grid_[neighbour_id].get_y()<< " )" << std::endl;
                 neighbour_ids_.push_back( neighbour_id );
@@ -243,7 +241,7 @@ void A_Star_Path_Planner::add_neighbours( MapCell *cmp ){
                     parent_[ neighbour_id ] = &grid_[current_id_];
                 }
 
-            } else if ( ( (cmp->get_x() + 1 ) <  map_width_ ) && ( cmp->get_y() + 1 ) == map_height_ && !closed_[ ( cmp->get_x() + 1 ) +  ( cmp->get_y()  ) * map_width_] && map_[ ( cmp->get_x() + 1 ) +  ( cmp->get_y()  ) * map_width_ ] != 'X'){
+            } else if ( ( (cmp->get_x() + 1 ) <  map_width_ ) && ( cmp->get_y() + 1 ) == map_height_ && !closed_[ ( cmp->get_x() + 1 ) +  ( cmp->get_y()  ) * map_width_] && map_.data[ ( cmp->get_x() + 1 ) +  ( cmp->get_y()  ) * map_width_ ] <= 0 ){
                 neighbour_id = ( ( cmp->get_x() + 1 ) +  ( cmp->get_y()  ) * map_width_ );
                 //std::cout << "NEW Neighbour -- >> " << "( " << grid_[neighbour_id].get_x() << " , " <<grid_[neighbour_id].get_y()<< " )" << std::endl;
                 neighbour_ids_.push_back( neighbour_id );
@@ -252,7 +250,7 @@ void A_Star_Path_Planner::add_neighbours( MapCell *cmp ){
                     parent_[ neighbour_id ] = &grid_[current_id_];
                 }
 
-            } else if (  ( cmp->get_x() == 0 ) && ( cmp->get_y() == 0 ) && x >= 0 && y >= 0 && !closed_[ ( cmp->get_x() + (x) ) + ( cmp->get_y() + (y) ) * map_width_] && map_[ ( cmp->get_x() + (x) ) + ( cmp->get_y() + (y) ) * map_width_] != 'X'){
+            } else if (  ( cmp->get_x() == 0 ) && ( cmp->get_y() == 0 ) && x >= 0 && y >= 0 && !closed_[ ( cmp->get_x() + (x) ) + ( cmp->get_y() + (y) ) * map_width_] && map_.data[ ( cmp->get_x() + (x) ) + ( cmp->get_y() + (y) ) * map_width_] <= 0 ){
                 neighbour_id = ( cmp->get_x() + (x) ) + ( cmp->get_y() + (y) ) * map_width_;
                 //std::cout << "NEW Neighbour -- >> " << "( " << grid_[neighbour_id].get_x() << " , " <<grid_[neighbour_id].get_y()<< " )" << std::endl;
                 neighbour_ids_.push_back( neighbour_id );
@@ -295,29 +293,6 @@ void A_Star_Path_Planner::compute_path( MapCell* current ){
 
 }
 
-void A_Star_Path_Planner::print_map( ){
-
-    int map_counter = 0;
-
-    std::vector<char>::iterator itm;
-
-    for( itm = map_.begin(); itm != map_.end(); itm++ ){
-
-        if ( map_counter % 10 == 0 ){
-            std::cout << "\n";
-
-        }
-        std::cout <<"  " << *itm;
-
-        map_counter++;
-
-    }
-
-    std::cout << "\n";
-
-
-
-}
 
 
 A_Star_Path_Planner::~A_Star_Path_Planner()

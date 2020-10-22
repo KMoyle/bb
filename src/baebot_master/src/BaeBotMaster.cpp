@@ -57,6 +57,52 @@ void BaeBotMaster::controlLoopFunc(){
 
 }
 
+void BaeBotMaster::pathPlannerLoopFunc(){
+
+    int	pathLoopCnt = 0;
+    ros::Rate loop_rate( r );
+
+    actionlib::SimpleActionClient<baebot_path_planner::PathPlannerAction> ac_( "Planner Action");
+
+    while( ros::ok() ){
+
+        if ( DEBUG ) ROS_INFO( "Path Loop Cnt: %d", pathLoopCnt++ );
+
+        if ( need_new_path ){
+
+            if ( ac_.isServerConnected() ){
+                ROS_INFO( "BaeBotMaster: Action server connected, sending goal" );
+
+                ac_.sendGoal( pathgoal );
+                waiting_for_path = true;
+                need_new_path = false;
+
+            }else{
+                ROS_WARN( "BaeBotMaster: UNABLE TO CONNECT TO PATH PLANNER SERVER" );
+            }
+         }
+
+         if( ac_.isServerConnected() && waiting_for_path ) {
+
+            if( ac_.getState() == actionlib::SimpleClientGoalState::SUCCEEDED )
+                pathResult = ac_.getResult();
+                need_new_path = false;
+                waiting_for_path = false;
+
+        }else{
+                ROS_INFO( "BaeBotMaster: waiting for path from planner" );
+
+        }
+
+
+
+        ros::spinOnce();
+        loop_rate.sleep();
+    }
+
+
+}
+
 void BaeBotMaster::updateLoop(){
 
     updateDt();

@@ -30,9 +30,11 @@ int main( int argc, char **argv){
 
 
         boost::thread controlLoopThread( boost::bind( &BaeBotMaster::controlLoopFunc, baebotMaster ) );
+        boost::thread pathPlannerLoodThread ( boost::bind( &BaeBotMaster::pathPlannerLoopFunc, baebotMaster ) );
 
         ROS_INFO("main: starting controller thread");
         controlLoopThread.join();
+        pathPlannerLoodThread.join();
 
 
         delete baebotMaster;

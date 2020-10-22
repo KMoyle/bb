@@ -2,9 +2,7 @@
 #include "BbLaser.h"
 
 
-
-
-void BaeBotMaster::rpLidarCallback(const sensor_msgs::LaserScan::ConstPtr& scan ){
+void BaeBotMaster::rpLidarCallback( const sensor_msgs::LaserScan::ConstPtr& scan ){
 
      timeSinceLastLidarUpdate = 0.0;
      sensor_status.lidarAlive = true;
