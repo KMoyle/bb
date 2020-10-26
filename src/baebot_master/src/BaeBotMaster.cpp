@@ -86,7 +86,6 @@ void BaeBotMaster::pathPlannerLoopFunc(){
 
             if( ac_.getState() == actionlib::SimpleClientGoalState::SUCCEEDED )
                 pathResult = ac_.getResult();
-                need_new_path = false;
                 waiting_for_path = false;
 
         }else{

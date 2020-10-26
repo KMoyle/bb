@@ -145,6 +145,10 @@ if (map_ok_){
 
     //ctor
 }
+void A_Star_Path_Planner::mapCallBack ( const nav_msgs::OccupancyGrid::ConstPtr &occ_map ){
+
+
+}
 
 MapCell *A_Star_Path_Planner::get_best_neighbour( ){
 

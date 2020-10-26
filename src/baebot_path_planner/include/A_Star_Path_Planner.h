@@ -25,6 +25,7 @@ class A_Star_Path_Planner
         A_Star_Path_Planner( std::string name );
 
         void pathPlannerCallBack( const baebot_path_planner::PathPlannerGoal::ConstPtr& );
+        void mapCallBack( const nav_msgs::OccupancyGrid::ConstPtr& );
 
         float return_g_score( MapCell* ,unsigned int );
         float return_h_score( MapCell* );
