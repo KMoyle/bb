@@ -17,6 +17,9 @@ A_Star_Path_Planner::A_Star_Path_Planner( std::string name  )
          action_name_( name ) {
 
 
+     map_sub = n_.subscribe("/map" ,1, &A_Star_Path_Planner::mapCallBack, this);
+
+
     //init sizes of all a* vecs
     grid_.resize( map_height_ * map_width_ );
     parent_.resize( map_height_ * map_width_ );
@@ -147,6 +150,7 @@ if (map_ok_){
 }
 void A_Star_Path_Planner::mapCallBack ( const nav_msgs::OccupancyGrid::ConstPtr &occ_map ){
 
+    std::cout << occ_map->data[0] << std::endl;
 
 }
 

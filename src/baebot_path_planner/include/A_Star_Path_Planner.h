@@ -22,33 +22,37 @@
 class A_Star_Path_Planner
 {
     public:
+        //ctor
         A_Star_Path_Planner( std::string name );
 
+        //Callback functions
         void pathPlannerCallBack( const baebot_path_planner::PathPlannerGoal::ConstPtr& );
         void mapCallBack( const nav_msgs::OccupancyGrid::ConstPtr& );
 
+        //helper functions
         float return_g_score( MapCell* ,unsigned int );
         float return_h_score( MapCell* );
-
         void add_neighbours( MapCell* );
         MapCell *get_best_neighbour( );
-
         void compute_path( MapCell* );
 
+        //dtor
         ~A_Star_Path_Planner();
 
+        //Occ Grid members
+        ros::Subscriber map_sub;
+        nav_msgs::OccupancyGrid map_;
 
+        //Action server vars
         actionlib::SimpleActionServer<baebot_path_planner::PathPlannerAction> as_;
         std::string action_name_;
         baebot_path_planner::PathPlannerFeedback feedback_;
         baebot_path_planner::PathPlannerResult result_;
 
-        bool found_goal;
-        bool DEBUG = true;
-
+        //A* members
         MapCell * start_;
         MapCell * goal_;
-        nav_msgs::OccupancyGrid map_;
+
 
 
     private:
@@ -60,6 +64,8 @@ class A_Star_Path_Planner
         const int map_width_ = 100;
         const int map_height_= 100;
 
+        bool found_goal;
+        bool DEBUG = true;
 
         // A star Search variables
         std::vector<MapCell> grid_; //main grid containing map cells
