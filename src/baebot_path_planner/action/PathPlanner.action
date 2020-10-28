@@ -5,6 +5,7 @@ int8 goal_y
 # Result
 int8[] path_x
 int8[] path_y
+
 ---
 # Feedback
 uint8 search_steps

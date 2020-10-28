@@ -30,11 +30,12 @@ class A_Star_Path_Planner
         void mapCallBack( const nav_msgs::OccupancyGrid::ConstPtr& );
 
         //helper functions
-        float return_g_score( MapCell* ,unsigned int );
-        float return_h_score( MapCell* );
+        inline float return_g_score( MapCell* ,unsigned int );
+        inline float return_h_score( MapCell* );
         void add_neighbours( MapCell* );
         MapCell *get_best_neighbour( );
         void compute_path( MapCell* );
+        inline void setNeighbour( double, double );
 
         //dtor
         ~A_Star_Path_Planner();

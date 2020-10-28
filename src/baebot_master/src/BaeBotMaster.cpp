@@ -62,7 +62,7 @@ void BaeBotMaster::pathPlannerLoopFunc(){
     int	pathLoopCnt = 0;
     ros::Rate loop_rate( r );
 
-    actionlib::SimpleActionClient<baebot_path_planner::PathPlannerAction> ac_( "Planner Action");
+    actionlib::SimpleActionClient<baebot_path_planner::PathPlannerAction> ac_( "Planner Action" );
 
     while( ros::ok() ){
 
