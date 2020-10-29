@@ -8,12 +8,9 @@ BaeBotMaster::BaeBotMaster(ros::NodeHandle *nh ) :
 {
         // Subscribers
         laser_sub = nh->subscribe<sensor_msgs::LaserScan>("/scan" , 1, &BaeBotMaster::rpLidarCallback, this);
-
         pose_sub = nh->subscribe<nav_msgs::Odometry>("/odom" , 1, &BaeBotMaster::bbPoseCallback, this);
-
         image_sub = it_.subscribe("/camera/rgb/image_raw" , 1, &BaeBotMaster::cameraImageCallback, this);
         //image_sub = it_.subscribe("/BaeBot/camera/image_raw" , 1, &BaeBotMaster::cameraImageCallback, this);
-
         battery_sub = nh->subscribe("/battery" , 1, &BaeBotMaster::batteryStateCallback, this);
 
         // MISSION STATUS INIT
@@ -62,7 +59,15 @@ void BaeBotMaster::pathPlannerLoopFunc(){
     int	pathLoopCnt = 0;
     ros::Rate loop_rate( r );
 
-    actionlib::SimpleActionClient<baebot_path_planner::PathPlannerAction> ac_( "Planner Action" );
+    actionlib::SimpleActionClient<baebot_path_planner::PathPlannerAction> ac_( "Planner_Action" );
+
+    if ( DEBUG_PLANNER && test_new_path ){
+        pathgoal.goal_x = 3;
+        pathgoal.goal_y = 3;
+        ac_.sendGoal( pathgoal );
+        need_new_path = true;
+        test_new_path = false;
+    }
 
     while( ros::ok() ){
 
@@ -71,7 +76,7 @@ void BaeBotMaster::pathPlannerLoopFunc(){
         if ( need_new_path ){
 
             if ( ac_.isServerConnected() ){
-                ROS_INFO( "BaeBotMaster: Action server connected, sending goal" );
+                if ( DEBUG_PLANNER ) ROS_INFO( "BaeBotMaster: Action server connected, sending goal" );
 
                 ac_.sendGoal( pathgoal );
                 waiting_for_path = true;
@@ -87,9 +92,10 @@ void BaeBotMaster::pathPlannerLoopFunc(){
             if( ac_.getState() == actionlib::SimpleClientGoalState::SUCCEEDED )
                 pathResult = ac_.getResult();
                 waiting_for_path = false;
+                  if ( DEBUG_PLANNER )ROS_INFO( "BaeBotMaster: Result recieved from planner" );
 
         }else{
-                ROS_INFO( "BaeBotMaster: waiting for path from planner" );
+                 if ( DEBUG_PLANNER )ROS_INFO( "BaeBotMaster: waiting for path from planner" );
 
         }
 
@@ -114,10 +120,10 @@ void BaeBotMaster::updateLoop(){
     //goStraight();
 
 
+
+
     // Update the pose and navigation parameters
     navUpdate();
-
-
 
     //if( sensor_status.poseAlive && sensor_status.cameraAlive && sensor_status.lidarAlive ) {
     if( 1 ) {
@@ -175,7 +181,7 @@ void BaeBotMaster::navUpdate(){
 
     // TODO -->> LOGIC TO DETERMINE WHAT CONTROLLER IM USING
     // Initial waypoint
-    if ( !we_are_off ){
+    if ( we_are_off ){
         ROS_INFO("Off on our first mission");
         mission_status = MISSION_RUNNING;
         poseDmd.x = goto_points.front().first;
@@ -228,43 +234,43 @@ void BaeBotMaster::missionUpdate(){
         case AWAITING_MISSION:
             motor_cmds_vw.first = 0;
             motor_cmds_vw.second = 0;
-            ROS_INFO("AWAITING_MISSION");
+            if ( DEBUG_SM ) ROS_INFO("AWAITING_MISSION");
             break;
 
         case MISSION_RUNNING:
             motor_cmds_vw = baeBotControl.controllerPurePursuit( pose, poseDmd );
             //motor_cmds_vw = baeBotControl.controllerProportional( pose, poseDmd );
-            ROS_INFO("MISSION_RUNNING");
+            if ( DEBUG_SM ) ROS_INFO("MISSION_RUNNING");
             break;
 
         case MISSION_COMPLETED:
             motor_cmds_vw.first = 0;
             motor_cmds_vw.second = 0;
-            ROS_INFO("MISSION_COMPLETED");
+            if ( DEBUG_SM ) ROS_INFO("MISSION_COMPLETED");
             break;
 
         case MISSION_PAUSED:
             motor_cmds_vw.first = 0;
             motor_cmds_vw.second = 0;
-            ROS_INFO("MISSION_PAUSED");
+            if ( DEBUG_SM ) ROS_INFO("MISSION_PAUSED");
             break;
 
         case MISSION_STOPPED:
             motor_cmds_vw.first = 0;
             motor_cmds_vw.second = 0;
-            ROS_INFO("MISSION_STOPPED");
+            if ( DEBUG_SM ) ROS_INFO("MISSION_STOPPED");
             break;
 
         case MISSION_DO_A_SPIN:
             motor_cmds_vw.first = 0;
             motor_cmds_vw.second = 1;
-            ROS_INFO("MISSION_DO_A_SPIN");
+            if ( DEBUG_SM ) ROS_INFO("MISSION_DO_A_SPIN");
             break;
 
         case MISSION_GO_STRAIGHT:
             motor_cmds_vw.first = 0.05;
             motor_cmds_vw.second = 0;
-            ROS_INFO("MISSION_GO_STRAIGHT");
+            if ( DEBUG_SM ) ROS_INFO("MISSION_GO_STRAIGHT");
             break;
 }
 
@@ -324,7 +330,7 @@ void BaeBotMaster::bbPoseCallback(const nav_msgs::Odometry::ConstPtr& msg){
     pose.velY = msg->twist.twist.linear.y;
 
 
-    ROS_INFO("Current Pose: X= %f     Y= %f     theta= %f", pose.x, pose.y, pose.theta);
+   if ( DEBUG_POSE ) ROS_INFO("Current Pose: X= %f     Y= %f     theta= %f", pose.x, pose.y, pose.theta);
 
 }
 
@@ -371,5 +377,12 @@ void BaeBotMaster::doASpin(){
 void BaeBotMaster::goStraight(){
 
         mission_status = MISSION_GO_STRAIGHT;
+
+}
+
+void BaeBotMaster::pathPlannerTest(){
+
+
+
 
 }

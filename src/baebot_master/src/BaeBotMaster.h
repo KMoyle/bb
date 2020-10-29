@@ -54,7 +54,11 @@ class BaeBotMaster {
 
     // USING DEBUG & SIM MODES
     bool SIM = false;
-    bool DEBUG = true;
+    bool DEBUG = false;
+    bool DEBUG_PLANNER = true;;
+    bool DEBUG_SM = false;
+    bool DEBUG_POSE = false;
+
 
     //Initial movement bool
     bool we_are_off = false;
@@ -63,6 +67,7 @@ class BaeBotMaster {
     //Require new path from planner
     bool need_new_path = false;
     bool waiting_for_path = false;
+    bool test_new_path = true;
 
 
 
@@ -129,9 +134,10 @@ class BaeBotMaster {
     void publishPoseMessages();
 
 
-    //DATA gathering functions to TEST ODOM
+    //DATA gathering and TEST functions
     void doASpin();
     void goStraight();
+    void pathPlannerTest();
 
     // UTILS
     double dist_to_point( Point2D );

@@ -4,7 +4,7 @@
 int main(int argc, char **argv) {
 
     ros::init(argc, argv, "a_star_planner");
-    A_Star_Path_Planner bbPathPlanner( "path_planner" );
+    A_Star_Path_Planner bbPathPlanner( "Planner_Action" );
     ros::spin();
 
     return 0;

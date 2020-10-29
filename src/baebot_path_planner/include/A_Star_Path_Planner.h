@@ -62,8 +62,8 @@ class A_Star_Path_Planner
 
         bool map_ok_;
 
-        const int map_width_ = 100;
-        const int map_height_= 100;
+        const int map_width_ = 50;
+        const int map_height_= 50;
 
         bool found_goal;
         bool DEBUG = true;
