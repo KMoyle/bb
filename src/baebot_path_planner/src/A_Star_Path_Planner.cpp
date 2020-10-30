@@ -4,6 +4,7 @@
 int main(int argc, char **argv) {
 
     ros::init(argc, argv, "a_star_planner");
+    ROS_INFO("HELLO");
     A_Star_Path_Planner bbPathPlanner( "Planner_Action" );
     ros::spin();
 
@@ -16,8 +17,8 @@ A_Star_Path_Planner::A_Star_Path_Planner( std::string name  )
          as_(n_, name, boost::bind( &A_Star_Path_Planner::pathPlannerCallBack, this, _1), false ),
          action_name_( name ) {
 
-
-     map_sub = n_.subscribe("/map" ,1, &A_Star_Path_Planner::mapCallBack, this);
+        ROS_INFO("HELLO1");
+     map_sub = n_.subscribe("/map" ,10, &A_Star_Path_Planner::mapCallBack, this);
 
 
     //init sizes of all a* vecs
@@ -54,48 +55,53 @@ A_Star_Path_Planner::A_Star_Path_Planner( std::string name  )
 
 void A_Star_Path_Planner::pathPlannerCallBack( const baebot_path_planner::PathPlannerGoal::ConstPtr &goal ) {
 
+    ROS_INFO("goal_x= %d and goal_y= %d ", goal->goal_x, goal->goal_y);
 
-if (map_ok_){
-    //init lists with start mapcell
-    open_set_.push_back( start_ );
-    opened_[ start_->get_x() + start_->get_y() * map_width_ ] = true;
-    g_[ start_->get_x() + start_->get_y() * map_width_ ] = 0;
-    h_[ start_->get_x() + start_->get_y() * map_width_ ] = return_h_score( start_ );
-    f_[ start_->get_x() + start_->get_y() * map_width_ ] = g_[ start_->get_x() + start_->get_y() * map_width_ ] +  h_[ start_->get_x() + start_->get_y() * map_width_ ];
+    //TODO transform goal into map coor
+    goal_ = new MapCell( static_cast<unsigned int>( goal->goal_x ), static_cast<unsigned int>( goal->goal_y ) );
+    start_ = new MapCell( static_cast<unsigned int>( goal->start_x ), static_cast<unsigned int>( goal->start_y ) );
 
+    if (map_ok_){
+        //init lists with start mapcell
+        open_set_.push_back( start_ );
+        opened_[ start_->get_x() + start_->get_y() * map_width_ ] = true;
+        g_[ start_->get_x() + start_->get_y() * map_width_ ] = 0;
+        h_[ start_->get_x() + start_->get_y() * map_width_ ] = return_h_score( start_ );
+        f_[ start_->get_x() + start_->get_y() * map_width_ ] = g_[ start_->get_x() + start_->get_y() * map_width_ ] +  h_[ start_->get_x() + start_->get_y() * map_width_ ];
 
-    //start search
-    while ( !open_set_.empty() ){
+        ROS_WARN( "map not updated yet");
+        //start search
+        while ( !open_set_.empty() ){
 
         //finding cell with best f score
-        MapCell *current = get_best_neighbour();
-        float current_id_ = current->get_x() + current->get_y() * map_width_;
+            MapCell *current = get_best_neighbour();
+            float current_id_ = current->get_x() + current->get_y() * map_width_;
 
-       if( DEBUG ) std::cout << "( " << current->get_x() << " , " << current->get_y() << " )" << std::endl;
+            if( DEBUG ) std::cout << "( " << current->get_x() << " , " << current->get_y() << " )" << std::endl;
 
-        if ( current->get_x() == goal_->get_x() && current->get_y() == goal_->get_y() ){
-            found_goal = true;
-            std::cout << " FOUND PATH " << std::endl;
-           compute_path( current );
-            break;
-        }
-        //remove current point from opened set and place in closed set and set closed to true
-        closed_set_.push_back( open_set_.front() );
-        closed_[ current_id_ ] = true;
+            if ( current->get_x() == goal_->get_x() && current->get_y() == goal_->get_y() ){
+                found_goal = true;
+                std::cout << " FOUND PATH " << std::endl;
+                compute_path( current );
+                break;
+            }
+            //remove current point from opened set and place in closed set and set closed to true
+            closed_set_.push_back( open_set_.front() );
+            closed_[ current_id_ ] = true;
 
-        //get valid neighbours of current i.e. within bounds
-        neighbour_ids_.clear();
-        add_neighbours( current );
+            //get valid neighbours of current i.e. within bounds
+            neighbour_ids_.clear();
+            add_neighbours( current );
 
-        //loop through neighbours
-        for( auto itn = neighbour_ids_.begin() ; itn != neighbour_ids_.end(); itn++ ){
+            //loop through neighbours
+            for( auto itn = neighbour_ids_.begin() ; itn != neighbour_ids_.end(); itn++ ){
 
-            //firstly compute, cost = g(current) + distance(current,neighbour)
-            float cost = g_[ current_id_ ] + return_g_score( current, *itn );
-            //neighbour info
-            if( DEBUG )std::cout << "neighbour ->  ( " <<  grid_[*itn].get_x() << " , " <<  grid_[*itn].get_y() << " )" <<  "\told g= " <<  g_[ *itn ] << "\tcost= " << cost << "\n" << std::endl;
+                //firstly compute, cost = g(current) + distance(current,neighbour)
+                float cost = g_[ current_id_ ] + return_g_score( current, *itn );
+                //neighbour info
+                if( DEBUG )std::cout << "neighbour ->  ( " <<  grid_[*itn].get_x() << " , " <<  grid_[*itn].get_y() << " )" <<  "\told g= " <<  g_[ *itn ] << "\tcost= " << cost << "\n" << std::endl;
 
-            if( closed_[*itn] && cost < g_[ *itn ] ){
+                if( closed_[*itn] && cost < g_[ *itn ] ){
 
                      g_[ *itn ] = cost;
                      f_[ *itn ] = g_[ *itn ] + h_[ *itn ];
@@ -105,36 +111,41 @@ if (map_ok_){
                     parent_[ *itn ] = &grid_[current_id_];
                     if( DEBUG )std::cout << "neighbours parent is now ( " << parent_[ *itn ]->get_x() << " , " << parent_[ *itn ]->get_y() << " )" << std::endl;
 
-            }else if ( opened_[*itn] && cost < g_[ *itn ] ){
+                }else if ( opened_[*itn] && cost < g_[ *itn ] ){
 
                     g_[ *itn ] = cost;
                     f_[ *itn ] = g_[ *itn ] + h_[ *itn ];
                     if( DEBUG )std::cout << "neighbours parent was ( " << parent_[ *itn ]->get_x() << " , " << parent_[ *itn ]->get_y() << " )" << std::endl;
                     parent_[ *itn ] = &grid_[current_id_];
                     if( DEBUG )std::cout << "neighbours parent is now ( " << parent_[ *itn ]->get_x() << " , " << parent_[ *itn ]->get_y() << " )" << std::endl;
-            }else if( !opened_[*itn] && !closed_[*itn] ){
+                }else if( !opened_[*itn] && !closed_[*itn] ){
 
-                open_set_.push_back( &grid_[ *itn ] );
-                opened_[ *itn  ] = true;
-                g_[ *itn ] = cost;
-                h_[ *itn ] = return_h_score( &grid_[ *itn ] );
-                f_[ *itn ] = g_[ *itn ] + h_[ *itn ];
+                    open_set_.push_back( &grid_[ *itn ] );
+                    opened_[ *itn  ] = true;
+                    g_[ *itn ] = cost;
+                    h_[ *itn ] = return_h_score( &grid_[ *itn ] );
+                    f_[ *itn ] = g_[ *itn ] + h_[ *itn ];
 
+                }
             }
-        }
 
-    }
+        }
 
     } else {
         ROS_WARN( "map not updated yet");
         as_.setAborted();
+        delete goal_;
+        delete start_;
     }
 }
-void A_Star_Path_Planner::mapCallBack ( const nav_msgs::OccupancyGrid::ConstPtr &occ_map ){
+void A_Star_Path_Planner::mapCallBack( const nav_msgs::OccupancyGrid &occ_map ){
 
-    std::cout << occ_map->data[0] << std::endl;
+    map_ok_ = true;
+    map_ = occ_map;
+    ROS_INFO("WE HAVE A MAP");
 
 }
+
 
 MapCell *A_Star_Path_Planner::get_best_neighbour( ){
 

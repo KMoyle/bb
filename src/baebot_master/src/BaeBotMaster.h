@@ -53,21 +53,21 @@ class BaeBotMaster {
     std::pair<double, double> motor_cmds_vw;
 
     // USING DEBUG & SIM MODES
-    bool SIM = false;
-    bool DEBUG = false;
-    bool DEBUG_PLANNER = true;;
-    bool DEBUG_SM = false;
-    bool DEBUG_POSE = false;
+    bool SIM{false};
+    bool DEBUG{false};
+    bool DEBUG_PLANNER{true};
+    bool DEBUG_SM{false};
+    bool DEBUG_POSE{false};
 
 
     //Initial movement bool
-    bool we_are_off = false;
+    bool we_are_off{false};
     //Threshold dist for Proportional control
-    const double THRESH_DIST = 0.05; //5cm
+    const double THRESH_DIST{0.05}; //5cm
     //Require new path from planner
-    bool need_new_path = false;
-    bool waiting_for_path = false;
-    bool test_new_path = true;
+    bool need_new_path{false};
+    bool waiting_for_path{false};
+    bool test_new_path{true};
 
 
 
@@ -77,16 +77,16 @@ class BaeBotMaster {
     SENSOR_STATUS sensor_status;
 
     //Sensors timeouts
-    double sensorTimeOut = 5.0;
+    double sensorTimeOut{5.0};
     double timeSinceLastLidarUpdate;
     double timeSinceLastCameraUpdate;
     double timeSinceLastPoseUpdate;
 
     // Timing infos
-    double sampleRate = 30;
+    double sampleRate{30};
     ros::Duration dt;
-    ros::Rate r = 30; //10Hz
-    ros::Time* lastUpdateTime = NULL;
+    ros::Rate r{30}; //10Hz
+    ros::Time* lastUpdateTime{nullptr};
 
     //Declaring pose & posedmd infos
     POSE        pose;

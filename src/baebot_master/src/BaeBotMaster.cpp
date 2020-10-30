@@ -34,7 +34,7 @@ BaeBotMaster::~BaeBotMaster(){
 
 void BaeBotMaster::controlLoopFunc(){
 
-    int	controlLoopCnt = 0;
+    int	controlLoopCnt{0};
     ros::Rate loop_rate( r );
 
 
@@ -56,7 +56,7 @@ void BaeBotMaster::controlLoopFunc(){
 
 void BaeBotMaster::pathPlannerLoopFunc(){
 
-    int	pathLoopCnt = 0;
+    int	pathLoopCnt{0};
     ros::Rate loop_rate( r );
 
     actionlib::SimpleActionClient<baebot_path_planner::PathPlannerAction> ac_( "Planner_Action" );
@@ -64,6 +64,10 @@ void BaeBotMaster::pathPlannerLoopFunc(){
     if ( DEBUG_PLANNER && test_new_path ){
         pathgoal.goal_x = 3;
         pathgoal.goal_y = 3;
+
+        pathgoal.start_x = static_cast<unsigned int>( pose.x );
+        pathgoal.start_y = static_cast<unsigned int>( pose.y );
+
         ac_.sendGoal( pathgoal );
         need_new_path = true;
         test_new_path = false;
@@ -174,8 +178,8 @@ void BaeBotMaster::updateDt(){
 */
 void BaeBotMaster::navUpdate(){
 
-    static int num_wp = 0;
-    static int bread_crumb_counter = 0;
+    static int num_wp{0};
+    static int bread_crumb_counter{0};
 
     ros::Time currentTime = ros::Time::now();
 

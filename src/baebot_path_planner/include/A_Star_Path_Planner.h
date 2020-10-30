@@ -27,7 +27,7 @@ class A_Star_Path_Planner
 
         //Callback functions
         void pathPlannerCallBack( const baebot_path_planner::PathPlannerGoal::ConstPtr& );
-        void mapCallBack( const nav_msgs::OccupancyGrid::ConstPtr& );
+        void mapCallBack( const nav_msgs::OccupancyGrid& );
 
         //helper functions
         inline float return_g_score( MapCell* ,unsigned int );
@@ -51,8 +51,9 @@ class A_Star_Path_Planner
         baebot_path_planner::PathPlannerResult result_;
 
         //A* members
-        MapCell * start_;
-        MapCell * goal_;
+        MapCell * start_{nullptr};
+        MapCell * goal_{nullptr};
+
 
 
 
@@ -62,11 +63,11 @@ class A_Star_Path_Planner
 
         bool map_ok_;
 
-        const int map_width_ = 50;
-        const int map_height_= 50;
+        const int map_width_{50};
+        const int map_height_{50};
 
         bool found_goal;
-        bool DEBUG = true;
+        bool DEBUG{false};
 
         // A star Search variables
         std::vector<MapCell> grid_; //main grid containing map cells

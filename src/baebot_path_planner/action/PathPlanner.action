@@ -1,4 +1,6 @@
 # Goal
+int8 start_x
+int8 start_y
 int8 goal_x
 int8 goal_y
 ---

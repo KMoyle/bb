@@ -1,0 +1,7 @@
+<launch>
+
+    <node pkg="baebot_path_planner" name="BaeBotPathPlanner" type="BaeBotPathPlanner" launch-prefix="gdb -ex run --args" output="screen"/>
+
+	
+
+</launch>
