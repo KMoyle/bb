@@ -63,11 +63,12 @@ class A_Star_Path_Planner
 
         bool map_ok_;
 
-        const int map_width_{50};
-        const int map_height_{50};
+        const int map_width_{50}; //m
+        const int map_height_{50};//m
+        const double map_res_{0.10};//m
 
         bool found_goal;
-        bool DEBUG{false};
+        bool DEBUG{true};
 
         // A star Search variables
         std::vector<MapCell> grid_; //main grid containing map cells
