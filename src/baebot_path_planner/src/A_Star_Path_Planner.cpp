@@ -131,8 +131,7 @@ void A_Star_Path_Planner::pathPlannerCallBack( const baebot_path_planner::PathPl
     } else {
         ROS_WARN( "map not updated yet");
         as_.setAborted();
-        delete goal_;
-        delete start_;
+
     }
 }
 void A_Star_Path_Planner::mapCallBack( const nav_msgs::OccupancyGrid &occ_map ){
@@ -151,6 +150,7 @@ MapCell *A_Star_Path_Planner::get_best_neighbour( ){
     MapCell *best;
     unsigned int current_id = 0;
     std::list<MapCell *>::iterator best_itf;
+
     ///iterating through the list to find the mapcell with the best f score
     for( auto itf = open_set_.begin(); itf != open_set_.end(); itf++){
         if ( itf == open_set_.begin() || ( ( f_[(*itf)->get_x() + (*itf)->get_y() * map_width_] ) < f_[current_id]  )  ){
@@ -222,6 +222,7 @@ void A_Star_Path_Planner::add_neighbours( MapCell *cmp ){
 inline void A_Star_Path_Planner::setNeighbour( double nid, double cid ){
     ///add neighbour id to new neighbours vec
     neighbour_ids_.push_back( nid );
+
     ///if not opened add its parent node
     if ( !opened_[ nid] ) parent_[ nid ] = &grid_[ cid] ;
 
@@ -242,6 +243,7 @@ void A_Star_Path_Planner::compute_path( MapCell* current ){
     }
     ///reverse path before sending
     std::reverse(path_.begin(),path_.end());
+
     /// Assign path the as_ result msg
     for( auto it : path_ ) {
         result_.path_x.push_back( it->get_x() );
@@ -263,6 +265,9 @@ void A_Star_Path_Planner::compute_path( MapCell* current ){
 
 A_Star_Path_Planner::~A_Star_Path_Planner()
 {
+
+        delete goal_;
+        delete start_;
     //dtor
 }
 

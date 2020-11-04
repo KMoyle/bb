@@ -17,30 +17,17 @@ int main( int argc, char **argv){
     */
     BaeBotMaster *baebotMaster = new BaeBotMaster( &nh );
 
-
-
-    //commit for change!
-
     /*
     *   Initialise Threads
     */
-    // Control threads
-    // Planner threads
-        baebotMaster->motorDmd_pub = nh.advertise< geometry_msgs::Twist >( "cmd_vel", 1 );
+    boost::thread controlLoopThread( boost::bind( &BaeBotMaster::controlLoopFunc, baebotMaster ) );
+    boost::thread pathPlannerLoodThread ( boost::bind( &BaeBotMaster::pathPlannerLoopFunc, baebotMaster ) );
 
+    ROS_INFO("main: starting controller thread");
+    controlLoopThread.join();
+    pathPlannerLoodThread.join();
 
-        boost::thread controlLoopThread( boost::bind( &BaeBotMaster::controlLoopFunc, baebotMaster ) );
-        boost::thread pathPlannerLoodThread ( boost::bind( &BaeBotMaster::pathPlannerLoopFunc, baebotMaster ) );
-
-        ROS_INFO("main: starting controller thread");
-        controlLoopThread.join();
-        pathPlannerLoodThread.join();
-
-
-        delete baebotMaster;
-
-
-
+    delete baebotMaster;
 
     return 0;
 

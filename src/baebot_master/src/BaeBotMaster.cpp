@@ -116,28 +116,24 @@ void BaeBotMaster::updateLoop(){
 
     updateDt();
 
-        // Sensor update check
+    /// Sensor update check
     //sensorUpdate();
 
-    //ODOM TEST
+    ///ODOM TEST
     //doASpin();
     //goStraight();
 
-
-
-
-    // Update the pose and navigation parameters
+    /// Update the pose and navigation parameters
     navUpdate();
 
-    //if( sensor_status.poseAlive && sensor_status.cameraAlive && sensor_status.lidarAlive ) {
-    if( 1 ) {
-        // Update the the current mission task and calculate the desired control forces
+    if( sensor_status.poseAlive && sensor_status.cameraAlive && sensor_status.lidarAlive ) {
+        /// Update the the current mission task and calculate the desired control forces
         missionUpdate();
 
-        // Move to the next task in the queue if the current task has just completed
+        /// Move to the next task in the queue if the current task has just completed
         updateCurrentTask();
 
-        // Send the thruster commands to the motor controller
+        /// Send the thruster commands to the motor controller
         publishMotorCommands();
 
     } else{
@@ -145,10 +141,10 @@ void BaeBotMaster::updateLoop(){
         ROS_ERROR("BaeBotMaster: lidar, camera or pose not alive, skipping mission/motor update");
     }
 
-    // Publishes summary pose messages
+    /// Publishes summary pose messages
     publishPoseMessages();
 
-    // Publish RViz markers
+    /// TODO Publish RViz markers
 
 }
 
@@ -183,7 +179,7 @@ void BaeBotMaster::navUpdate(){
 
     ros::Time currentTime = ros::Time::now();
 
-    // TODO -->> LOGIC TO DETERMINE WHAT CONTROLLER IM USING
+    /// TODO -->> LOGIC TO DETERMINE WHAT CONTROLLER IM USING
     // Initial waypoint
     if ( we_are_off ){
         ROS_INFO("Off on our first mission");
